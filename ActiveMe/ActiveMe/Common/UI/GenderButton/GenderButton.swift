@@ -23,6 +23,8 @@ extension GenderButton {
         let maleIcon: UIImage = UIImage(named: "male")!
         let femaleFillIcon: UIImage = UIImage(named: "female.fill")!
         let femaleIcon: UIImage = UIImage(named: "female")!
+        let otherIcon: UIImage = UIImage(named: "other")!
+        let otherFillIcon: UIImage = UIImage(named: "other.fill")!
         
         let borderColor: UIColor = UIColor.lightGray
         let selectedBorderColor: UIColor = UIColor(rgb: 0xF9743E)
@@ -140,7 +142,7 @@ class GenderButton: UIView {
         case .Female:
             self.genderImageView.image = appearance.femaleIcon
         case .Other:
-            break
+            self.genderImageView.image = appearance.otherIcon
         }
         
         genderLabel.text = gender.rawValue
@@ -170,7 +172,7 @@ class GenderButton: UIView {
         case .Female:
             self.genderImageView.image = appearance.femaleFillIcon
         case .Other:
-            break
+            self.genderImageView.image = appearance.otherFillIcon
         }
         
         self.layer.borderColor = appearance.selectedBorderColor.cgColor
@@ -185,7 +187,7 @@ class GenderButton: UIView {
         case .Female:
             self.genderImageView.image = appearance.femaleIcon
         case .Other:
-            break
+            self.genderImageView.image = appearance.otherIcon
         }
         
         self.layer.borderColor = appearance.borderColor.cgColor

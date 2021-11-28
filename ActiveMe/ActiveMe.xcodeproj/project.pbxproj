@@ -153,10 +153,10 @@
 		D445F92A27515035001AA71A /* ActiveMe */ = {
 			isa = PBXGroup;
 			children = (
-				D48E1E592753C7C00034DDBE /* Modules */,
+				D445F95E27515054001AA71A /* App */,
 				D445F9762751693B001AA71A /* Extensions */,
 				D445F96027515227001AA71A /* Common */,
-				D445F95E27515054001AA71A /* App */,
+				D48E1E592753C7C00034DDBE /* Modules */,
 				D445F95F27515066001AA71A /* SupportingFiles */,
 				D445F93C27515037001AA71A /* Info.plist */,
 			);
@@ -289,6 +289,7 @@
 		D48E1E5A2753C7C90034DDBE /* UserParameters */ = {
 			isa = PBXGroup;
 			children = (
+				D48E1E6F27541C320034DDBE /* ActiveMeCoordinator.swift */,
 				D48E1E5F2753C9F80034DDBE /* Model */,
 				D48E1E5E2753C9F40034DDBE /* View */,
 				D48E1E5D2753C9EE0034DDBE /* ViewModel */,
@@ -325,7 +326,6 @@
 				D48E1E6C27541B520034DDBE /* BaseCoordinator */,
 				D48E1E632753E3A90034DDBE /* Router */,
 				D48E1E6D27541B6F0034DDBE /* AppCoordinator.swift */,
-				D48E1E6F27541C320034DDBE /* ActiveMeCoordinator.swift */,
 			);
 			path = AppCoordinator;
 			sourceTree = "<group>";
