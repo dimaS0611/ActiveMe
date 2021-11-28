@@ -19,7 +19,8 @@ class StrokesSliderCell: UICollectionViewCell {
     lazy var label: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
-        label.font = UIFont(name: "vegur-regular", size: 7)
+        label.font = UIFont.regular(with: 12)
+        label.textAlignment = .center
         return label
     }()
     
@@ -56,7 +57,7 @@ class StrokesSliderCell: UICollectionViewCell {
     private func setupConstraints() {
         label.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.height.width.equalTo(30.0)
+            make.height.width.equalTo(35.0)
             make.top.equalToSuperview().offset(20.0)
         }
         
@@ -64,7 +65,7 @@ class StrokesSliderCell: UICollectionViewCell {
             make.centerX.equalToSuperview()
             make.top.equalTo(label.snp.bottom).offset(20.0)
             make.bottom.equalToSuperview()
-            make.width.equalTo(5.0)
+            make.width.equalTo(3.0)
         }
     }
 }
@@ -82,7 +83,7 @@ extension StrokesSliderCell: StrokeSliderCellProtocol {
         UIView.animate(withDuration: 0.2) {
             self.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
             self.stroke.backgroundColor = .black
-            self.label.font = UIFont(name: "vegur-bold", size: 10)
+            self.label.font = UIFont.medium(with: 14)
             let generator = UIImpactFeedbackGenerator(style: .light)
             generator.impactOccurred()
         }
@@ -94,7 +95,7 @@ extension StrokesSliderCell: StrokeSliderCellProtocol {
             self.transform = CGAffineTransform.identity
             
             self.stroke.backgroundColor = .lightGray
-            self.label.font = UIFont(name: "vegur-regular", size: 7)
+            self.label.font = UIFont.regular(with: 12)
         }
     }
     

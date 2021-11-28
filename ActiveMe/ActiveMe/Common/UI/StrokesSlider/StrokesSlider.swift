@@ -9,6 +9,12 @@ import Foundation
 import UIKit
 import SnapKit
 
+extension StrokesSlider {
+    struct Appearance {
+        var cellWidth: CGFloat = UIScreen.main.bounds.width / 7
+    }
+}
+
 class StrokesSlider: UIView {
     
     // MARK: - DataSource
@@ -24,13 +30,16 @@ class StrokesSlider: UIView {
     
     // MARK: - UI properties
     
-    let collectionViewFlowLayout = StrokesSliderFlowLayout()
+    private let appearance = Appearance()
     
-    let collectionView: UICollectionView = {
+    private let collectionViewFlowLayout = StrokesSliderFlowLayout()
+    
+    lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout.init())
         collectionView.backgroundColor = .clear
         collectionView.isScrollEnabled = true
         collectionView.showsHorizontalScrollIndicator = false
+        collectionView.delegate = self
         collectionView.register(StrokesSliderCell.self, forCellWithReuseIdentifier: StrokesSliderCell.reuseIdentifier)
         return collectionView
     }()
@@ -88,9 +97,6 @@ class StrokesSlider: UIView {
     }
     
     private func setupCollectionView() {
-        self.collectionView.delegate = self
-        
-        self.collectionViewFlowLayout.itemSize = CGSize(width: 50.0, height: self.frame.height)
         self.collectionView.collectionViewLayout = collectionViewFlowLayout
         
         for i in cellsRange {
@@ -100,8 +106,20 @@ class StrokesSlider: UIView {
         
         applySnapshot()
     }
+    
+    func snapToCenter() {
+        let indexPath = IndexPath(row: Int(collectionView.numberOfItems(inSection: 0) / 2),
+                                  section: 0)
+        collectionView.scrollToItem(at: indexPath,
+                                    at: .centeredHorizontally,
+                                    animated: false)
+    }
+}
 
-    // MARK: - ScrollView delegate
+
+// MARK: - UICollectionViewDelegate implementation
+
+extension StrokesSlider: UICollectionViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         guard scrollView is UICollectionView else { return }
@@ -118,29 +136,10 @@ class StrokesSlider: UIView {
         if let centerCell = centerCell as? StrokesSliderCell {
             let offsetX = centerPoint.x - centerCell.center.x
             
-            if offsetX < -15 || offsetX > 15 {
+            if offsetX < -20 || offsetX > 20 {
                 centerCell.setInactiveCell()
                 self.centerCell = nil
             }
         }
-    }
-}
-
-
-// MARK: - UICollectionViewDelegate implementation
-
-extension StrokesSlider: UICollectionViewDelegate {
-    
-}
-
-extension StrokesSlider: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        let totalCellWidth = (50 / 4) * collectionView.numberOfItems(inSection: 0)
-        let totalSpacingWidth = 10 * (collectionView.numberOfItems(inSection: 0) - 1)
-
-        let leftInset = (collectionView.layer.frame.size.width - CGFloat(totalCellWidth + totalSpacingWidth)) / 2
-        let rightInset = leftInset
-
-        return UIEdgeInsets(top: 0, left: leftInset, bottom: 0, right: rightInset)
     }
 }

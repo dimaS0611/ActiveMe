@@ -13,9 +13,9 @@ class StrokesSliderFlowLayout: UICollectionViewFlowLayout {
         super.prepare()
         
         scrollDirection = .horizontal
-        minimumLineSpacing = 15.0
-        minimumInteritemSpacing = 15.0
-        itemSize = CGSize(width: 50.0, height: 200.0)
+        minimumLineSpacing = 5.0
+        minimumInteritemSpacing = 5.0
+        itemSize = CGSize(width:UIScreen.main.bounds.width / 7, height: 200.0)
     }
     
     override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
