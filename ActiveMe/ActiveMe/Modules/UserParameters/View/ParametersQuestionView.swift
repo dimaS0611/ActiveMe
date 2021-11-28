@@ -10,18 +10,19 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-class ViewController: UIViewController {
+class UserParametersView: UIViewController {
 
     let disposeBag = DisposeBag()
     
     let slider = StrokesSlider(cellsRange: Range(140...210))
     let genderButton = GenderButton(gender: .Female)
     
+    var viewModel: UserParametersViewModel? = nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         addCollection()
-        setupEvent()
     }
     
     func addCollection() {
@@ -50,22 +51,6 @@ class ViewController: UIViewController {
 //                                                        bottom: 0, right: sideInset)
 //
 //        slider.snapToCenter()
-    }
-    
-    private func setupEvent() {
-        
-        let tap = UITapGestureRecognizer()
-        
-        genderButton.addGestureRecognizer(tap)
-        
-        tap.rx.event.subscribe { [weak self] _ in
-            guard let selected = self?.genderButton.buttonSelected else { return }
-            if !selected {
-                self?.genderButton.selectButton()
-            } else {
-                self?.genderButton.deseletButton()
-            }
-        }.disposed(by: self.disposeBag)
     }
 }
 

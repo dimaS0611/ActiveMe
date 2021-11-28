@@ -8,11 +8,14 @@
 import Foundation
 import UIKit
 import SnapKit
+import RxCocoa
+import RxSwift
 
 extension GenderButton {
     enum Gender: String {
         case Male
         case Female
+        case Other
     }
     
     struct Appearance {
@@ -29,6 +32,8 @@ extension GenderButton {
 }
 
 class GenderButton: UIView {
+    
+    private let disposeBag = DisposeBag()
     
     // MARK: - Appearance
     
@@ -84,6 +89,7 @@ class GenderButton: UIView {
         super.layoutSubviews()
         setupUI()
         setupContent()
+        setupEvent()
     }
 
     // MARK: - View config
@@ -133,10 +139,28 @@ class GenderButton: UIView {
             self.genderImageView.image = appearance.maleIcon
         case .Female:
             self.genderImageView.image = appearance.femaleIcon
+        case .Other:
+            break
         }
         
         genderLabel.text = gender.rawValue
         genderSubtitleLabel.text = "You are planing to use our platform as \(gender.rawValue) ?"
+    }
+    
+    private func setupEvent() {
+        
+        let tap = UITapGestureRecognizer()
+        
+        self.addGestureRecognizer(tap)
+        
+        tap.rx.event.subscribe { [weak self] _ in
+            guard let selected = self?.buttonSelected else { return }
+            if !selected {
+                self?.selectButton()
+            } else {
+                self?.deseletButton()
+            }
+        }.disposed(by: self.disposeBag)
     }
     
     func selectButton() {
@@ -145,6 +169,8 @@ class GenderButton: UIView {
             self.genderImageView.image = appearance.maleFillIcon
         case .Female:
             self.genderImageView.image = appearance.femaleFillIcon
+        case .Other:
+            break
         }
         
         self.layer.borderColor = appearance.selectedBorderColor.cgColor
@@ -158,6 +184,8 @@ class GenderButton: UIView {
             self.genderImageView.image = appearance.maleIcon
         case .Female:
             self.genderImageView.image = appearance.femaleIcon
+        case .Other:
+            break
         }
         
         self.layer.borderColor = appearance.borderColor.cgColor

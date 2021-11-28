@@ -35,6 +35,14 @@
 		D48E1E51275391180034DDBE /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D48E1E4827538CB00034DDBE /* Roboto-Light.ttf */; };
 		D48E1E56275399B00034DDBE /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D48E1E55275399B00034DDBE /* RxCocoa */; };
 		D48E1E58275399B00034DDBE /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D48E1E57275399B00034DDBE /* RxSwift */; };
+		D48E1E5C2753C8220034DDBE /* UserParametersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E5B2753C8220034DDBE /* UserParametersViewModel.swift */; };
+		D48E1E622753E33F0034DDBE /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E612753E33F0034DDBE /* UIViewController+Extension.swift */; };
+		D48E1E652753E3B50034DDBE /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E642753E3B50034DDBE /* RouterProtocol.swift */; };
+		D48E1E672753E4380034DDBE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E662753E4380034DDBE /* Router.swift */; };
+		D48E1E692754178B0034DDBE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E682754178B0034DDBE /* Coordinator.swift */; };
+		D48E1E6B275419EE0034DDBE /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E6A275419EE0034DDBE /* BaseCoordinator.swift */; };
+		D48E1E6E27541B6F0034DDBE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E6D27541B6F0034DDBE /* AppCoordinator.swift */; };
+		D48E1E7027541C320034DDBE /* ActiveMeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E6F27541C320034DDBE /* ActiveMeCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +91,14 @@
 		D48E1E4A27538CC30034DDBE /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "../../../../../../../../Downloads/Roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		D48E1E4B27538CCC0034DDBE /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "../../../../../../../../Downloads/Roboto/Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		D48E1E4C27538CD50034DDBE /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Thin.ttf"; path = "../../../../../../../../Downloads/Roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		D48E1E5B2753C8220034DDBE /* UserParametersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserParametersViewModel.swift; sourceTree = "<group>"; };
+		D48E1E612753E33F0034DDBE /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		D48E1E642753E3B50034DDBE /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
+		D48E1E662753E4380034DDBE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		D48E1E682754178B0034DDBE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		D48E1E6A275419EE0034DDBE /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		D48E1E6D27541B6F0034DDBE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D48E1E6F27541C320034DDBE /* ActiveMeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveMeCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,10 +153,10 @@
 		D445F92A27515035001AA71A /* ActiveMe */ = {
 			isa = PBXGroup;
 			children = (
+				D48E1E592753C7C00034DDBE /* Modules */,
 				D445F9762751693B001AA71A /* Extensions */,
 				D445F96027515227001AA71A /* Common */,
 				D445F95E27515054001AA71A /* App */,
-				D445F92F27515035001AA71A /* ParametersQuestionView.swift */,
 				D445F95F27515066001AA71A /* SupportingFiles */,
 				D445F93C27515037001AA71A /* Info.plist */,
 			);
@@ -167,6 +183,7 @@
 		D445F95E27515054001AA71A /* App */ = {
 			isa = PBXGroup;
 			children = (
+				D48E1E602753E3170034DDBE /* AppCoordinator */,
 				D445F92B27515035001AA71A /* AppDelegate.swift */,
 				D445F92D27515035001AA71A /* SceneDelegate.swift */,
 			);
@@ -236,6 +253,7 @@
 				D445F97727516951001AA71A /* UICollectionViewCell+Extension.swift */,
 				D48E1E44275386FF0034DDBE /* UIColor+Extension.swift */,
 				D48E1E462753887A0034DDBE /* UIFont+Extension.swift */,
+				D48E1E612753E33F0034DDBE /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -258,6 +276,76 @@
 				D48E1E42275380500034DDBE /* GenderButton.swift */,
 			);
 			path = GenderButton;
+			sourceTree = "<group>";
+		};
+		D48E1E592753C7C00034DDBE /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D48E1E5A2753C7C90034DDBE /* UserParameters */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D48E1E5A2753C7C90034DDBE /* UserParameters */ = {
+			isa = PBXGroup;
+			children = (
+				D48E1E5F2753C9F80034DDBE /* Model */,
+				D48E1E5E2753C9F40034DDBE /* View */,
+				D48E1E5D2753C9EE0034DDBE /* ViewModel */,
+			);
+			path = UserParameters;
+			sourceTree = "<group>";
+		};
+		D48E1E5D2753C9EE0034DDBE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D48E1E5B2753C8220034DDBE /* UserParametersViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D48E1E5E2753C9F40034DDBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D445F92F27515035001AA71A /* ParametersQuestionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D48E1E5F2753C9F80034DDBE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D48E1E602753E3170034DDBE /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D48E1E6C27541B520034DDBE /* BaseCoordinator */,
+				D48E1E632753E3A90034DDBE /* Router */,
+				D48E1E6D27541B6F0034DDBE /* AppCoordinator.swift */,
+				D48E1E6F27541C320034DDBE /* ActiveMeCoordinator.swift */,
+			);
+			path = AppCoordinator;
+			sourceTree = "<group>";
+		};
+		D48E1E632753E3A90034DDBE /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D48E1E642753E3B50034DDBE /* RouterProtocol.swift */,
+				D48E1E662753E4380034DDBE /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		D48E1E6C27541B520034DDBE /* BaseCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D48E1E682754178B0034DDBE /* Coordinator.swift */,
+				D48E1E6A275419EE0034DDBE /* BaseCoordinator.swift */,
+			);
+			path = BaseCoordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,19 +494,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D48E1E622753E33F0034DDBE /* UIViewController+Extension.swift in Sources */,
 				D48E1E472753887A0034DDBE /* UIFont+Extension.swift in Sources */,
 				D445F96C2751551C001AA71A /* StrokesSliderCell.swift in Sources */,
 				D445F93027515035001AA71A /* ParametersQuestionView.swift in Sources */,
+				D48E1E672753E4380034DDBE /* Router.swift in Sources */,
 				D48E1E43275380500034DDBE /* GenderButton.swift in Sources */,
+				D48E1E6E27541B6F0034DDBE /* AppCoordinator.swift in Sources */,
+				D48E1E692754178B0034DDBE /* Coordinator.swift in Sources */,
 				D445F92C27515035001AA71A /* AppDelegate.swift in Sources */,
 				D4480FAD27516CA100EDCD22 /* StrokesSliderFlowLayout.swift in Sources */,
+				D48E1E7027541C320034DDBE /* ActiveMeCoordinator.swift in Sources */,
 				D445F97427516608001AA71A /* StrokeSliderCellProtocol.swift in Sources */,
 				D445F92E27515035001AA71A /* SceneDelegate.swift in Sources */,
+				D48E1E652753E3B50034DDBE /* RouterProtocol.swift in Sources */,
 				D445F964275152EE001AA71A /* StrokesSlider.swift in Sources */,
 				D445F96727515395001AA71A /* MainSection.swift in Sources */,
 				D445F969275153D7001AA71A /* StrokeCell.swift in Sources */,
+				D48E1E6B275419EE0034DDBE /* BaseCoordinator.swift in Sources */,
 				D48E1E45275386FF0034DDBE /* UIColor+Extension.swift in Sources */,
 				D445F97827516951001AA71A /* UICollectionViewCell+Extension.swift in Sources */,
+				D48E1E5C2753C8220034DDBE /* UserParametersViewModel.swift in Sources */,
 				D445F93627515036001AA71A /* ActiveMe.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
