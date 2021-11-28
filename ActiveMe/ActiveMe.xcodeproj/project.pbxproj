@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D445F92C27515035001AA71A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F92B27515035001AA71A /* AppDelegate.swift */; };
 		D445F92E27515035001AA71A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F92D27515035001AA71A /* SceneDelegate.swift */; };
-		D445F93027515035001AA71A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F92F27515035001AA71A /* ViewController.swift */; };
+		D445F93027515035001AA71A /* ParametersQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F92F27515035001AA71A /* ParametersQuestionView.swift */; };
 		D445F93627515036001AA71A /* ActiveMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D445F93427515036001AA71A /* ActiveMe.xcdatamodeld */; };
 		D445F93827515037001AA71A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D445F93727515037001AA71A /* Assets.xcassets */; };
 		D445F93B27515037001AA71A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D445F93927515037001AA71A /* LaunchScreen.storyboard */; };
@@ -25,6 +25,16 @@
 		D445F97427516608001AA71A /* StrokeSliderCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F97327516608001AA71A /* StrokeSliderCellProtocol.swift */; };
 		D445F97827516951001AA71A /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F97727516951001AA71A /* UICollectionViewCell+Extension.swift */; };
 		D4480FAD27516CA100EDCD22 /* StrokesSliderFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4480FAC27516CA100EDCD22 /* StrokesSliderFlowLayout.swift */; };
+		D48E1E43275380500034DDBE /* GenderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E42275380500034DDBE /* GenderButton.swift */; };
+		D48E1E45275386FF0034DDBE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E44275386FF0034DDBE /* UIColor+Extension.swift */; };
+		D48E1E472753887A0034DDBE /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E462753887A0034DDBE /* UIFont+Extension.swift */; };
+		D48E1E4D2753910E0034DDBE /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D48E1E4C27538CD50034DDBE /* Roboto-Thin.ttf */; };
+		D48E1E4E275391110034DDBE /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D48E1E4B27538CCC0034DDBE /* Roboto-Bold.ttf */; };
+		D48E1E4F275391130034DDBE /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D48E1E4A27538CC30034DDBE /* Roboto-Regular.ttf */; };
+		D48E1E50275391160034DDBE /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D48E1E4927538CBA0034DDBE /* Roboto-Medium.ttf */; };
+		D48E1E51275391180034DDBE /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D48E1E4827538CB00034DDBE /* Roboto-Light.ttf */; };
+		D48E1E56275399B00034DDBE /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D48E1E55275399B00034DDBE /* RxCocoa */; };
+		D48E1E58275399B00034DDBE /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D48E1E57275399B00034DDBE /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +58,7 @@
 		D445F92827515035001AA71A /* ActiveMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActiveMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D445F92B27515035001AA71A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D445F92D27515035001AA71A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D445F92F27515035001AA71A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D445F92F27515035001AA71A /* ParametersQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersQuestionView.swift; sourceTree = "<group>"; };
 		D445F93527515036001AA71A /* ActiveMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ActiveMe.xcdatamodel; sourceTree = "<group>"; };
 		D445F93727515037001AA71A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D445F93A27515037001AA71A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,8 +75,14 @@
 		D445F97327516608001AA71A /* StrokeSliderCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeSliderCellProtocol.swift; sourceTree = "<group>"; };
 		D445F97727516951001AA71A /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
 		D4480FAC27516CA100EDCD22 /* StrokesSliderFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokesSliderFlowLayout.swift; sourceTree = "<group>"; };
-		D4480FAF2751776400EDCD22 /* vegur-regular 0333.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "vegur-regular 0333.otf"; path = "../../../../../../../../Downloads/Fonts/vegur-regular 0333.otf"; sourceTree = "<group>"; };
-		D4480FB02751776400EDCD22 /* vegur-bold 0310.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "vegur-bold 0310.otf"; path = "../../../../../../../../Downloads/Fonts/vegur-bold 0310.otf"; sourceTree = "<group>"; };
+		D48E1E42275380500034DDBE /* GenderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderButton.swift; sourceTree = "<group>"; };
+		D48E1E44275386FF0034DDBE /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		D48E1E462753887A0034DDBE /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		D48E1E4827538CB00034DDBE /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "../../../../../../../../Downloads/Roboto/Roboto-Light.ttf"; sourceTree = "<group>"; };
+		D48E1E4927538CBA0034DDBE /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "../../../../../../../../Downloads/Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		D48E1E4A27538CC30034DDBE /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "../../../../../../../../Downloads/Roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		D48E1E4B27538CCC0034DDBE /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "../../../../../../../../Downloads/Roboto/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		D48E1E4C27538CD50034DDBE /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Thin.ttf"; path = "../../../../../../../../Downloads/Roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +90,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D48E1E56275399B00034DDBE /* RxCocoa in Frameworks */,
 				D445F96F27515CBA001AA71A /* SnapKit in Frameworks */,
+				D48E1E58275399B00034DDBE /* RxSwift in Frameworks */,
 				D445F9722751654C001AA71A /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,7 +140,7 @@
 				D445F9762751693B001AA71A /* Extensions */,
 				D445F96027515227001AA71A /* Common */,
 				D445F95E27515054001AA71A /* App */,
-				D445F92F27515035001AA71A /* ViewController.swift */,
+				D445F92F27515035001AA71A /* ParametersQuestionView.swift */,
 				D445F95F27515066001AA71A /* SupportingFiles */,
 				D445F93C27515037001AA71A /* Info.plist */,
 			);
@@ -177,6 +195,7 @@
 		D445F9612751522F001AA71A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				D48E1E412753803C0034DDBE /* GenderButton */,
 				D445F96227515235001AA71A /* StrokesSlider */,
 			);
 			path = UI;
@@ -215,6 +234,8 @@
 			isa = PBXGroup;
 			children = (
 				D445F97727516951001AA71A /* UICollectionViewCell+Extension.swift */,
+				D48E1E44275386FF0034DDBE /* UIColor+Extension.swift */,
+				D48E1E462753887A0034DDBE /* UIFont+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -222,10 +243,21 @@
 		D4480FAE2751775600EDCD22 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				D4480FB02751776400EDCD22 /* vegur-bold 0310.otf */,
-				D4480FAF2751776400EDCD22 /* vegur-regular 0333.otf */,
+				D48E1E4C27538CD50034DDBE /* Roboto-Thin.ttf */,
+				D48E1E4B27538CCC0034DDBE /* Roboto-Bold.ttf */,
+				D48E1E4A27538CC30034DDBE /* Roboto-Regular.ttf */,
+				D48E1E4927538CBA0034DDBE /* Roboto-Medium.ttf */,
+				D48E1E4827538CB00034DDBE /* Roboto-Light.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D48E1E412753803C0034DDBE /* GenderButton */ = {
+			isa = PBXGroup;
+			children = (
+				D48E1E42275380500034DDBE /* GenderButton.swift */,
+			);
+			path = GenderButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +279,8 @@
 			packageProductDependencies = (
 				D445F96E27515CBA001AA71A /* SnapKit */,
 				D445F9712751654C001AA71A /* GRDB */,
+				D48E1E55275399B00034DDBE /* RxCocoa */,
+				D48E1E57275399B00034DDBE /* RxSwift */,
 			);
 			productName = ActiveMe;
 			productReference = D445F92827515035001AA71A /* ActiveMe.app */;
@@ -323,6 +357,7 @@
 			packageReferences = (
 				D445F96D27515CBA001AA71A /* XCRemoteSwiftPackageReference "SnapKit" */,
 				D445F9702751654B001AA71A /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+				D48E1E54275399B00034DDBE /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = D445F92927515035001AA71A /* Products */;
 			projectDirPath = "";
@@ -342,6 +377,11 @@
 			files = (
 				D445F93B27515037001AA71A /* LaunchScreen.storyboard in Resources */,
 				D445F93827515037001AA71A /* Assets.xcassets in Resources */,
+				D48E1E50275391160034DDBE /* Roboto-Medium.ttf in Resources */,
+				D48E1E4F275391130034DDBE /* Roboto-Regular.ttf in Resources */,
+				D48E1E51275391180034DDBE /* Roboto-Light.ttf in Resources */,
+				D48E1E4E275391110034DDBE /* Roboto-Bold.ttf in Resources */,
+				D48E1E4D2753910E0034DDBE /* Roboto-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,8 +406,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D48E1E472753887A0034DDBE /* UIFont+Extension.swift in Sources */,
 				D445F96C2751551C001AA71A /* StrokesSliderCell.swift in Sources */,
-				D445F93027515035001AA71A /* ViewController.swift in Sources */,
+				D445F93027515035001AA71A /* ParametersQuestionView.swift in Sources */,
+				D48E1E43275380500034DDBE /* GenderButton.swift in Sources */,
 				D445F92C27515035001AA71A /* AppDelegate.swift in Sources */,
 				D4480FAD27516CA100EDCD22 /* StrokesSliderFlowLayout.swift in Sources */,
 				D445F97427516608001AA71A /* StrokeSliderCellProtocol.swift in Sources */,
@@ -375,6 +417,7 @@
 				D445F964275152EE001AA71A /* StrokesSlider.swift in Sources */,
 				D445F96727515395001AA71A /* MainSection.swift in Sources */,
 				D445F969275153D7001AA71A /* StrokeCell.swift in Sources */,
+				D48E1E45275386FF0034DDBE /* UIColor+Extension.swift in Sources */,
 				D445F97827516951001AA71A /* UICollectionViewCell+Extension.swift in Sources */,
 				D445F93627515036001AA71A /* ActiveMe.xcdatamodeld in Sources */,
 			);
@@ -748,6 +791,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		D48E1E54275399B00034DDBE /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -760,6 +811,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D445F9702751654B001AA71A /* XCRemoteSwiftPackageReference "GRDB.swift" */;
 			productName = GRDB;
+		};
+		D48E1E55275399B00034DDBE /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D48E1E54275399B00034DDBE /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		D48E1E57275399B00034DDBE /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D48E1E54275399B00034DDBE /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 
