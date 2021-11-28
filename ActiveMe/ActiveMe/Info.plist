@@ -4,8 +4,11 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>vegur-regular 0333.otf</string>
-		<string>vegur-bold 0310.otf</string>
+		<string>Roboto-Thin.ttf</string>
+		<string>Roboto-Bold.ttf</string>
+		<string>Roboto-Regular.ttf</string>
+		<string>Roboto-Medium.ttf</string>
+		<string>Roboto-Light.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
