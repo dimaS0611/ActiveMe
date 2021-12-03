@@ -20,7 +20,7 @@ class WaterBalanceListView: UIViewController {
         configureDataSource()
     }
     
-    private var appearance = UICollectionLayoutListConfiguration.Appearance.insetGrouped
+    private var appearance = UICollectionLayoutListConfiguration.Appearance.sidebar
 }
 
 extension WaterBalanceListView {
