@@ -45,16 +45,17 @@ extension WaterBalanceListView {
             var content = cell.defaultContentConfiguration()
             content.text = item.title
             cell.contentConfiguration = content
-            
-            //cell.accessories = [.outlineDisclosure()]
         }
         
         let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, Item> { (cell, indexPath, item) in
             
             var content = cell.defaultContentConfiguration()
-            content.text = item.title
-            content.secondaryText = item.emojiIcon
+            content.text = item.emojiIcon
+            //content.secondaryText = item.emojiIcon
             cell.contentConfiguration = content
+            if let title = item.title {
+                cell.accessories = [.label(text: title)]
+            }
             
         }
         
