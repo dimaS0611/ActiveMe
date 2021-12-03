@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3ADAFBCD275A15DB0026A1CC /* WaterBalanceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADAFBCC275A15DB0026A1CC /* WaterBalanceListView.swift */; };
+		3ADAFBCF275A16080026A1CC /* WaterBalanceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADAFBCE275A16080026A1CC /* WaterBalanceListViewModel.swift */; };
+		3ADAFBD1275A1C690026A1CC /* WaterBalanceListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADAFBD0275A1C690026A1CC /* WaterBalanceListModel.swift */; };
+		3ADAFBD3275A273A0026A1CC /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ADAFBD2275A273A0026A1CC /* Roboto-Thin.ttf */; };
+		3ADAFBD5275A27440026A1CC /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ADAFBD4275A27440026A1CC /* Roboto-Bold.ttf */; };
+		3ADAFBD7275A274E0026A1CC /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ADAFBD6275A274E0026A1CC /* Roboto-Regular.ttf */; };
+		3ADAFBD9275A27560026A1CC /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ADAFBD8275A27560026A1CC /* Roboto-Medium.ttf */; };
+		3ADAFBDB275A275D0026A1CC /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ADAFBDA275A275D0026A1CC /* Roboto-Light.ttf */; };
 		D445F92C27515035001AA71A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F92B27515035001AA71A /* AppDelegate.swift */; };
 		D445F92E27515035001AA71A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F92D27515035001AA71A /* SceneDelegate.swift */; };
 		D445F93027515035001AA71A /* ParametersQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F92F27515035001AA71A /* ParametersQuestionView.swift */; };
@@ -28,11 +36,6 @@
 		D48E1E43275380500034DDBE /* GenderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E42275380500034DDBE /* GenderButton.swift */; };
 		D48E1E45275386FF0034DDBE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E44275386FF0034DDBE /* UIColor+Extension.swift */; };
 		D48E1E472753887A0034DDBE /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E462753887A0034DDBE /* UIFont+Extension.swift */; };
-		D48E1E4D2753910E0034DDBE /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D48E1E4C27538CD50034DDBE /* Roboto-Thin.ttf */; };
-		D48E1E4E275391110034DDBE /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D48E1E4B27538CCC0034DDBE /* Roboto-Bold.ttf */; };
-		D48E1E4F275391130034DDBE /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D48E1E4A27538CC30034DDBE /* Roboto-Regular.ttf */; };
-		D48E1E50275391160034DDBE /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D48E1E4927538CBA0034DDBE /* Roboto-Medium.ttf */; };
-		D48E1E51275391180034DDBE /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D48E1E4827538CB00034DDBE /* Roboto-Light.ttf */; };
 		D48E1E56275399B00034DDBE /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D48E1E55275399B00034DDBE /* RxCocoa */; };
 		D48E1E58275399B00034DDBE /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D48E1E57275399B00034DDBE /* RxSwift */; };
 		D48E1E5C2753C8220034DDBE /* UserParametersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E5B2753C8220034DDBE /* UserParametersViewModel.swift */; };
@@ -63,6 +66,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3ADAFBCC275A15DB0026A1CC /* WaterBalanceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterBalanceListView.swift; sourceTree = "<group>"; };
+		3ADAFBCE275A16080026A1CC /* WaterBalanceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterBalanceListViewModel.swift; sourceTree = "<group>"; };
+		3ADAFBD0275A1C690026A1CC /* WaterBalanceListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterBalanceListModel.swift; sourceTree = "<group>"; };
+		3ADAFBD2275A273A0026A1CC /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		3ADAFBD4275A27440026A1CC /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		3ADAFBD6275A274E0026A1CC /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		3ADAFBD8275A27560026A1CC /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		3ADAFBDA275A275D0026A1CC /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		D445F92827515035001AA71A /* ActiveMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActiveMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D445F92B27515035001AA71A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D445F92D27515035001AA71A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,11 +97,6 @@
 		D48E1E42275380500034DDBE /* GenderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderButton.swift; sourceTree = "<group>"; };
 		D48E1E44275386FF0034DDBE /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		D48E1E462753887A0034DDBE /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
-		D48E1E4827538CB00034DDBE /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "../../../../../../../../Downloads/Roboto/Roboto-Light.ttf"; sourceTree = "<group>"; };
-		D48E1E4927538CBA0034DDBE /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "../../../../../../../../Downloads/Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
-		D48E1E4A27538CC30034DDBE /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "../../../../../../../../Downloads/Roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; };
-		D48E1E4B27538CCC0034DDBE /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "../../../../../../../../Downloads/Roboto/Roboto-Bold.ttf"; sourceTree = "<group>"; };
-		D48E1E4C27538CD50034DDBE /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Thin.ttf"; path = "../../../../../../../../Downloads/Roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		D48E1E5B2753C8220034DDBE /* UserParametersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserParametersViewModel.swift; sourceTree = "<group>"; };
 		D48E1E612753E33F0034DDBE /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		D48E1E642753E3B50034DDBE /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
@@ -130,6 +136,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3ADAFBCA275A15980026A1CC /* WaterBalance */ = {
+			isa = PBXGroup;
+			children = (
+				3ADAFBCB275A15A40026A1CC /* WaterBalanceList */,
+			);
+			path = WaterBalance;
+			sourceTree = "<group>";
+		};
+		3ADAFBCB275A15A40026A1CC /* WaterBalanceList */ = {
+			isa = PBXGroup;
+			children = (
+				3ADAFBCC275A15DB0026A1CC /* WaterBalanceListView.swift */,
+				3ADAFBCE275A16080026A1CC /* WaterBalanceListViewModel.swift */,
+				3ADAFBD0275A1C690026A1CC /* WaterBalanceListModel.swift */,
+			);
+			path = WaterBalanceList;
+			sourceTree = "<group>";
+		};
 		D445F91F27515035001AA71A = {
 			isa = PBXGroup;
 			children = (
@@ -261,11 +285,11 @@
 		D4480FAE2751775600EDCD22 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				D48E1E4C27538CD50034DDBE /* Roboto-Thin.ttf */,
-				D48E1E4B27538CCC0034DDBE /* Roboto-Bold.ttf */,
-				D48E1E4A27538CC30034DDBE /* Roboto-Regular.ttf */,
-				D48E1E4927538CBA0034DDBE /* Roboto-Medium.ttf */,
-				D48E1E4827538CB00034DDBE /* Roboto-Light.ttf */,
+				3ADAFBD2275A273A0026A1CC /* Roboto-Thin.ttf */,
+				3ADAFBD4275A27440026A1CC /* Roboto-Bold.ttf */,
+				3ADAFBD6275A274E0026A1CC /* Roboto-Regular.ttf */,
+				3ADAFBDA275A275D0026A1CC /* Roboto-Light.ttf */,
+				3ADAFBD8275A27560026A1CC /* Roboto-Medium.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -281,6 +305,7 @@
 		D48E1E592753C7C00034DDBE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3ADAFBCA275A15980026A1CC /* WaterBalance */,
 				D48E1E5A2753C7C90034DDBE /* UserParameters */,
 			);
 			path = Modules;
@@ -463,13 +488,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ADAFBD3275A273A0026A1CC /* Roboto-Thin.ttf in Resources */,
 				D445F93B27515037001AA71A /* LaunchScreen.storyboard in Resources */,
+				3ADAFBDB275A275D0026A1CC /* Roboto-Light.ttf in Resources */,
+				3ADAFBD7275A274E0026A1CC /* Roboto-Regular.ttf in Resources */,
 				D445F93827515037001AA71A /* Assets.xcassets in Resources */,
-				D48E1E50275391160034DDBE /* Roboto-Medium.ttf in Resources */,
-				D48E1E4F275391130034DDBE /* Roboto-Regular.ttf in Resources */,
-				D48E1E51275391180034DDBE /* Roboto-Light.ttf in Resources */,
-				D48E1E4E275391110034DDBE /* Roboto-Bold.ttf in Resources */,
-				D48E1E4D2753910E0034DDBE /* Roboto-Thin.ttf in Resources */,
+				3ADAFBD5275A27440026A1CC /* Roboto-Bold.ttf in Resources */,
+				3ADAFBD9275A27560026A1CC /* Roboto-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,12 +530,15 @@
 				D445F92C27515035001AA71A /* AppDelegate.swift in Sources */,
 				D4480FAD27516CA100EDCD22 /* StrokesSliderFlowLayout.swift in Sources */,
 				D48E1E7027541C320034DDBE /* ActiveMeCoordinator.swift in Sources */,
+				3ADAFBCF275A16080026A1CC /* WaterBalanceListViewModel.swift in Sources */,
 				D445F97427516608001AA71A /* StrokeSliderCellProtocol.swift in Sources */,
+				3ADAFBCD275A15DB0026A1CC /* WaterBalanceListView.swift in Sources */,
 				D445F92E27515035001AA71A /* SceneDelegate.swift in Sources */,
 				D48E1E652753E3B50034DDBE /* RouterProtocol.swift in Sources */,
 				D445F964275152EE001AA71A /* StrokesSlider.swift in Sources */,
 				D445F96727515395001AA71A /* MainSection.swift in Sources */,
 				D445F969275153D7001AA71A /* StrokeCell.swift in Sources */,
+				3ADAFBD1275A1C690026A1CC /* WaterBalanceListModel.swift in Sources */,
 				D48E1E6B275419EE0034DDBE /* BaseCoordinator.swift in Sources */,
 				D48E1E45275386FF0034DDBE /* UIColor+Extension.swift in Sources */,
 				D445F97827516951001AA71A /* UICollectionViewCell+Extension.swift in Sources */,

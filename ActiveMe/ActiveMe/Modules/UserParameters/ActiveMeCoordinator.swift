@@ -12,8 +12,8 @@ class ActiveMeCoordinator: BaseCoordinator {
     var router: RouterProtocol?
     
     lazy var startViewController: UIViewController? = {
-        let view = UserParametersView()
-        view.viewModel = UserParametersViewModel()
+        let view = WaterBalanceListView()//UserParametersView()
+        //view.viewModel = UserParametersViewModel()
         return view
     }()
     
