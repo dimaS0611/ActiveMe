@@ -70,7 +70,7 @@ class SliderParametersView: UIViewController {
     }
     
     private func setupUI() {
-        self.view.backgroundColor = .systemBackground
+        self.view.backgroundColor = .systemGray6
         
         view.addSubview(slider)
         view.addSubview(questionLabel)

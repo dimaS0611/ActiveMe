@@ -53,11 +53,11 @@ extension UserParametersCoordinator {
     }
     
     private func showWeightView(in navigationController: UINavigationController) {
-        let parametersViewController = SliderParametersView(question: "Tell us your weight", sliderRange: Range<Int>(100...250))
+        let parametersViewController = SliderParametersView(question: "Tell us your weight", sliderRange: Range<Int>(30...200))
         parametersViewController.viewModel = SliderParametersViewModel()
         
         parametersViewController.viewModel?.showNextPage.subscribe(onNext: { [weak self] _ in
-            
+            self?.coordinateToMainView()
         })
         
         navigationController.interactivePopGestureRecognizer?.isEnabled = false
@@ -77,8 +77,10 @@ extension UserParametersCoordinator {
         
         navigationController.pushViewController(parametersViewController, animated: true)
     }
+    
+    private func coordinateToMainView() {
+        coordinate(to: MainTabBarCoordinator(window: self.window))
+    }
 }
 
-extension UserParametersCoordinator: UIGestureRecognizerDelegate {
-    
-}
+extension UserParametersCoordinator: UIGestureRecognizerDelegate {}

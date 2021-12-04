@@ -64,14 +64,14 @@ class GenderButton: UIView {
         let label = UILabel(frame: .zero)
         label.font = UIFont.bold(with: 16.0)
         label.numberOfLines = 1
-        label.textColor = .black
+        label.textColor = .label
         label.textAlignment = .center
         return label
     }()
     
     private let genderSubtitleLabel: UILabel = {
         let label = UILabel(frame: .zero)
-        label.font = UIFont.regular(with: 12.0)
+        label.font = UIFont.regular(with: 13.0)
         label.lineBreakMode = .byWordWrapping
         label.textColor = .lightGray
         label.textAlignment = .center

@@ -62,7 +62,7 @@ class GenderView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .systemGray6
         navigationController?.isNavigationBarHidden = true
         safeArea = view.safeAreaLayoutGuide
         
