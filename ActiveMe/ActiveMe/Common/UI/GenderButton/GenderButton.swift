@@ -11,13 +11,18 @@ import SnapKit
 import RxCocoa
 import RxSwift
 
+protocol GenderButtonDelegate: AnyObject {
+    func buttonSelected(gender: Gender)
+    func buttonDeselected(gender: Gender)
+}
+
+enum Gender: String {
+    case Male
+    case Female
+    case Other
+}
+
 extension GenderButton {
-    enum Gender: String {
-        case Male
-        case Female
-        case Other
-    }
-    
     struct Appearance {
         let maleFillIcon: UIImage = UIImage(named: "male.fill")!
         let maleIcon: UIImage = UIImage(named: "male")!
@@ -27,7 +32,7 @@ extension GenderButton {
         let otherFillIcon: UIImage = UIImage(named: "other.fill")!
         
         let borderColor: UIColor = UIColor.lightGray
-        let selectedBorderColor: UIColor = UIColor(rgb: 0xF9743E)
+        let selectedBorderColor: UIColor = UIColor(rgb: 0xea5975)
         
         let borderWidth: CGFloat = 2.0
     }
@@ -36,6 +41,8 @@ extension GenderButton {
 class GenderButton: UIView {
     
     private let disposeBag = DisposeBag()
+    
+    weak var delegate: GenderButtonDelegate?
     
     // MARK: - Appearance
     
@@ -156,11 +163,14 @@ class GenderButton: UIView {
         self.addGestureRecognizer(tap)
         
         tap.rx.event.subscribe { [weak self] _ in
-            guard let selected = self?.buttonSelected else { return }
+            guard let selected = self?.buttonSelected,
+                  let gender = self?.gender else { return }
             if !selected {
                 self?.selectButton()
+                self?.delegate?.buttonSelected(gender: gender)
             } else {
                 self?.deseletButton()
+                self?.delegate?.buttonDeselected(gender: gender)
             }
         }.disposed(by: self.disposeBag)
     }

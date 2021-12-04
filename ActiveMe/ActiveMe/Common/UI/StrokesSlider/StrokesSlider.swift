@@ -9,6 +9,10 @@ import Foundation
 import UIKit
 import SnapKit
 
+protocol StrokesSliderDelegate: AnyObject {
+    func getSelectedValue() -> Int?
+}
+
 extension StrokesSlider {
     struct Appearance {
         var cellWidth: CGFloat = UIScreen.main.bounds.width / 7
@@ -45,6 +49,8 @@ class StrokesSlider: UIView {
     }()
     
     private var centerCell: StrokeSliderCellProtocol? = nil
+    
+    var delegate: StrokesSliderDelegate?
     
     // MARK: - Init
     
@@ -141,5 +147,11 @@ extension StrokesSlider: UICollectionViewDelegate {
                 self.centerCell = nil
             }
         }
+    }
+}
+
+extension StrokesSlider: StrokesSliderDelegate {
+    func getSelectedValue() -> Int? {
+        return centerCell?.getValueOfCell()
     }
 }

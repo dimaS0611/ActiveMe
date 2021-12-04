@@ -18,6 +18,7 @@ class StrokesSliderCell: UICollectionViewCell {
     
     lazy var label: UILabel = {
         let label = UILabel()
+        label.textColor = .label
         label.numberOfLines = 1
         label.font = UIFont.regular(with: 12)
         label.textAlignment = .center
@@ -82,7 +83,7 @@ extension StrokesSliderCell: StrokeSliderCellProtocol {
     func setActiveCell() {
         UIView.animate(withDuration: 0.2) {
             self.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
-            self.stroke.backgroundColor = .black
+            self.stroke.backgroundColor = .label
             self.label.font = UIFont.medium(with: 14)
             let generator = UIImpactFeedbackGenerator(style: .light)
             generator.impactOccurred()

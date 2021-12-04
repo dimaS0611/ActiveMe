@@ -15,9 +15,14 @@
 		3ADAFBD7275A274E0026A1CC /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ADAFBD6275A274E0026A1CC /* Roboto-Regular.ttf */; };
 		3ADAFBD9275A27560026A1CC /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ADAFBD8275A27560026A1CC /* Roboto-Medium.ttf */; };
 		3ADAFBDB275A275D0026A1CC /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ADAFBDA275A275D0026A1CC /* Roboto-Light.ttf */; };
+		D442C172275AA17800BD8EE6 /* GenderViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D442C171275AA17800BD8EE6 /* GenderViewCoordinator.swift */; };
+		D442C175275AAABF00BD8EE6 /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D442C174275AAABF00BD8EE6 /* NextButton.swift */; };
+		D442C17C275AB9C300BD8EE6 /* SliderParametersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D442C17B275AB9C300BD8EE6 /* SliderParametersView.swift */; };
+		D442C17E275AB9CD00BD8EE6 /* SliderParametersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D442C17D275AB9CD00BD8EE6 /* SliderParametersViewModel.swift */; };
+		D442C180275AB9D900BD8EE6 /* SliderParametersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D442C17F275AB9D900BD8EE6 /* SliderParametersCoordinator.swift */; };
 		D445F92C27515035001AA71A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F92B27515035001AA71A /* AppDelegate.swift */; };
 		D445F92E27515035001AA71A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F92D27515035001AA71A /* SceneDelegate.swift */; };
-		D445F93027515035001AA71A /* ParametersQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F92F27515035001AA71A /* ParametersQuestionView.swift */; };
+		D445F93027515035001AA71A /* GenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F92F27515035001AA71A /* GenderView.swift */; };
 		D445F93627515036001AA71A /* ActiveMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D445F93427515036001AA71A /* ActiveMe.xcdatamodeld */; };
 		D445F93827515037001AA71A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D445F93727515037001AA71A /* Assets.xcassets */; };
 		D445F93B27515037001AA71A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D445F93927515037001AA71A /* LaunchScreen.storyboard */; };
@@ -38,14 +43,12 @@
 		D48E1E472753887A0034DDBE /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E462753887A0034DDBE /* UIFont+Extension.swift */; };
 		D48E1E56275399B00034DDBE /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D48E1E55275399B00034DDBE /* RxCocoa */; };
 		D48E1E58275399B00034DDBE /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D48E1E57275399B00034DDBE /* RxSwift */; };
-		D48E1E5C2753C8220034DDBE /* UserParametersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E5B2753C8220034DDBE /* UserParametersViewModel.swift */; };
+		D48E1E5C2753C8220034DDBE /* GenderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E5B2753C8220034DDBE /* GenderViewModel.swift */; };
 		D48E1E622753E33F0034DDBE /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E612753E33F0034DDBE /* UIViewController+Extension.swift */; };
 		D48E1E652753E3B50034DDBE /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E642753E3B50034DDBE /* RouterProtocol.swift */; };
 		D48E1E672753E4380034DDBE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E662753E4380034DDBE /* Router.swift */; };
-		D48E1E692754178B0034DDBE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E682754178B0034DDBE /* Coordinator.swift */; };
 		D48E1E6B275419EE0034DDBE /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E6A275419EE0034DDBE /* BaseCoordinator.swift */; };
 		D48E1E6E27541B6F0034DDBE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E6D27541B6F0034DDBE /* AppCoordinator.swift */; };
-		D48E1E7027541C320034DDBE /* ActiveMeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E6F27541C320034DDBE /* ActiveMeCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,10 +77,15 @@
 		3ADAFBD6275A274E0026A1CC /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		3ADAFBD8275A27560026A1CC /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		3ADAFBDA275A275D0026A1CC /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		D442C171275AA17800BD8EE6 /* GenderViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewCoordinator.swift; sourceTree = "<group>"; };
+		D442C174275AAABF00BD8EE6 /* NextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
+		D442C17B275AB9C300BD8EE6 /* SliderParametersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderParametersView.swift; sourceTree = "<group>"; };
+		D442C17D275AB9CD00BD8EE6 /* SliderParametersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderParametersViewModel.swift; sourceTree = "<group>"; };
+		D442C17F275AB9D900BD8EE6 /* SliderParametersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderParametersCoordinator.swift; sourceTree = "<group>"; };
 		D445F92827515035001AA71A /* ActiveMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActiveMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D445F92B27515035001AA71A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D445F92D27515035001AA71A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D445F92F27515035001AA71A /* ParametersQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersQuestionView.swift; sourceTree = "<group>"; };
+		D445F92F27515035001AA71A /* GenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderView.swift; sourceTree = "<group>"; };
 		D445F93527515036001AA71A /* ActiveMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ActiveMe.xcdatamodel; sourceTree = "<group>"; };
 		D445F93727515037001AA71A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D445F93A27515037001AA71A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,14 +105,12 @@
 		D48E1E42275380500034DDBE /* GenderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderButton.swift; sourceTree = "<group>"; };
 		D48E1E44275386FF0034DDBE /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		D48E1E462753887A0034DDBE /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
-		D48E1E5B2753C8220034DDBE /* UserParametersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserParametersViewModel.swift; sourceTree = "<group>"; };
+		D48E1E5B2753C8220034DDBE /* GenderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewModel.swift; sourceTree = "<group>"; };
 		D48E1E612753E33F0034DDBE /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		D48E1E642753E3B50034DDBE /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		D48E1E662753E4380034DDBE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		D48E1E682754178B0034DDBE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		D48E1E6A275419EE0034DDBE /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		D48E1E6D27541B6F0034DDBE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		D48E1E6F27541C320034DDBE /* ActiveMeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveMeCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +158,57 @@
 				3ADAFBD0275A1C690026A1CC /* WaterBalanceListModel.swift */,
 			);
 			path = WaterBalanceList;
+			sourceTree = "<group>";
+		};
+		D442C173275AAAB100BD8EE6 /* NextButton */ = {
+			isa = PBXGroup;
+			children = (
+				D442C174275AAABF00BD8EE6 /* NextButton.swift */,
+			);
+			path = NextButton;
+			sourceTree = "<group>";
+		};
+		D442C176275AB99700BD8EE6 /* UserParameters */ = {
+			isa = PBXGroup;
+			children = (
+				D442C177275AB9A400BD8EE6 /* SliderParameters */,
+				D48E1E5A2753C7C90034DDBE /* Gender */,
+			);
+			path = UserParameters;
+			sourceTree = "<group>";
+		};
+		D442C177275AB9A400BD8EE6 /* SliderParameters */ = {
+			isa = PBXGroup;
+			children = (
+				D442C17A275AB9B600BD8EE6 /* ViewModel */,
+				D442C179275AB9B200BD8EE6 /* View */,
+				D442C178275AB9AB00BD8EE6 /* Coordinator */,
+			);
+			path = SliderParameters;
+			sourceTree = "<group>";
+		};
+		D442C178275AB9AB00BD8EE6 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D442C17F275AB9D900BD8EE6 /* SliderParametersCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D442C179275AB9B200BD8EE6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D442C17B275AB9C300BD8EE6 /* SliderParametersView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D442C17A275AB9B600BD8EE6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D442C17D275AB9CD00BD8EE6 /* SliderParametersViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		D445F91F27515035001AA71A = {
@@ -236,6 +293,7 @@
 		D445F9612751522F001AA71A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				D442C173275AAAB100BD8EE6 /* NextButton */,
 				D48E1E412753803C0034DDBE /* GenderButton */,
 				D445F96227515235001AA71A /* StrokesSlider */,
 			);
@@ -305,27 +363,27 @@
 		D48E1E592753C7C00034DDBE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D442C176275AB99700BD8EE6 /* UserParameters */,
 				3ADAFBCA275A15980026A1CC /* WaterBalance */,
-				D48E1E5A2753C7C90034DDBE /* UserParameters */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		D48E1E5A2753C7C90034DDBE /* UserParameters */ = {
+		D48E1E5A2753C7C90034DDBE /* Gender */ = {
 			isa = PBXGroup;
 			children = (
-				D48E1E6F27541C320034DDBE /* ActiveMeCoordinator.swift */,
+				D4A20654275A63D600453330 /* Coordinator */,
 				D48E1E5F2753C9F80034DDBE /* Model */,
 				D48E1E5E2753C9F40034DDBE /* View */,
 				D48E1E5D2753C9EE0034DDBE /* ViewModel */,
 			);
-			path = UserParameters;
+			path = Gender;
 			sourceTree = "<group>";
 		};
 		D48E1E5D2753C9EE0034DDBE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D48E1E5B2753C8220034DDBE /* UserParametersViewModel.swift */,
+				D48E1E5B2753C8220034DDBE /* GenderViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -333,7 +391,7 @@
 		D48E1E5E2753C9F40034DDBE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D445F92F27515035001AA71A /* ParametersQuestionView.swift */,
+				D445F92F27515035001AA71A /* GenderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -367,10 +425,17 @@
 		D48E1E6C27541B520034DDBE /* BaseCoordinator */ = {
 			isa = PBXGroup;
 			children = (
-				D48E1E682754178B0034DDBE /* Coordinator.swift */,
 				D48E1E6A275419EE0034DDBE /* BaseCoordinator.swift */,
 			);
 			path = BaseCoordinator;
+			sourceTree = "<group>";
+		};
+		D4A20654275A63D600453330 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D442C171275AA17800BD8EE6 /* GenderViewCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -521,28 +586,31 @@
 			files = (
 				D48E1E622753E33F0034DDBE /* UIViewController+Extension.swift in Sources */,
 				D48E1E472753887A0034DDBE /* UIFont+Extension.swift in Sources */,
+				D442C17E275AB9CD00BD8EE6 /* SliderParametersViewModel.swift in Sources */,
 				D445F96C2751551C001AA71A /* StrokesSliderCell.swift in Sources */,
-				D445F93027515035001AA71A /* ParametersQuestionView.swift in Sources */,
+				D445F93027515035001AA71A /* GenderView.swift in Sources */,
 				D48E1E672753E4380034DDBE /* Router.swift in Sources */,
 				D48E1E43275380500034DDBE /* GenderButton.swift in Sources */,
 				D48E1E6E27541B6F0034DDBE /* AppCoordinator.swift in Sources */,
-				D48E1E692754178B0034DDBE /* Coordinator.swift in Sources */,
 				D445F92C27515035001AA71A /* AppDelegate.swift in Sources */,
 				D4480FAD27516CA100EDCD22 /* StrokesSliderFlowLayout.swift in Sources */,
-				D48E1E7027541C320034DDBE /* ActiveMeCoordinator.swift in Sources */,
 				3ADAFBCF275A16080026A1CC /* WaterBalanceListViewModel.swift in Sources */,
 				D445F97427516608001AA71A /* StrokeSliderCellProtocol.swift in Sources */,
 				3ADAFBCD275A15DB0026A1CC /* WaterBalanceListView.swift in Sources */,
 				D445F92E27515035001AA71A /* SceneDelegate.swift in Sources */,
 				D48E1E652753E3B50034DDBE /* RouterProtocol.swift in Sources */,
+				D442C180275AB9D900BD8EE6 /* SliderParametersCoordinator.swift in Sources */,
 				D445F964275152EE001AA71A /* StrokesSlider.swift in Sources */,
+				D442C175275AAABF00BD8EE6 /* NextButton.swift in Sources */,
 				D445F96727515395001AA71A /* MainSection.swift in Sources */,
 				D445F969275153D7001AA71A /* StrokeCell.swift in Sources */,
 				3ADAFBD1275A1C690026A1CC /* WaterBalanceListModel.swift in Sources */,
+				D442C172275AA17800BD8EE6 /* GenderViewCoordinator.swift in Sources */,
 				D48E1E6B275419EE0034DDBE /* BaseCoordinator.swift in Sources */,
+				D442C17C275AB9C300BD8EE6 /* SliderParametersView.swift in Sources */,
 				D48E1E45275386FF0034DDBE /* UIColor+Extension.swift in Sources */,
 				D445F97827516951001AA71A /* UICollectionViewCell+Extension.swift in Sources */,
-				D48E1E5C2753C8220034DDBE /* UserParametersViewModel.swift in Sources */,
+				D48E1E5C2753C8220034DDBE /* GenderViewModel.swift in Sources */,
 				D445F93627515036001AA71A /* ActiveMe.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

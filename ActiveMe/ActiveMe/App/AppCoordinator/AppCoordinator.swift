@@ -7,39 +7,18 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
-class AppCoordinator: BaseCoordinator {
-    let window: UIWindow
-    
+class AppCoordinator: BaseCoordinator<Void> {
+
+    private let window: UIWindow
+
     init(window: UIWindow) {
         self.window = window
-        super.init()
     }
-    
-    override func start() {
-        /// preparing root view
-        let navigationController = UINavigationController()
-        let router = Router(navigationController: navigationController)
-        let coordinator = ActiveMeCoordinator(router: router)
-        
-        /// store child coordinator
-        self.store(coordinator: coordinator)
-        coordinator.start()
-        
-        router.push(coordinator, isAnimated: true) { [weak self, weak coordinator] in
-            guard let self = self,
-                  let coordinator = coordinator
-            else { return }
-            self.free(coordinator: coordinator)
-        }
-        
-        window.rootViewController = navigationController
-        window.makeKeyAndVisible()
-        
-        
-        /// delete when free it
-        coordinator.isCompleted = { [weak self] in
-            self?.free(coordinator: coordinator)
-        }
+
+    override func start() -> Observable<Void> {
+        let repositoryListCoordinator = UserParametersCoordinator(window: window)
+        return coordinate(to: repositoryListCoordinator)
     }
 }

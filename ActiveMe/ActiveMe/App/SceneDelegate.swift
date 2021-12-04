@@ -6,30 +6,23 @@
 //
 
 import UIKit
+import RxSwift
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     private var appCoordinator: AppCoordinator!
-
+    private let disposeBag = DisposeBag()
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: scene)
         
-        let appCoordinatr = AppCoordinator(window: window)
-        appCoordinatr.start()
-        self.appCoordinator = appCoordinatr
-        
-//        window.rootViewController = navigationController()
-//        self.window = window
-//
-//        window.makeKeyAndVisible()
-        
+        appCoordinator = AppCoordinator(window: window)
+        appCoordinator.start()
+            .subscribe()
+            .disposed(by: disposeBag)
     }
-    
-//    func navigationController() -> UINavigationController {
-//        UINavigationController(rootViewController: UserParametersView())
-//    }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
