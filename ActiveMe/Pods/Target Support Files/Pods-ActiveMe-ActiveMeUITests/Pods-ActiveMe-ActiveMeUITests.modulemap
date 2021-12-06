@@ -1,0 +1,6 @@
+framework module Pods_ActiveMe_ActiveMeUITests {
+  umbrella header "Pods-ActiveMe-ActiveMeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
