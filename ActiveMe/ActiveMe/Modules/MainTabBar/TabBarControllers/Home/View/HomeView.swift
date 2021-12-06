@@ -35,6 +35,10 @@ class HomeView: UIViewController {
         setupUI()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+       // viewModel.viewDidDisappear()
+    }
+    
     private func setupUI() {
         view.addSubview(prediction)
         view.addSubview(accData)
@@ -58,17 +62,21 @@ class HomeView: UIViewController {
     }
     
     private func setupBinding() {
-        viewModel.labelPrediction.subscribe { [weak self] prediction in
-            DispatchQueue.main.async {
-                self?.prediction.text = prediction
-            }
-        }.disposed(by: self.disposeBag)
-
-        viewModel.accelerationData.subscribe { [weak self] data in
-            guard let acc = data.element else { return }
-            DispatchQueue.main.async {
-                self?.accData.text = "\(acc.0), \(acc.1), \(acc.2)"
-            }
-        }.disposed(by: self.disposeBag)
+        viewModel.labelPrediction
+            .subscribe(on: MainScheduler.instance)
+            .subscribe { [weak self] prediction in
+                DispatchQueue.main.async {
+                    self?.prediction.text = prediction
+                }
+            }.disposed(by: self.disposeBag)
+        
+        viewModel.accelerationData
+            .subscribe(on: MainScheduler.instance)
+            .subscribe { [weak self] data in
+                guard let acc = data.element else { return }
+                DispatchQueue.main.async {
+                    self?.accData.text = "\(acc.0), \(acc.1), \(acc.2)"
+                }
+            }.disposed(by: self.disposeBag)
     }
 }

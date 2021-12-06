@@ -58,7 +58,7 @@ extension UserParametersCoordinator {
         
         parametersViewController.viewModel?.showNextPage.subscribe(onNext: { [weak self] _ in
             self?.coordinateToMainView()
-        })
+        }).disposed(by: self.disposeBag)
         
         navigationController.interactivePopGestureRecognizer?.isEnabled = false
         

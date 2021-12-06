@@ -13,7 +13,7 @@ class MotionManager {
     
     private let motionManager = CMMotionManager()
     
-    private func stopDeviceMotion() {
+    func stopDeviceMotion() {
         guard motionManager.isDeviceMotionActive else {
             debugPrint("Core Motion Data Unavailable!")
             return
@@ -24,7 +24,10 @@ class MotionManager {
     
     func startDeviceMotion() -> CMMotionManager {
         stopDeviceMotion()
+        
         motionManager.startDeviceMotionUpdates()
+        
+        debugPrint("Core Motion started!")
         
         motionManager.accelerometerUpdateInterval = 1.0 / 80
         

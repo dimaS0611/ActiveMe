@@ -31,6 +31,8 @@ class ActivityClassifier: ActivityClassifierProtocol {
     private let modelName: String = "HARClassifier"
     private var currentIndexInPredictionWindow = 0
     
+    let lock = NSRecursiveLock()
+    
     private let accX = try? MLMultiArray(shape: [ModelConstants.predictionWindowSize as NSNumber], dataType: MLMultiArrayDataType.float32)
     
     private let accY = try? MLMultiArray(shape: [ModelConstants.predictionWindowSize as NSNumber], dataType: MLMultiArrayDataType.float32)
@@ -54,19 +56,25 @@ class ActivityClassifier: ActivityClassifierProtocol {
         }
     }
     
+    func stopClassifying() {
+        MotionManager.shared.stopDeviceMotion()
+    }
+    
     private func addDataToArray(motionSample: CMAccelerometerData) {
         guard let dataArray = predictionWindowDataArray else { return }
         
-        DispatchQueue.global().async {
+        DispatchQueue.global(qos: .utility).async {
             dataArray[[0, ModelConstants.numOfFeatures * self.currentIndexInPredictionWindow] as [NSNumber]] = motionSample.acceleration.x as NSNumber
             dataArray[[0, ModelConstants.numOfFeatures * self.currentIndexInPredictionWindow + 1] as [NSNumber]] = motionSample.acceleration.y as NSNumber
             dataArray[[0, ModelConstants.numOfFeatures * self.currentIndexInPredictionWindow + 2] as [NSNumber]] = motionSample.acceleration.z as NSNumber
             
             self.currentIndexInPredictionWindow += 1
             
+            self.lock.lock()
             self.accelerationData.onNext((motionSample.acceleration.x,
                                           motionSample.acceleration.y,
                                           motionSample.acceleration.z))
+            self.lock.unlock()
             
             if self.currentIndexInPredictionWindow * 3 == ModelConstants.predictionWindowSize {
                 DispatchQueue.main.async {
