@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A1043A9275DDCD00017C25C /* HARClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A1043A8275DDCD00017C25C /* HARClassifier.mlmodel */; };
+		3A1043AD275DDD2C0017C25C /* ActivityClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1043AC275DDD2C0017C25C /* ActivityClassifier.swift */; };
+		3A1043B0275DE11B0017C25C /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1043AF275DE11B0017C25C /* MotionManager.swift */; };
+		3A1043B2275DFC410017C25C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1043B1275DFC410017C25C /* HomeViewModel.swift */; };
+		3A1043B4275DFE840017C25C /* ActivityClassifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1043B3275DFE840017C25C /* ActivityClassifierProtocol.swift */; };
 		3ADAFBCD275A15DB0026A1CC /* WaterBalanceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADAFBCC275A15DB0026A1CC /* WaterBalanceListView.swift */; };
 		3ADAFBCF275A16080026A1CC /* WaterBalanceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADAFBCE275A16080026A1CC /* WaterBalanceListViewModel.swift */; };
 		3ADAFBD1275A1C690026A1CC /* WaterBalanceListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADAFBD0275A1C690026A1CC /* WaterBalanceListModel.swift */; };
@@ -71,6 +76,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A1043A8275DDCD00017C25C /* HARClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = HARClassifier.mlmodel; path = ../../../ML/HARClassifier.mlmodel; sourceTree = "<group>"; };
+		3A1043AC275DDD2C0017C25C /* ActivityClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityClassifier.swift; sourceTree = "<group>"; };
+		3A1043AF275DE11B0017C25C /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
+		3A1043B1275DFC410017C25C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = ActiveMe/Common/Motion/HomeViewModel.swift; sourceTree = SOURCE_ROOT; };
+		3A1043B3275DFE840017C25C /* ActivityClassifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityClassifierProtocol.swift; sourceTree = "<group>"; };
 		3ADAFBCC275A15DB0026A1CC /* WaterBalanceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterBalanceListView.swift; sourceTree = "<group>"; };
 		3ADAFBCE275A16080026A1CC /* WaterBalanceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterBalanceListViewModel.swift; sourceTree = "<group>"; };
 		3ADAFBD0275A1C690026A1CC /* WaterBalanceListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterBalanceListModel.swift; sourceTree = "<group>"; };
@@ -146,6 +156,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A1043A7275DDCAD0017C25C /* ML models */ = {
+			isa = PBXGroup;
+			children = (
+				3A1043A8275DDCD00017C25C /* HARClassifier.mlmodel */,
+			);
+			path = "ML models";
+			sourceTree = "<group>";
+		};
+		3A1043AB275DDD190017C25C /* ML */ = {
+			isa = PBXGroup;
+			children = (
+				3A1043AC275DDD2C0017C25C /* ActivityClassifier.swift */,
+				3A1043B3275DFE840017C25C /* ActivityClassifierProtocol.swift */,
+			);
+			path = ML;
+			sourceTree = "<group>";
+		};
+		3A1043AE275DE10A0017C25C /* Motion */ = {
+			isa = PBXGroup;
+			children = (
+				3A1043AF275DE11B0017C25C /* MotionManager.swift */,
+			);
+			path = Motion;
+			sourceTree = "<group>";
+		};
 		3ADAFBCA275A15980026A1CC /* WaterBalance */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +265,7 @@
 		D445F92A27515035001AA71A /* ActiveMe */ = {
 			isa = PBXGroup;
 			children = (
+				3A1043A7275DDCAD0017C25C /* ML models */,
 				D445F95E27515054001AA71A /* App */,
 				D445F9762751693B001AA71A /* Extensions */,
 				D445F96027515227001AA71A /* Common */,
@@ -281,6 +317,8 @@
 		D445F96027515227001AA71A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3A1043AE275DE10A0017C25C /* Motion */,
+				3A1043AB275DDD190017C25C /* ML */,
 				D445F9612751522F001AA71A /* UI */,
 			);
 			path = Common;
@@ -491,6 +529,7 @@
 		D4DCA86C275BE3870072F725 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3A1043B1275DFC410017C25C /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -716,6 +755,7 @@
 				D442C17E275AB9CD00BD8EE6 /* SliderParametersViewModel.swift in Sources */,
 				D445F96C2751551C001AA71A /* StrokesSliderCell.swift in Sources */,
 				D445F93027515035001AA71A /* GenderView.swift in Sources */,
+				3A1043AD275DDD2C0017C25C /* ActivityClassifier.swift in Sources */,
 				D48E1E43275380500034DDBE /* GenderButton.swift in Sources */,
 				D4DCA876275BE3E00072F725 /* MainTabBarCoordinator.swift in Sources */,
 				D48E1E6E27541B6F0034DDBE /* AppCoordinator.swift in Sources */,
@@ -726,6 +766,9 @@
 				D4DCA879275BE6890072F725 /* HomeView.swift in Sources */,
 				D445F97427516608001AA71A /* StrokeSliderCellProtocol.swift in Sources */,
 				3ADAFBCD275A15DB0026A1CC /* WaterBalanceListView.swift in Sources */,
+				3A1043B0275DE11B0017C25C /* MotionManager.swift in Sources */,
+				3A1043B2275DFC410017C25C /* HomeViewModel.swift in Sources */,
+				3A1043A9275DDCD00017C25C /* HARClassifier.mlmodel in Sources */,
 				D445F92E27515035001AA71A /* SceneDelegate.swift in Sources */,
 				D445F964275152EE001AA71A /* StrokesSlider.swift in Sources */,
 				D442C175275AAABF00BD8EE6 /* NextButton.swift in Sources */,
@@ -733,6 +776,7 @@
 				D445F969275153D7001AA71A /* StrokeCell.swift in Sources */,
 				3ADAFBD1275A1C690026A1CC /* WaterBalanceListModel.swift in Sources */,
 				D442C172275AA17800BD8EE6 /* UserParametersCoordinator.swift in Sources */,
+				3A1043B4275DFE840017C25C /* ActivityClassifierProtocol.swift in Sources */,
 				D4DCA87B275BE6C10072F725 /* ActivityView.swift in Sources */,
 				D48E1E6B275419EE0034DDBE /* BaseCoordinator.swift in Sources */,
 				D442C17C275AB9C300BD8EE6 /* SliderParametersView.swift in Sources */,
