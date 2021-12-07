@@ -12,11 +12,24 @@ import RxSwift
 
 class ActivityView: UIViewController {
     
-    let graph = GraphView()
+    let accXGraph = GraphView(identifier: "acc x")
+    
+    let accYGraph = GraphView(identifier: "acc y")
+    
+    let accZGraph = GraphView(identifier: "acc z")
     
     let viewModel = ActivityViewModel()
     
     let disposeBag = DisposeBag()
+    
+    lazy var activityPrediction: UILabel = {
+       let label = UILabel()
+        label.font = UIFont.regular(with: 17.0)
+        label.lineBreakMode = .byWordWrapping
+        label.textAlignment = .center
+        label.textColor = .label
+        return label
+    }()
     
     override func viewDidLoad() {
         view.backgroundColor = .systemGray6
@@ -24,57 +37,38 @@ class ActivityView: UIViewController {
         setupBinding()
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-       // viewModel.viewDidDisappear()
-    }
-    
     private func setupUI() {
-        view.addSubview(graph)
+        view.addSubview(accXGraph)
+        view.addSubview(accYGraph)
+        view.addSubview(accZGraph)
+        view.addSubview(activityPrediction)
         
-        graph.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+        accXGraph.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
             make.width.equalToSuperview()
-            make.height.equalTo(300.0)
-        }
-    }
-    
-    func addPointToGraph(pointX: Double, pointY: Double) {
-        let graph = graph.hostedGraph
-        let plot = graph?.plot(withIdentifier: "coreplot-graph" as NSCopying)
-        if((plot) != nil) {
-            if(self.graph.plotData.count >= 100) {
-                self.graph.plotData.removeFirst()
-                plot?.deleteData(inIndexRange:NSRange(location: 0, length: 1))
-            }
-        }
-        guard let plotSpace = graph?.defaultPlotSpace as? CPTXYPlotSpace else { return }
-        
-        let location: NSInteger
-        if self.graph.currentIndex >= 100 {
-            location = NSInteger(self.graph.currentIndex - 100 + 2)
-        } else {
-            location = 0
+            make.height.lessThanOrEqualTo(200.0)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(5.0)
         }
         
-        let range: NSInteger
-        
-        if location > 0 {
-            range = location-1
-        } else {
-            range = 0
+        accYGraph.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.width.equalToSuperview()
+            make.height.lessThanOrEqualTo(200.0)
+            make.top.equalTo(accXGraph.snp.bottom).inset(5.0)
+        }
+
+        accZGraph.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.width.equalToSuperview()
+            make.height.lessThanOrEqualTo(200.0)
+            make.top.equalTo(accYGraph.snp.bottom).inset(5.0)
         }
         
-        let oldRange =  CPTPlotRange(locationDecimal: CPTDecimalFromDouble(Double(range)), lengthDecimal: CPTDecimalFromDouble(Double(100-2)))
-        let newRange =  CPTPlotRange(locationDecimal: CPTDecimalFromDouble(Double(location)), lengthDecimal: CPTDecimalFromDouble(Double(100-2)))
-        
-        CPTAnimation.animate(plotSpace, property: "xRange", from: oldRange, to: newRange, duration:0.3)
-        
-        self.graph.currentIndex += 1;
-       // let point = Double.random(in: 75...85)
-        self.graph.plotData.append(pointX)
-        //        self.graph.xValue.text = #"X: \#(String(format:"%.2f",Double(self.plotData.last!)))"#
-        //            yValue.text = #"Y: \#(UInt(self.currentIndex!)) Sec"#
-        plot?.insertData(at: UInt(self.graph.plotData.count-1), numberOfRecords: 1)
+        activityPrediction.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(10.0)
+            make.leading.trailing.equalToSuperview().inset(15.0)
+        }
     }
     
     private func setupBinding() {
@@ -82,9 +76,16 @@ class ActivityView: UIViewController {
             .subscribe(on: MainScheduler.instance)
             .subscribe { [weak self] data in
                 guard let data = data.element else { return }
-                self?.addPointToGraph(pointX: data.0, pointY: 1 / 80.0 )
+                self?.accXGraph.addPoint(x: 1 / 80.0, y: data.0)
+                self?.accYGraph.addPoint(x: 1 / 80.0, y: data.1)
+                self?.accZGraph.addPoint(x: 1 / 80.0, y: data.2)
             }.disposed(by: self.disposeBag)
 
+        self.viewModel.labelPrediction
+            .subscribe(on: MainScheduler.instance)
+            .subscribe { [weak self] prediction in
+                self?.activityPrediction.text = prediction
+            }.disposed(by: self.disposeBag)
     }
     
     

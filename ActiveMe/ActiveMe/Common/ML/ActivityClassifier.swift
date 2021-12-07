@@ -71,9 +71,11 @@ class ActivityClassifier: ActivityClassifierProtocol {
             self.currentIndexInPredictionWindow += 1
             
             self.lock.lock()
-            self.accelerationData.onNext((motionSample.acceleration.x,
-                                          motionSample.acceleration.y,
-                                          motionSample.acceleration.z))
+            DispatchQueue.main.async {
+                self.accelerationData.onNext((motionSample.acceleration.x,
+                                              motionSample.acceleration.y,
+                                              motionSample.acceleration.z))
+            }
             self.lock.unlock()
             
             if self.currentIndexInPredictionWindow * 3 == ModelConstants.predictionWindowSize {

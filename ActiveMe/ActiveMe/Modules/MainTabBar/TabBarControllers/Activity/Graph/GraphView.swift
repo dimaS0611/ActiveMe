@@ -8,7 +8,13 @@
 import Foundation
 import CorePlot
 
+protocol GraphDelegate: AnyObject {
+    func addPoint(x: Double, y: Double)
+}
+
 class GraphView: CPTGraphHostingView {
+    var identifier: String
+    
     var plotData = [Double](repeating: 0.0, count: 100)
     var currentIndex: Double = 0.0
     
@@ -16,7 +22,9 @@ class GraphView: CPTGraphHostingView {
     
     var plot: CPTScatterPlot?
     
-    init() {
+    init(identifier: String) {
+        self.identifier = identifier
+        
         super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width - 20.0,
                                  height: 150.0))
         configureGraph()
@@ -39,7 +47,7 @@ class GraphView: CPTGraphHostingView {
         hostedGraph = graph
         graph?.backgroundColor = UIColor.systemGray6.cgColor
         graph?.paddingBottom = 40.0
-        graph?.paddingLeft = 40.0
+        graph?.paddingLeft = 30.0
         graph?.paddingTop = 30.0
         graph?.paddingRight = 15.0
     }
@@ -71,23 +79,23 @@ class GraphView: CPTGraphHostingView {
             x.delegate = self
         }
         
-        if let y = axisSet.yAxis {
-            y.majorIntervalLength   = 5
-            y.minorTicksPerInterval = 5
-            y.minorGridLineStyle = gridLineStyle
-            y.labelTextStyle = axisTextStyle
-            y.alternatingBandFills = [CPTFill(color: CPTColor.init(componentRed: 255, green: 255, blue: 255, alpha: 0.03)),CPTFill(color: CPTColor.black())]
-            y.axisLineStyle = lineStyle
-            y.axisConstraints = CPTConstraints(lowerOffset: 0.0)
-            y.delegate = self
-        }
+//        if let y = axisSet.yAxis {
+//            y.majorIntervalLength   = 5
+//            y.minorTicksPerInterval = 5
+//            y.minorGridLineStyle = gridLineStyle
+//            y.labelTextStyle = axisTextStyle
+//            y.alternatingBandFills = [CPTFill(color: CPTColor.init(componentRed: 255, green: 255, blue: 255, alpha: 0.03)),CPTFill(color: CPTColor.black())]
+//            y.axisLineStyle = lineStyle
+//            y.axisConstraints = CPTConstraints(lowerOffset: 0.0)
+//            y.delegate = self
+//        }
     }
     
     private func setupPlotSpace() {
         let xMin = 0.0
-        let xMax = 100.0
-        let yMin = -3.0
-        let yMax = 3.0
+        let xMax = 20.0
+        let yMin = -2.0
+        let yMax = 2.0
         guard let plotSpace = graph?.defaultPlotSpace as? CPTXYPlotSpace else { return }
         plotSpace.xRange = CPTPlotRange(locationDecimal: CPTDecimalFromDouble(xMin), lengthDecimal: CPTDecimalFromDouble(xMax - xMin))
         plotSpace.yRange = CPTPlotRange(locationDecimal: CPTDecimalFromDouble(yMin), lengthDecimal: CPTDecimalFromDouble(yMax - yMin))
@@ -100,13 +108,13 @@ class GraphView: CPTGraphHostingView {
         let plotLineStile = CPTMutableLineStyle()
         plotLineStile.lineJoin = .round
         plotLineStile.lineCap = .round
-        plotLineStile.lineWidth = 3
+        plotLineStile.lineWidth = 2
         plotLineStile.lineColor = CPTColor(nativeColor: UIColor(rgb: 0xF9743E))
         
         plot?.dataLineStyle = plotLineStile
         plot?.curvedInterpolationOption = .catmullCustomAlpha
         plot?.interpolation = .curved
-        plot?.identifier = "coreplot-graph" as NSCoding & NSCopying & NSObjectProtocol
+        plot?.identifier = self.identifier as NSCoding & NSCopying & NSObjectProtocol
         
         guard let graph = hostedGraph,
               let plot = plot else { return }
@@ -136,4 +144,43 @@ extension GraphView: CPTScatterPlotDataSource {
 
 extension GraphView: CPTScatterPlotDelegate {
     
+}
+
+extension GraphView: GraphDelegate {
+    func addPoint(x: Double, y: Double) {
+        let graph = self.hostedGraph
+        let plot = self.graph?.plot(withIdentifier: self.identifier as NSCopying)
+        if((plot) != nil) {
+            if(self.plotData.count >= 100) {
+                self.plotData.removeFirst()
+                plot?.deleteData(inIndexRange:NSRange(location: 0, length: 1))
+            }
+        }
+        guard let plotSpace = graph?.defaultPlotSpace as? CPTXYPlotSpace else { return }
+        
+        let location: NSInteger
+        if self.currentIndex >= 100 {
+            location = NSInteger(self.currentIndex - 100 + 2)
+        } else {
+            location = 0
+        }
+        
+        let range: NSInteger
+        
+        if location > 0 {
+            range = location-1
+        } else {
+            range = 0
+        }
+        
+        let oldRange =  CPTPlotRange(locationDecimal: CPTDecimalFromDouble(Double(range)), lengthDecimal: CPTDecimalFromDouble(Double(100-2)))
+        let newRange =  CPTPlotRange(locationDecimal: CPTDecimalFromDouble(Double(location)), lengthDecimal: CPTDecimalFromDouble(Double(100-2)))
+        
+        CPTAnimation.animate(plotSpace, property: "xRange", from: oldRange, to: newRange, duration:0.3)
+        
+        self.currentIndex += 1//x
+        self.plotData.append(y)
+        
+        plot?.insertData(at: UInt(self.plotData.count-1), numberOfRecords: 1)
+    }
 }
