@@ -22,6 +22,7 @@ class MainTabBarCoordinator: BaseCoordinator<Void> {
         let navigationController = UINavigationController(rootViewController: viewController)
         
         window.rootViewController = navigationController
+        window.tintColor = UIColor(rgb: 0x178FB3)
         window.makeKeyAndVisible()
         
         return Observable.never()

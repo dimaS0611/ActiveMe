@@ -13,6 +13,14 @@
 		3A1043B0275DE11B0017C25C /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1043AF275DE11B0017C25C /* MotionManager.swift */; };
 		3A1043B2275DFC410017C25C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1043B1275DFC410017C25C /* HomeViewModel.swift */; };
 		3A1043B4275DFE840017C25C /* ActivityClassifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1043B3275DFE840017C25C /* ActivityClassifierProtocol.swift */; };
+		3A6A2C6C276122D2006B840E /* PedometerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A2C6B276122D2006B840E /* PedometerManager.swift */; };
+		3A6A2C6E27612BA7006B840E /* CareKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3A6A2C6D27612BA7006B840E /* CareKit */; };
+		3A6A2C7027612BA7006B840E /* CareKitStore in Frameworks */ = {isa = PBXBuildFile; productRef = 3A6A2C6F27612BA7006B840E /* CareKitStore */; };
+		3A6A2C7227612BA7006B840E /* CareKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3A6A2C7127612BA7006B840E /* CareKitUI */; };
+		3A6A2C7527612C71006B840E /* CareStoreReferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A2C7427612C71006B840E /* CareStoreReferenceManager.swift */; };
+		3A6A2C7727612F8C006B840E /* OCKStore+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A2C7627612F8C006B840E /* OCKStore+Extension.swift */; };
+		3A6A2C7B27614453006B840E /* CarePlanDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A2C7A27614453006B840E /* CarePlanDataManager.swift */; };
+		3A6A2C7D276153F8006B840E /* StepsTaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A2C7C276153F8006B840E /* StepsTaskStore.swift */; };
 		3ADAFBCD275A15DB0026A1CC /* WaterBalanceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADAFBCC275A15DB0026A1CC /* WaterBalanceListView.swift */; };
 		3ADAFBCF275A16080026A1CC /* WaterBalanceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADAFBCE275A16080026A1CC /* WaterBalanceListViewModel.swift */; };
 		3ADAFBD1275A1C690026A1CC /* WaterBalanceListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADAFBD0275A1C690026A1CC /* WaterBalanceListModel.swift */; };
@@ -87,6 +95,11 @@
 		3A1043AF275DE11B0017C25C /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 		3A1043B1275DFC410017C25C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = ActiveMe/Common/Motion/HomeViewModel.swift; sourceTree = SOURCE_ROOT; };
 		3A1043B3275DFE840017C25C /* ActivityClassifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityClassifierProtocol.swift; sourceTree = "<group>"; };
+		3A6A2C6B276122D2006B840E /* PedometerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedometerManager.swift; sourceTree = "<group>"; };
+		3A6A2C7427612C71006B840E /* CareStoreReferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareStoreReferenceManager.swift; sourceTree = "<group>"; };
+		3A6A2C7627612F8C006B840E /* OCKStore+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OCKStore+Extension.swift"; sourceTree = "<group>"; };
+		3A6A2C7A27614453006B840E /* CarePlanDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarePlanDataManager.swift; sourceTree = "<group>"; };
+		3A6A2C7C276153F8006B840E /* StepsTaskStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsTaskStore.swift; sourceTree = "<group>"; };
 		3ADAFBCC275A15DB0026A1CC /* WaterBalanceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterBalanceListView.swift; sourceTree = "<group>"; };
 		3ADAFBCE275A16080026A1CC /* WaterBalanceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterBalanceListViewModel.swift; sourceTree = "<group>"; };
 		3ADAFBD0275A1C690026A1CC /* WaterBalanceListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterBalanceListModel.swift; sourceTree = "<group>"; };
@@ -149,6 +162,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A6A2C7027612BA7006B840E /* CareKitStore in Frameworks */,
+				3A6A2C6E27612BA7006B840E /* CareKit in Frameworks */,
+				3A6A2C7227612BA7006B840E /* CareKitUI in Frameworks */,
 				D48E1E56275399B00034DDBE /* RxCocoa in Frameworks */,
 				D445F96F27515CBA001AA71A /* SnapKit in Frameworks */,
 				D48E1E58275399B00034DDBE /* RxSwift in Frameworks */,
@@ -210,8 +226,19 @@
 			isa = PBXGroup;
 			children = (
 				3A1043AF275DE11B0017C25C /* MotionManager.swift */,
+				3A6A2C6B276122D2006B840E /* PedometerManager.swift */,
 			);
 			path = Motion;
+			sourceTree = "<group>";
+		};
+		3A6A2C7327612C52006B840E /* CareStorage */ = {
+			isa = PBXGroup;
+			children = (
+				3A6A2C7427612C71006B840E /* CareStoreReferenceManager.swift */,
+				3A6A2C7A27614453006B840E /* CarePlanDataManager.swift */,
+				3A6A2C7C276153F8006B840E /* StepsTaskStore.swift */,
+			);
+			path = CareStorage;
 			sourceTree = "<group>";
 		};
 		3ADAFBCA275A15980026A1CC /* WaterBalance */ = {
@@ -360,6 +387,7 @@
 		D445F96027515227001AA71A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3A6A2C7327612C52006B840E /* CareStorage */,
 				3A1043AE275DE10A0017C25C /* Motion */,
 				3A1043AB275DDD190017C25C /* ML */,
 				D445F9612751522F001AA71A /* UI */,
@@ -413,6 +441,7 @@
 				D48E1E44275386FF0034DDBE /* UIColor+Extension.swift */,
 				D48E1E462753887A0034DDBE /* UIFont+Extension.swift */,
 				D48E1E612753E33F0034DDBE /* UIViewController+Extension.swift */,
+				3A6A2C7627612F8C006B840E /* OCKStore+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -682,6 +711,9 @@
 				D445F9712751654C001AA71A /* GRDB */,
 				D48E1E55275399B00034DDBE /* RxCocoa */,
 				D48E1E57275399B00034DDBE /* RxSwift */,
+				3A6A2C6D27612BA7006B840E /* CareKit */,
+				3A6A2C6F27612BA7006B840E /* CareKitStore */,
+				3A6A2C7127612BA7006B840E /* CareKitUI */,
 			);
 			productName = ActiveMe;
 			productReference = D445F92827515035001AA71A /* ActiveMe.app */;
@@ -922,8 +954,10 @@
 				3A1043AD275DDD2C0017C25C /* ActivityClassifier.swift in Sources */,
 				D48E1E43275380500034DDBE /* GenderButton.swift in Sources */,
 				D4DCA876275BE3E00072F725 /* MainTabBarCoordinator.swift in Sources */,
+				3A6A2C7527612C71006B840E /* CareStoreReferenceManager.swift in Sources */,
 				D48E1E6E27541B6F0034DDBE /* AppCoordinator.swift in Sources */,
 				D445F92C27515035001AA71A /* AppDelegate.swift in Sources */,
+				3A6A2C7B27614453006B840E /* CarePlanDataManager.swift in Sources */,
 				D4480FAD27516CA100EDCD22 /* StrokesSliderFlowLayout.swift in Sources */,
 				D41F5478275E711E00093D1D /* GraphView.swift in Sources */,
 				3ADAFBCF275A16080026A1CC /* WaterBalanceListViewModel.swift in Sources */,
@@ -946,11 +980,14 @@
 				D4DCA87B275BE6C10072F725 /* ActivityView.swift in Sources */,
 				D48E1E6B275419EE0034DDBE /* BaseCoordinator.swift in Sources */,
 				D442C17C275AB9C300BD8EE6 /* SliderParametersView.swift in Sources */,
+				3A6A2C7D276153F8006B840E /* StepsTaskStore.swift in Sources */,
 				D48E1E45275386FF0034DDBE /* UIColor+Extension.swift in Sources */,
 				D445F97827516951001AA71A /* UICollectionViewCell+Extension.swift in Sources */,
+				3A6A2C7727612F8C006B840E /* OCKStore+Extension.swift in Sources */,
 				D48E1E5C2753C8220034DDBE /* GenderViewModel.swift in Sources */,
 				D4DCA87D275BE6D40072F725 /* SettingsView.swift in Sources */,
 				D445F93627515036001AA71A /* ActiveMe.xcdatamodeld in Sources */,
+				3A6A2C6C276122D2006B840E /* PedometerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1049,7 +1086,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1104,7 +1141,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1176,6 +1213,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J9ZD55BC9Y;
@@ -1202,6 +1240,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J9ZD55BC9Y;
@@ -1227,6 +1266,7 @@
 			baseConfigurationReference = 4ADB9D4C1712E76A05851EF0 /* Pods-ActiveMe-ActiveMeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J9ZD55BC9Y;
@@ -1251,6 +1291,7 @@
 			baseConfigurationReference = ACFFE28DFDD648C9B106D7B6 /* Pods-ActiveMe-ActiveMeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J9ZD55BC9Y;
@@ -1347,6 +1388,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3A6A2C6D27612BA7006B840E /* CareKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4AA4F37275BADD3002DBE23 /* XCRemoteSwiftPackageReference "CareKit" */;
+			productName = CareKit;
+		};
+		3A6A2C6F27612BA7006B840E /* CareKitStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4AA4F37275BADD3002DBE23 /* XCRemoteSwiftPackageReference "CareKit" */;
+			productName = CareKitStore;
+		};
+		3A6A2C7127612BA7006B840E /* CareKitUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4AA4F37275BADD3002DBE23 /* XCRemoteSwiftPackageReference "CareKit" */;
+			productName = CareKitUI;
+		};
 		D445F96E27515CBA001AA71A /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D445F96D27515CBA001AA71A /* XCRemoteSwiftPackageReference "SnapKit" */;

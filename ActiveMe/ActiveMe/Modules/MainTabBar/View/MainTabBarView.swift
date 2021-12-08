@@ -14,7 +14,7 @@ class MainTabBarView: UITabBarController {
         self.tabBar.backgroundColor = .systemGray6
         
         let homeItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house.fill"), selectedImage: UIImage(systemName: "house.fill")?.withTintColor(UIColor(rgb: 0x178FB3)))
-        let homeVC = HomeView()
+        let homeVC = HomeView(storeManager: CareStoreReferenceManager.shared.synchronizedStoreManager)
         
         homeVC.tabBarItem = homeItem
         

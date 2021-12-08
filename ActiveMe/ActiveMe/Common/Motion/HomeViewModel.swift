@@ -17,8 +17,8 @@ protocol HomeViewModelProtocol: AnyObject {
 
 class HomeViewModel: HomeViewModelProtocol  {
     private let disposeBag = DisposeBag()
-    private let model: ActivityClassifierProtocol = ActivityClassifier()
-    
+   // private let model: ActivityClassifierProtocol = ActivityClassifier()
+    private let pedometer = PedometerManager()
     var labelPrediction: PublishSubject<String>
     var accelerationData: PublishSubject<(Double, Double, Double)>
     
@@ -30,20 +30,22 @@ class HomeViewModel: HomeViewModelProtocol  {
     }
     
     private func setupBinding() {
-        self.model.prediction
-            .subscribe(on: MainScheduler.instance)
-            .subscribe { [weak self] prediction in
-                self?.labelPrediction.onNext(prediction)
-            }.disposed(by: self.disposeBag)
-        
-        self.model.accelerationData
-            .subscribe(on: MainScheduler.instance)
-            .subscribe { [weak self] data in
-                self?.accelerationData.onNext(data)
-            }.disposed(by: self.disposeBag)
+        pedometer.startActivityUpdater()
+        pedometer.startPedometerUpdater()
+//        self.model.prediction
+//            .subscribe(on: MainScheduler.instance)
+//            .subscribe { [weak self] prediction in
+//                self?.labelPrediction.onNext(prediction)
+//            }.disposed(by: self.disposeBag)
+//
+//        self.model.accelerationData
+//            .subscribe(on: MainScheduler.instance)
+//            .subscribe { [weak self] data in
+//                self?.accelerationData.onNext(data)
+//            }.disposed(by: self.disposeBag)
     }
     
     func viewDidDisappear() {
-        model.stopClassifying()
+    //    model.stopClassifying()
     }
 }

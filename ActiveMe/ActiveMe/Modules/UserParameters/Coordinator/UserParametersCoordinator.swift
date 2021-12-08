@@ -32,6 +32,7 @@ class UserParametersCoordinator: BaseCoordinator<Void> {
             }.disposed(by: self.disposeBag)
 
         window.rootViewController = navigationController
+        window.tintColor = UIColor(rgb: 0x178FB3)
         window.makeKeyAndVisible()
         
         return Observable.never()
