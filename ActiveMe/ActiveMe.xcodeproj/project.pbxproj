@@ -13,6 +13,7 @@
 		3A1043B0275DE11B0017C25C /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1043AF275DE11B0017C25C /* MotionManager.swift */; };
 		3A1043B2275DFC410017C25C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1043B1275DFC410017C25C /* HomeViewModel.swift */; };
 		3A1043B4275DFE840017C25C /* ActivityClassifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1043B3275DFE840017C25C /* ActivityClassifierProtocol.swift */; };
+		3A29A1C22762927E00A0CE79 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A29A1C12762927E00A0CE79 /* HomeModel.swift */; };
 		3A6A2C6C276122D2006B840E /* PedometerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A2C6B276122D2006B840E /* PedometerManager.swift */; };
 		3A6A2C6E27612BA7006B840E /* CareKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3A6A2C6D27612BA7006B840E /* CareKit */; };
 		3A6A2C7027612BA7006B840E /* CareKitStore in Frameworks */ = {isa = PBXBuildFile; productRef = 3A6A2C6F27612BA7006B840E /* CareKitStore */; };
@@ -98,6 +99,7 @@
 		3A1043AF275DE11B0017C25C /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 		3A1043B1275DFC410017C25C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = ActiveMe/Common/Motion/HomeViewModel.swift; sourceTree = SOURCE_ROOT; };
 		3A1043B3275DFE840017C25C /* ActivityClassifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityClassifierProtocol.swift; sourceTree = "<group>"; };
+		3A29A1C12762927E00A0CE79 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeModel.swift; path = ActiveMe/Modules/MainTabBar/TabBarControllers/Home/HomeModel.swift; sourceTree = SOURCE_ROOT; };
 		3A6A2C6B276122D2006B840E /* PedometerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedometerManager.swift; sourceTree = "<group>"; };
 		3A6A2C7427612C71006B840E /* CareStoreReferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareStoreReferenceManager.swift; sourceTree = "<group>"; };
 		3A6A2C7627612F8C006B840E /* OCKStore+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OCKStore+Extension.swift"; sourceTree = "<group>"; };
@@ -654,6 +656,7 @@
 		D4DCA86D275BE38D0072F725 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3A29A1C12762927E00A0CE79 /* HomeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1001,6 +1004,7 @@
 				D445F97427516608001AA71A /* StrokeSliderCellProtocol.swift in Sources */,
 				D4CA4EA1275EA1A800A8FE62 /* ActivityViewModel.swift in Sources */,
 				3ADAFBCD275A15DB0026A1CC /* WaterBalanceListView.swift in Sources */,
+				3A29A1C22762927E00A0CE79 /* HomeModel.swift in Sources */,
 				3A1043B0275DE11B0017C25C /* MotionManager.swift in Sources */,
 				3A1043B2275DFC410017C25C /* HomeViewModel.swift in Sources */,
 				3A6A2C8027615F69006B840E /* StorageManager.swift in Sources */,

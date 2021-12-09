@@ -13,4 +13,5 @@ protocol ActivityClassifierProtocol: AnyObject {
     var accelerationData: PublishSubject<(Double, Double, Double)> { get }
     
     func stopClassifying()
+    func startClassifying()
 }

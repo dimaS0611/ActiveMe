@@ -11,8 +11,8 @@ import GRDB
 struct ActivityStorable: Codable, FetchableRecord, PersistableRecord {
     static var databaseTableName: String = "Activity"
     var date: Date
-    var startTime: Date
-    var endTime: Date
+    var timeStart: Date
+    var timeEnd: Date
     var activity: String
     
     init(date: Date = Date(),
@@ -20,8 +20,8 @@ struct ActivityStorable: Codable, FetchableRecord, PersistableRecord {
          end: Date,
          activity: String) {
         self.date = date
-        self.startTime = start
-        self.endTime = end
+        self.timeStart = start
+        self.timeEnd = end
         self.activity = activity
     }
 }

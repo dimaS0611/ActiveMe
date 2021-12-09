@@ -7,6 +7,7 @@
 
 import Foundation
 import RxSwift
+import NotificationCenter
 
 class BackgroundOperation {
     static func getOperationsToFetchLatestEntries() -> [Operation] {
@@ -26,12 +27,6 @@ class BackgroudPedometer: Operation {
     
     override func main() {
         pedometer.startPedometerUpdater()
-        pedometer.pedometerCounter.subscribe { [weak self] pedometer in
-            self?.storage.storeSteps(model: StepsStorable(date: Date(),
-                                                          start: pedometer.1,
-                                                          end: pedometer.2,
-                                                          steps: pedometer.0))
-        }.disposed(by: self.disposeBag)
     }
 }
 
@@ -48,12 +43,5 @@ class BackgroundActivityClassifier: Operation {
     
     override func main() {
         activityClassifier.startClassifying()
-        
-        activityClassifier.prediction.subscribe { [weak self] prediction in
-            self?.storage.storeActivity(model: ActivityStorable(date: Date(),
-                                                                start: prediction.1,
-                                                                end: prediction.2,
-                                                                activity: prediction.0))
-        }.disposed(by: self.disposeBag)
     }
 }

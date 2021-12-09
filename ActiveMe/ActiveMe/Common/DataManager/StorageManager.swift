@@ -10,9 +10,7 @@ import GRDB
 
 final class StorageManager {
     
-    private let path = Bundle.main.resourceURL?.appendingPathComponent("ActiveMe")
-    
-    private var db: DatabasePool?
+    private var db: DatabaseQueue!
     
     private var migration = DatabaseMigrator()
     
@@ -24,11 +22,15 @@ final class StorageManager {
     
     private func setupDB() {
         do {
-            guard let path = path else {
-                assertionFailure("Cannot obtain db path")
-                return
-            }
-            db = try DatabasePool(path: path.absoluteString)
+            let path = try FileManager.default.url(for: .documentDirectory,
+                                                      in: .userDomainMask,
+                                                      appropriateFor: nil,
+                                                      create:true)
+                .appendingPathComponent("ActiveMe.sqlite")
+            
+            db = try DatabaseQueue(path: path.absoluteString)
+            registerMigration()
+            try migration.migrate(db)
         } catch let error {
             print(error.localizedDescription)
         }
@@ -37,7 +39,6 @@ final class StorageManager {
     private func registerMigration() {
         migration.registerMigration("v1") { db in
             try db.create(table: "Steps") { t in
-                t.column("id", .integer)
                 t.column("date", .date)
                 t.column("timeStart", .datetime)
                 t.column("timeEnd", .datetime)
@@ -48,7 +49,6 @@ final class StorageManager {
             }
             
             try db.create(table: "Activity"){ t in
-                t.column("id", .integer)
                 t.column("date", .date)
                 t.column("timeStart", .integer)
                 t.column("timeEnd", .integer)
@@ -89,6 +89,53 @@ extension StorageManager: StorageManagerProtocol {
         } catch let error {
             print(error.localizedDescription)
             return 0
+        }
+    }
+    
+    func obtainStepsAndTime(by date: Date) -> [DateInterval : Int] {
+        do {
+            let start = Calendar.current.startOfDay(for: date)
+            let end = (Calendar.current.date(byAdding: .hour, value: 24, to: start) ?? Date())
+            
+            let steps = try db?.read({ db in
+                try StepsStorable
+                    .filter(Column("date") > start)
+                    .filter(Column("date") < end)
+                    .fetchAll(db)
+            })
+            
+            guard let steps = steps else { return [:] }
+            
+            var hours = [DateInterval]()
+            for i in 0..<24 {
+                var start: Date
+                
+                if hours.isEmpty {
+                    start = Calendar.current.startOfDay(for: Date())
+                } else {
+                    start = hours[i-1].end
+                }
+                
+                hours.append(DateInterval(start: start, duration: 3600))
+            }
+            
+            var stepsPerHour: [DateInterval:Int] = [:]
+            
+            for hour in hours {
+                stepsPerHour[hour] = 0
+            }
+            
+            for step in steps {
+                for hour in hours {
+                    if hour.contains(step.timeEnd) {
+                        stepsPerHour[hour]! += step.steps
+                    }
+                }
+            }
+            return stepsPerHour
+        } catch let error {
+            print(error.localizedDescription)
+            return [:]
         }
     }
     
@@ -156,7 +203,7 @@ extension StorageManager: StorageManagerProtocol {
         
         activity.values.forEach { el in
             let time = el
-                .map { DateInterval(start: $0.startTime, end: $0.endTime) }
+                .map { DateInterval(start: $0.timeStart, end: $0.timeEnd) }
                 .sorted { $0.duration < $1.duration }
             
             if let type = el.first?.activity,

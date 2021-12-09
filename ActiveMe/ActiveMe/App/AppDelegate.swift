@@ -8,6 +8,7 @@
 import UIKit
 import CoreData
 import BackgroundTasks
+import GRDB
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,16 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // MARK: Registering Launch Handlers for Tasks
-        BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.dzmitry-semianovich.ActiveMe.steps", using: nil) { task in
+        BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.dzmitry-semianovich.ActiveMe.activity", using: nil) { task in
             // Downcast the parameter to an app refresh task as this identifier is used for a refresh request.
             self.handleAppRefresh(task: task as! BGAppRefreshTask)
         }
         return true
-    }
-
-    
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        scheduleAppRefresh()
     }
     
     // MARK: UISceneSession Lifecycle
@@ -45,8 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Scheduling Tasks
     
     func scheduleAppRefresh() {
-        let request = BGAppRefreshTaskRequest(identifier: "com.dzmitry-semianovich.ActiveMe.steps")
-        request.earliestBeginDate = Date(timeIntervalSinceNow: 15 * 60) // Fetch no earlier than 15 minutes from now
+        let request = BGAppRefreshTaskRequest(identifier: "com.dzmitry-semianovich.ActiveMe.activity")
+        request.earliestBeginDate = Date(timeIntervalSinceNow: 15) // Fetch no earlier than 15 minutes from now
         
         do {
             try BGTaskScheduler.shared.submit(request)
@@ -62,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         scheduleAppRefresh()
         
         let queue = OperationQueue()
-        queue.maxConcurrentOperationCount = 1
+        queue.maxConcurrentOperationCount = 2
         
         let operations = BackgroundOperation.getOperationsToFetchLatestEntries()
         let lastOperation = operations.last!

@@ -19,6 +19,7 @@ protocol PedometerDelegate: AnyObject {
 class PedometerManager {
     private let activityManager = CMMotionActivityManager()
     private let pedometer = CMPedometer()
+    private let storage = StorageService()
     
     var pedometerCounter = PublishSubject<(Int, Date, Date)>()
     
@@ -49,17 +50,23 @@ extension PedometerManager: PedometerDelegate {
     
     func startPedometerUpdater() {
         if CMPedometer.isStepCountingAvailable() {
-            pedometer.startUpdates(from: Date()) { data, error in
-                guard let pedometerData = data, error == nil else {
-                    print(error?.localizedDescription)
-                    return
-                }
-                
-                DispatchQueue.main.async {
-                    self.pedometerCounter.onNext((pedometerData.numberOfSteps.intValue, pedometerData.startDate, pedometerData.endDate))
-                    print("start: \(pedometerData.startDate)")
-                    print("end: \(pedometerData.endDate)")
-                    print("steps: \(pedometerData.numberOfSteps.intValue)")
+            DispatchQueue.global(qos: .utility).async {
+                self.pedometer.startUpdates(from: Date()) { data, error in
+                    guard let pedometerData = data, error == nil else {
+                        print(error?.localizedDescription)
+                        return
+                    }
+                    
+                    DispatchQueue.main.async {
+                        self.pedometerCounter.onNext((pedometerData.numberOfSteps.intValue, pedometerData.startDate, pedometerData.endDate))
+                        self.storage.storeSteps(model: StepsStorable(date: Date(),
+                                                                     start: pedometerData.startDate,
+                                                                     end: pedometerData.endDate,
+                                                                     steps: pedometerData.numberOfSteps.intValue))
+                        print("start: \(pedometerData.startDate)")
+                        print("end: \(pedometerData.endDate)")
+                        print("steps: \(pedometerData.numberOfSteps.intValue)")
+                    }
                 }
             }
         }

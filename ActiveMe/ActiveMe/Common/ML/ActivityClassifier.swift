@@ -27,6 +27,10 @@ extension ActivityClassifier {
 }
 
 class ActivityClassifier: ActivityClassifierProtocol {
+    static let shared = ActivityClassifier()
+    
+    private let storage = StorageService()
+    
     private let classifier = try? HARClassifier(contentsOf: HARClassifier.urlOfModelInThisBundle)
     private let modelName: String = "HARClassifier"
     private var currentIndexInPredictionWindow = 0
@@ -35,17 +39,15 @@ class ActivityClassifier: ActivityClassifierProtocol {
     private let accY = try? MLMultiArray(shape: [ModelConstants.predictionWindowSize as NSNumber], dataType: MLMultiArrayDataType.float32)
     private let accZ = try? MLMultiArray(shape: [ModelConstants.predictionWindowSize as NSNumber], dataType: MLMultiArrayDataType.float32)
     
+    private var startTime: Date?
+    private var endTime: Date?
+    
     let predictionWindowDataArray = try? MLMultiArray(shape: [1, ModelConstants.predictionWindowSize] as [NSNumber], dataType: MLMultiArrayDataType.float32)
     
     var prediction = PublishSubject<(String, Date, Date)>()
     var accelerationData = PublishSubject<(Double, Double, Double)>()
     
     let lock = NSRecursiveLock()
-    
-    static let shared = ActivityClassifier()
-    
-    private var startTime: Date?
-    private var endTime: Date?
     
     private init() {}
     
@@ -91,6 +93,10 @@ class ActivityClassifier: ActivityClassifierProtocol {
                            let endTime = self.endTime
                         {
                             self.prediction.onNext((prediction, startTime, endTime))
+                            self.storage.storeActivity(model: ActivityStorable(date: Date(),
+                                                                               start: startTime,
+                                                                               end: endTime,
+                                                                               activity: prediction))
                         }
                     }
                 }

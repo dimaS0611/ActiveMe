@@ -10,6 +10,7 @@ import Foundation
 protocol StorageServiceProtocol: AnyObject {
     func storeSteps(model: StepsStorable)
     func obtainSteps(by date: Date) -> Int
+    func obtainStepsAndTime(by date: Date) -> [DateInterval : Int]
     func obtainAllSteps() -> Int
     
     func storeActivity(model: ActivityStorable)
@@ -27,6 +28,10 @@ class StorageService: StorageServiceProtocol {
     
     func obtainSteps(by date: Date) -> Int {
         storage.obtainSteps(by: date)
+    }
+    
+    func obtainStepsAndTime(by date: Date) -> [DateInterval : Int] {
+        storage.obtainStepsAndTime(by: date)
     }
     
     func obtainAllSteps() -> Int {
@@ -53,5 +58,6 @@ protocol StorageManagerProtocol: AnyObject {
     
     func storeActivity(model: ActivityStorable)
     func obtainActivity(by date: Date) -> [String : DateInterval]
+    func obtainStepsAndTime(by date: Date) -> [DateInterval : Int]
     func obtainAllActivity() -> [String : DateInterval]
 }

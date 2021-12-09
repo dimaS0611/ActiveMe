@@ -12,8 +12,8 @@ struct StepsStorable: Codable, FetchableRecord, PersistableRecord {
 //    var id: Int = 0
     static var databaseTableName: String = "Steps"
     var date: Date
-    var startTime: Date
-    var endTime: Date
+    var timeStart: Date
+    var timeEnd: Date
     var steps: Int
     
     init(date: Date = Date(),
@@ -21,8 +21,8 @@ struct StepsStorable: Codable, FetchableRecord, PersistableRecord {
          end: Date,
          steps: Int) {
         self.date = date
-        self.startTime = start
-        self.endTime = end
+        self.timeStart = start
+        self.timeEnd = end
         self.steps = steps
     }
 }
