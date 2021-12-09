@@ -7,17 +7,24 @@
 
 import Foundation
 import CoreMotion
+import RxSwift
 
 protocol PedometerDelegate: AnyObject {
+    var pedometerCounter: PublishSubject<(Int,Date,Date)> { get }
+    
     func startActivityUpdater()
     func startPedometerUpdater()
 }
 
 class PedometerManager {
     private let activityManager = CMMotionActivityManager()
-    
     private let pedometer = CMPedometer()
     
+    var pedometerCounter = PublishSubject<(Int, Date, Date)>()
+    
+    static let shared = PedometerManager()
+    
+    private init() {}
 }
 
 extension PedometerManager: PedometerDelegate {
@@ -49,6 +56,7 @@ extension PedometerManager: PedometerDelegate {
                 }
                 
                 DispatchQueue.main.async {
+                    self.pedometerCounter.onNext((pedometerData.numberOfSteps.intValue, pedometerData.startDate, pedometerData.endDate))
                     print("start: \(pedometerData.startDate)")
                     print("end: \(pedometerData.endDate)")
                     print("steps: \(pedometerData.numberOfSteps.intValue)")

@@ -19,8 +19,11 @@
 		3A6A2C7227612BA7006B840E /* CareKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3A6A2C7127612BA7006B840E /* CareKitUI */; };
 		3A6A2C7527612C71006B840E /* CareStoreReferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A2C7427612C71006B840E /* CareStoreReferenceManager.swift */; };
 		3A6A2C7727612F8C006B840E /* OCKStore+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A2C7627612F8C006B840E /* OCKStore+Extension.swift */; };
-		3A6A2C7B27614453006B840E /* CarePlanDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A2C7A27614453006B840E /* CarePlanDataManager.swift */; };
-		3A6A2C7D276153F8006B840E /* StepsTaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A2C7C276153F8006B840E /* StepsTaskStore.swift */; };
+		3A6A2C8027615F69006B840E /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A2C7F27615F69006B840E /* StorageManager.swift */; };
+		3A6A2C8227616B08006B840E /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A2C8127616B08006B840E /* StorageService.swift */; };
+		3A6A2C8527616BA0006B840E /* StepsStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A2C8427616BA0006B840E /* StepsStorable.swift */; };
+		3A6A2C8727616FA7006B840E /* ActivityStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A2C8627616FA7006B840E /* ActivityStorable.swift */; };
+		3A6A2C8A276186BC006B840E /* BackgroundOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A2C89276186BC006B840E /* BackgroundOperation.swift */; };
 		3ADAFBCD275A15DB0026A1CC /* WaterBalanceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADAFBCC275A15DB0026A1CC /* WaterBalanceListView.swift */; };
 		3ADAFBCF275A16080026A1CC /* WaterBalanceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADAFBCE275A16080026A1CC /* WaterBalanceListViewModel.swift */; };
 		3ADAFBD1275A1C690026A1CC /* WaterBalanceListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADAFBD0275A1C690026A1CC /* WaterBalanceListModel.swift */; };
@@ -98,8 +101,11 @@
 		3A6A2C6B276122D2006B840E /* PedometerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedometerManager.swift; sourceTree = "<group>"; };
 		3A6A2C7427612C71006B840E /* CareStoreReferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareStoreReferenceManager.swift; sourceTree = "<group>"; };
 		3A6A2C7627612F8C006B840E /* OCKStore+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OCKStore+Extension.swift"; sourceTree = "<group>"; };
-		3A6A2C7A27614453006B840E /* CarePlanDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarePlanDataManager.swift; sourceTree = "<group>"; };
-		3A6A2C7C276153F8006B840E /* StepsTaskStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsTaskStore.swift; sourceTree = "<group>"; };
+		3A6A2C7F27615F69006B840E /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		3A6A2C8127616B08006B840E /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		3A6A2C8427616BA0006B840E /* StepsStorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsStorable.swift; sourceTree = "<group>"; };
+		3A6A2C8627616FA7006B840E /* ActivityStorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityStorable.swift; sourceTree = "<group>"; };
+		3A6A2C89276186BC006B840E /* BackgroundOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundOperation.swift; sourceTree = "<group>"; };
 		3ADAFBCC275A15DB0026A1CC /* WaterBalanceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterBalanceListView.swift; sourceTree = "<group>"; };
 		3ADAFBCE275A16080026A1CC /* WaterBalanceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterBalanceListViewModel.swift; sourceTree = "<group>"; };
 		3ADAFBD0275A1C690026A1CC /* WaterBalanceListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterBalanceListModel.swift; sourceTree = "<group>"; };
@@ -235,10 +241,35 @@
 			isa = PBXGroup;
 			children = (
 				3A6A2C7427612C71006B840E /* CareStoreReferenceManager.swift */,
-				3A6A2C7A27614453006B840E /* CarePlanDataManager.swift */,
-				3A6A2C7C276153F8006B840E /* StepsTaskStore.swift */,
 			);
 			path = CareStorage;
+			sourceTree = "<group>";
+		};
+		3A6A2C7E27615F49006B840E /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				3A6A2C8327616B83006B840E /* StorableModels */,
+				3A6A2C7F27615F69006B840E /* StorageManager.swift */,
+				3A6A2C8127616B08006B840E /* StorageService.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		3A6A2C8327616B83006B840E /* StorableModels */ = {
+			isa = PBXGroup;
+			children = (
+				3A6A2C8427616BA0006B840E /* StepsStorable.swift */,
+				3A6A2C8627616FA7006B840E /* ActivityStorable.swift */,
+			);
+			path = StorableModels;
+			sourceTree = "<group>";
+		};
+		3A6A2C8827618692006B840E /* BackgroundOperation */ = {
+			isa = PBXGroup;
+			children = (
+				3A6A2C89276186BC006B840E /* BackgroundOperation.swift */,
+			);
+			path = BackgroundOperation;
 			sourceTree = "<group>";
 		};
 		3ADAFBCA275A15980026A1CC /* WaterBalance */ = {
@@ -366,6 +397,7 @@
 		D445F95E27515054001AA71A /* App */ = {
 			isa = PBXGroup;
 			children = (
+				3A6A2C8827618692006B840E /* BackgroundOperation */,
 				D48E1E602753E3170034DDBE /* AppCoordinator */,
 				D445F92B27515035001AA71A /* AppDelegate.swift */,
 				D445F92D27515035001AA71A /* SceneDelegate.swift */,
@@ -387,6 +419,7 @@
 		D445F96027515227001AA71A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3A6A2C7E27615F49006B840E /* DataManager */,
 				3A6A2C7327612C52006B840E /* CareStorage */,
 				3A1043AE275DE10A0017C25C /* Motion */,
 				3A1043AB275DDD190017C25C /* ML */,
@@ -947,7 +980,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D48E1E622753E33F0034DDBE /* UIViewController+Extension.swift in Sources */,
+				3A6A2C8A276186BC006B840E /* BackgroundOperation.swift in Sources */,
 				D48E1E472753887A0034DDBE /* UIFont+Extension.swift in Sources */,
+				3A6A2C8727616FA7006B840E /* ActivityStorable.swift in Sources */,
 				D442C17E275AB9CD00BD8EE6 /* SliderParametersViewModel.swift in Sources */,
 				D445F96C2751551C001AA71A /* StrokesSliderCell.swift in Sources */,
 				D445F93027515035001AA71A /* GenderView.swift in Sources */,
@@ -957,9 +992,9 @@
 				3A6A2C7527612C71006B840E /* CareStoreReferenceManager.swift in Sources */,
 				D48E1E6E27541B6F0034DDBE /* AppCoordinator.swift in Sources */,
 				D445F92C27515035001AA71A /* AppDelegate.swift in Sources */,
-				3A6A2C7B27614453006B840E /* CarePlanDataManager.swift in Sources */,
 				D4480FAD27516CA100EDCD22 /* StrokesSliderFlowLayout.swift in Sources */,
 				D41F5478275E711E00093D1D /* GraphView.swift in Sources */,
+				3A6A2C8227616B08006B840E /* StorageService.swift in Sources */,
 				3ADAFBCF275A16080026A1CC /* WaterBalanceListViewModel.swift in Sources */,
 				D4AA4F3C275BB11C002DBE23 /* MainTabBarView.swift in Sources */,
 				D4DCA879275BE6890072F725 /* HomeView.swift in Sources */,
@@ -968,6 +1003,8 @@
 				3ADAFBCD275A15DB0026A1CC /* WaterBalanceListView.swift in Sources */,
 				3A1043B0275DE11B0017C25C /* MotionManager.swift in Sources */,
 				3A1043B2275DFC410017C25C /* HomeViewModel.swift in Sources */,
+				3A6A2C8027615F69006B840E /* StorageManager.swift in Sources */,
+				3A6A2C8527616BA0006B840E /* StepsStorable.swift in Sources */,
 				3A1043A9275DDCD00017C25C /* HARClassifier.mlmodel in Sources */,
 				D445F92E27515035001AA71A /* SceneDelegate.swift in Sources */,
 				D445F964275152EE001AA71A /* StrokesSlider.swift in Sources */,
@@ -980,7 +1017,6 @@
 				D4DCA87B275BE6C10072F725 /* ActivityView.swift in Sources */,
 				D48E1E6B275419EE0034DDBE /* BaseCoordinator.swift in Sources */,
 				D442C17C275AB9C300BD8EE6 /* SliderParametersView.swift in Sources */,
-				3A6A2C7D276153F8006B840E /* StepsTaskStore.swift in Sources */,
 				D48E1E45275386FF0034DDBE /* UIColor+Extension.swift in Sources */,
 				D445F97827516951001AA71A /* UICollectionViewCell+Extension.swift in Sources */,
 				3A6A2C7727612F8C006B840E /* OCKStore+Extension.swift in Sources */,
@@ -1162,10 +1198,11 @@
 				DEVELOPMENT_TEAM = J9ZD55BC9Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ActiveMe/Info.plist;
+				INFOPLIST_KEY_NSMotionUsageDescription = "We are using motion usage in  order  to classify your motion activity and to track your steps count";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortrait UIInterfaceOrientationPortrait UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortrait UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1190,10 +1227,11 @@
 				DEVELOPMENT_TEAM = J9ZD55BC9Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ActiveMe/Info.plist;
+				INFOPLIST_KEY_NSMotionUsageDescription = "We are using motion usage in  order  to classify your motion activity and to track your steps count";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortrait UIInterfaceOrientationPortrait UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortrait UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

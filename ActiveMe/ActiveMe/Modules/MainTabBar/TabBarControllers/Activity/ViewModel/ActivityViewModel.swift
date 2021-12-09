@@ -17,7 +17,7 @@ protocol ActivityViewModelProtocol: AnyObject {
 
 class ActivityViewModel: ActivityViewModelProtocol  {
     private let disposeBag = DisposeBag()
-    private let model = ActivityClassifier()
+    private let model = ActivityClassifier.shared
     
     var labelPrediction: PublishSubject<String>
     var accelerationData: PublishSubject<(Double, Double, Double)>
@@ -30,9 +30,9 @@ class ActivityViewModel: ActivityViewModelProtocol  {
     }
     
     private func setupBinding() {
-        self.model.prediction.subscribe { [weak self] prediction in
-            self?.labelPrediction.onNext(prediction)
-        }.disposed(by: self.disposeBag)
+//        self.model.prediction.subscribe { [weak self] prediction in
+//            self?.labelPrediction.onNext(prediction)
+//        }.disposed(by: self.disposeBag)
 
         self.model.accelerationData.subscribe { [weak self] data in
             self?.accelerationData.onNext(data)

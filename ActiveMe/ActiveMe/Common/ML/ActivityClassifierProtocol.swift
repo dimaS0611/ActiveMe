@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 
 protocol ActivityClassifierProtocol: AnyObject {
-    var prediction: PublishSubject<String> { get }
+    var prediction: PublishSubject<(String, Date, Date)> { get }
     var accelerationData: PublishSubject<(Double, Double, Double)> { get }
     
     func stopClassifying()

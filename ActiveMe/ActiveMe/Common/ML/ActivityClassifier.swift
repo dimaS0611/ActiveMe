@@ -31,24 +31,25 @@ class ActivityClassifier: ActivityClassifierProtocol {
     private let modelName: String = "HARClassifier"
     private var currentIndexInPredictionWindow = 0
     
-    let lock = NSRecursiveLock()
-    
     private let accX = try? MLMultiArray(shape: [ModelConstants.predictionWindowSize as NSNumber], dataType: MLMultiArrayDataType.float32)
-    
     private let accY = try? MLMultiArray(shape: [ModelConstants.predictionWindowSize as NSNumber], dataType: MLMultiArrayDataType.float32)
-    
     private let accZ = try? MLMultiArray(shape: [ModelConstants.predictionWindowSize as NSNumber], dataType: MLMultiArrayDataType.float32)
     
     let predictionWindowDataArray = try? MLMultiArray(shape: [1, ModelConstants.predictionWindowSize] as [NSNumber], dataType: MLMultiArrayDataType.float32)
     
-    var prediction = PublishSubject<String>()
+    var prediction = PublishSubject<(String, Date, Date)>()
     var accelerationData = PublishSubject<(Double, Double, Double)>()
     
-    init() {
-        startClassifying()
-    }
+    let lock = NSRecursiveLock()
     
-    private func startClassifying() {
+    static let shared = ActivityClassifier()
+    
+    private var startTime: Date?
+    private var endTime: Date?
+    
+    private init() {}
+    
+    func startClassifying() {
         MotionManager.shared.startDeviceMotion().startAccelerometerUpdates(to: .main) { data, error in
             guard let data = data else { return }
             
@@ -64,6 +65,10 @@ class ActivityClassifier: ActivityClassifierProtocol {
         guard let dataArray = predictionWindowDataArray else { return }
         
         DispatchQueue.global(qos: .utility).async {
+            if self.currentIndexInPredictionWindow == 0 {
+                self.startTime = Date()
+            }
+            
             dataArray[[0, ModelConstants.numOfFeatures * self.currentIndexInPredictionWindow] as [NSNumber]] = motionSample.acceleration.x as NSNumber
             dataArray[[0, ModelConstants.numOfFeatures * self.currentIndexInPredictionWindow + 1] as [NSNumber]] = motionSample.acceleration.y as NSNumber
             dataArray[[0, ModelConstants.numOfFeatures * self.currentIndexInPredictionWindow + 2] as [NSNumber]] = motionSample.acceleration.z as NSNumber
@@ -81,7 +86,12 @@ class ActivityClassifier: ActivityClassifierProtocol {
             if self.currentIndexInPredictionWindow * 3 == ModelConstants.predictionWindowSize {
                 DispatchQueue.main.async {
                     if let prediction = self.activityPrediction() {
-                        self.prediction.onNext(prediction)
+                        self.endTime = Date()
+                        if let startTime = self.startTime,
+                           let endTime = self.endTime
+                        {
+                            self.prediction.onNext((prediction, startTime, endTime))
+                        }
                     }
                 }
                 

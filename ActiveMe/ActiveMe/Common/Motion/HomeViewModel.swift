@@ -18,7 +18,7 @@ protocol HomeViewModelProtocol: AnyObject {
 class HomeViewModel: HomeViewModelProtocol  {
     private let disposeBag = DisposeBag()
    // private let model: ActivityClassifierProtocol = ActivityClassifier()
-    private let pedometer = PedometerManager()
+    private let pedometer = PedometerManager.shared
     var labelPrediction: PublishSubject<String>
     var accelerationData: PublishSubject<(Double, Double, Double)>
     
