@@ -36,6 +36,8 @@
 		73B12AD6928F319E88059F4F /* Pods_ActiveMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC86FF7029CD919886F8AE8 /* Pods_ActiveMe.framework */; };
 		8CE3BE2BC57228A6EF893722 /* Pods_ActiveMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A43C10F58614F261F73A06CE /* Pods_ActiveMeTests.framework */; };
 		D41F5478275E711E00093D1D /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F5477275E711E00093D1D /* GraphView.swift */; };
+		D424DCB22764917800E49132 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D424DCB12764917800E49132 /* UserDefaultsManager.swift */; };
+		D424DCB4276491E600E49132 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D424DCB3276491E600E49132 /* UserDefaultsKeys.swift */; };
 		D442C172275AA17800BD8EE6 /* UserParametersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D442C171275AA17800BD8EE6 /* UserParametersCoordinator.swift */; };
 		D442C175275AAABF00BD8EE6 /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D442C174275AAABF00BD8EE6 /* NextButton.swift */; };
 		D442C17C275AB9C300BD8EE6 /* SliderParametersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D442C17B275AB9C300BD8EE6 /* SliderParametersView.swift */; };
@@ -125,6 +127,8 @@
 		C2228BD15E8A455C0FF41079 /* Pods-ActiveMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiveMe.release.xcconfig"; path = "Target Support Files/Pods-ActiveMe/Pods-ActiveMe.release.xcconfig"; sourceTree = "<group>"; };
 		C9EAAFAA08498AA2F64CD99D /* Pods-ActiveMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiveMeTests.debug.xcconfig"; path = "Target Support Files/Pods-ActiveMeTests/Pods-ActiveMeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D41F5477275E711E00093D1D /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		D424DCB12764917800E49132 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		D424DCB3276491E600E49132 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 		D442C171275AA17800BD8EE6 /* UserParametersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserParametersCoordinator.swift; sourceTree = "<group>"; };
 		D442C174275AAABF00BD8EE6 /* NextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
 		D442C17B275AB9C300BD8EE6 /* SliderParametersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderParametersView.swift; sourceTree = "<group>"; };
@@ -250,9 +254,8 @@
 		3A6A2C7E27615F49006B840E /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
-				3A6A2C8327616B83006B840E /* StorableModels */,
-				3A6A2C7F27615F69006B840E /* StorageManager.swift */,
-				3A6A2C8127616B08006B840E /* StorageService.swift */,
+				D424DCB02764916300E49132 /* UserDefaultsManager */,
+				D424DCAF2764915600E49132 /* StorageManager */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -298,6 +301,25 @@
 				D41F5477275E711E00093D1D /* GraphView.swift */,
 			);
 			path = Graph;
+			sourceTree = "<group>";
+		};
+		D424DCAF2764915600E49132 /* StorageManager */ = {
+			isa = PBXGroup;
+			children = (
+				3A6A2C8327616B83006B840E /* StorableModels */,
+				3A6A2C7F27615F69006B840E /* StorageManager.swift */,
+				3A6A2C8127616B08006B840E /* StorageService.swift */,
+			);
+			path = StorageManager;
+			sourceTree = "<group>";
+		};
+		D424DCB02764916300E49132 /* UserDefaultsManager */ = {
+			isa = PBXGroup;
+			children = (
+				D424DCB12764917800E49132 /* UserDefaultsManager.swift */,
+				D424DCB3276491E600E49132 /* UserDefaultsKeys.swift */,
+			);
+			path = UserDefaultsManager;
 			sourceTree = "<group>";
 		};
 		D442C173275AAAB100BD8EE6 /* NextButton */ = {
@@ -986,6 +1008,7 @@
 				3A6A2C8A276186BC006B840E /* BackgroundOperation.swift in Sources */,
 				D48E1E472753887A0034DDBE /* UIFont+Extension.swift in Sources */,
 				3A6A2C8727616FA7006B840E /* ActivityStorable.swift in Sources */,
+				D424DCB4276491E600E49132 /* UserDefaultsKeys.swift in Sources */,
 				D442C17E275AB9CD00BD8EE6 /* SliderParametersViewModel.swift in Sources */,
 				D445F96C2751551C001AA71A /* StrokesSliderCell.swift in Sources */,
 				D445F93027515035001AA71A /* GenderView.swift in Sources */,
@@ -994,6 +1017,7 @@
 				D4DCA876275BE3E00072F725 /* MainTabBarCoordinator.swift in Sources */,
 				3A6A2C7527612C71006B840E /* CareStoreReferenceManager.swift in Sources */,
 				D48E1E6E27541B6F0034DDBE /* AppCoordinator.swift in Sources */,
+				D424DCB22764917800E49132 /* UserDefaultsManager.swift in Sources */,
 				D445F92C27515035001AA71A /* AppDelegate.swift in Sources */,
 				D4480FAD27516CA100EDCD22 /* StrokesSliderFlowLayout.swift in Sources */,
 				D41F5478275E711E00093D1D /* GraphView.swift in Sources */,

@@ -10,6 +10,12 @@ import UIKit
 import SnapKit
 import RxSwift
 
+enum SliderQuestionType: String {
+    case height = "height"
+    case age = "age"
+    case weight = "weight"
+}
+
 extension SliderParametersView {
     struct Appearance {
         let appIcon: UIImage = UIImage(named: "ActiveMeName")!
@@ -19,6 +25,8 @@ extension SliderParametersView {
 class SliderParametersView: UIViewController {
     
     var question: String
+    
+    var type: SliderQuestionType
     
     var sliderRange: Range<Int>
     
@@ -52,9 +60,10 @@ class SliderParametersView: UIViewController {
     
     var viewModel: SliderParametersViewModelProtocol?
     
-    init(question: String, sliderRange: Range<Int>) {
+    init(question: String, type: SliderQuestionType, sliderRange: Range<Int>) {
         self.question = question
         self.sliderRange = sliderRange
+        self.type = type
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -123,6 +132,6 @@ class SliderParametersView: UIViewController {
 extension SliderParametersView: NextButtonDelegate {
     func nextButtonTapped() {
         guard let value = self.slider.getSelectedValue() else { return }
-        self.viewModel?.chooseValue.onNext(value)
+        self.viewModel?.chooseValue.onNext((value, self.type))
     }
 }

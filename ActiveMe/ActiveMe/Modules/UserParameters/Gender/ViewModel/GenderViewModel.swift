@@ -27,7 +27,8 @@ class GenderViewModel: GenderViewModelProtocol {
     
     private func setupBinding() {
         self.chooseGender.subscribe { [weak self] gender in
-            print(gender)
+            guard let gender = gender.element else { return }
+            UserDefaultsManager.saveObject(for: .genderValue, value: gender)
         }.disposed(by: self.disposeBag)
 
     }

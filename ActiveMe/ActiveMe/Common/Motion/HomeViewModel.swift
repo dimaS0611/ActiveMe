@@ -36,11 +36,11 @@ class HomeViewModel: HomeViewModelProtocol  {
     }
     
     private func setupBinding() {
-       // pedometer.startActivityUpdater()
+        pedometer.startActivityUpdater()
         
         pedometer.startPedometerUpdater()
         
-        activity.startClassifying()
+       // activity.startClassifying()
 
 //        self.model.prediction
 //            .subscribe(on: MainScheduler.instance)
@@ -56,7 +56,15 @@ class HomeViewModel: HomeViewModelProtocol  {
     }
     
     func obtainSetpsPerTime(date: Date) -> [DateInterval : Int] {
-        self.model.obtainStepsPerTime(date: date)
+        pedometer.getPedometerDataSinceLastSession { result in
+            switch result {
+            case .success(let data):
+                print(data)
+            case .failure(let error):
+                print(error)
+            }
+        }
+        return self.model.obtainStepsPerTime(date: date)
     }
     
     func viewDidDisappear() {

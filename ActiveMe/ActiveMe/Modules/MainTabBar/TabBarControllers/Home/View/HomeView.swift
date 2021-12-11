@@ -13,6 +13,12 @@ import CareKitUI
 import CareKit
 
 final class HomeView: OCKDailyPageViewController {
+
+    private enum DailyPlan: String, CaseIterable {
+        case water
+        case training
+        case goodMood
+    }
     
     private var viewModel: HomeViewModelProtocol = HomeViewModel()
     
@@ -27,9 +33,9 @@ final class HomeView: OCKDailyPageViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let logo = UIImage(named: "ActiveMeName")
-        let imageView = UIImageView(image: logo)
-        self.navigationItem.titleView = imageView
+        let logoView = UIImageView()
+        logoView.image = UIImage(named: "ActiveMeName")
+        navigationController?.navigationItem.titleView = logoView
     }
     
     override func dailyPageViewController(_ dailyPageViewController: OCKDailyPageViewController, prepare listViewController: OCKListViewController, for date: Date) {
@@ -44,30 +50,23 @@ final class HomeView: OCKDailyPageViewController {
             
             tasks.forEach { task in
                 switch task.id {
-                case CareStoreReferenceManager.TaskIdentifiers.feelling.rawValue:
-                    
-                    let feelingCard = OCKGridTaskViewController(task: task,
-                                                                eventQuery: .init(for: date),
-                                                                storeManager: self.storeManager)
-                    
-                    listViewController.appendViewController(feelingCard, animated: false)
-                    
-                case CareStoreReferenceManager.TaskIdentifiers.steps.rawValue:
-                    let stepsSeries = OCKDataSeriesConfiguration(taskID: "steps",
-                                                                 legendTitle: "Today's steps",
-                                                                 gradientStartColor: #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1),
-                                                                 gradientEndColor: UIColor(rgb: 0x178FB3),
-                                                                 markerSize: 10,
-                                                                 eventAggregator: OCKEventAggregator.countOutcomeValues)
-                    
-                    let stepsChart = OCKCartesianChartViewController(plotType: .bar,
-                                                                     selectedDate: date,
-                                                                     configurations: [stepsSeries],
+                case CareStoreReferenceManager.TaskIdentifiers.dailyTracker.rawValue:
+
+                    let feelingCard = OCKChecklistTaskViewController(task: task,
+                                                                     eventQuery: .init(for: date),
                                                                      storeManager: self.storeManager)
                     
-                    stepsChart.chartView.headerView.titleLabel.text = "Today's steps"
+                    feelingCard.taskView.headerView.detailLabel.text = ""
+                    feelingCard.taskView.headerView.accessibilityLabel = ""
+                    listViewController.appendViewController(feelingCard, animated: false)
                     
-                    listViewController.appendViewController(stepsChart, animated: false)
+                case CareStoreReferenceManager.TaskIdentifiers.mood.rawValue:
+                    let moodTask = OCKGridTaskViewController(task: task,
+                                                             eventQuery: .init(for: date),
+                                                             storeManager: self.storeManager)
+                    
+                    moodTask.taskView.headerView.detailLabel.text = ""
+                   // listViewController.appendViewController(moodTask, animated: false)
                 default:
                     return
                 }
@@ -75,6 +74,31 @@ final class HomeView: OCKDailyPageViewController {
         }
         
         chart = OCKCartesianChartView(type: .bar)
+        
+        var dataSeries = [OCKDataSeries]()
+        for _ in 0..<24 {
+          //  let hour = formatter.string(from: time.start)
+            var series = OCKDataSeries(values: [CGFloat()], title: "")
+            series.size = 27
+            series.gradientStartColor = UIColor(rgb: Int.random(in: Range<Int>(0...2147483637)))
+            series.gradientEndColor = UIColor(rgb: Int.random(in: Range<Int>(0...2147483637)))
+            dataSeries.append(series)
+        }
+        
+        self.chart?.graphView.dataSeries.append(contentsOf: dataSeries)
+        
+        /// If you do not specify the minimum and maximum of your graph, `OCKCartesianGraphView` will take care of the right scaling.
+        /// This can be helpful if you do not know the range of your values but it makes it more difficult to animate the graphs.
+        self.chart?.graphView.xMinimum = 1
+        self.chart?.graphView.xMaximum = 24
+        
+        /// You can also set an array of strings to set custom labels on the x-axis.
+        /// I am not sure if that works on the y-axis as well.
+        self.chart?.graphView.horizontalAxisMarkers = ["steps"]
+        
+        /// With theses properties you can set a title and a subtitle for your graph.
+        self.chart?.headerView.titleLabel.text = "Your daily activity: \(0) steps"
+        self.chart?.headerView.detailLabel.text = ""
         
         if let chart = chart {
             listViewController.appendView(chart, animated: false)
@@ -93,37 +117,23 @@ final class HomeView: OCKDailyPageViewController {
             
             let formatter = DateFormatter()
             formatter.dateFormat = "HH"
-            
-            
+
+            var numberOfSteps = 0
             var dataSeries = [OCKDataSeries]()
             for (time, step) in steps {
                 let hour = formatter.string(from: time.start)
                 var series = OCKDataSeries(values: [CGFloat(step)], title: hour)
-                series.size = 15
+                series.size = 27
                 series.gradientStartColor = UIColor(rgb: Int.random(in: Range<Int>(0...2147483637)))
                 series.gradientEndColor = UIColor(rgb: Int.random(in: Range<Int>(0...2147483637)))
                 dataSeries.append(series)
-            }
-            
-            for series in dataSeries {
-                DispatchQueue.main.async {
-                    self.chart?.graphView.dataSeries.append(series)
-                }
+                numberOfSteps += step
             }
             
             DispatchQueue.main.async {
-                /// If you do not specify the minimum and maximum of your graph, `OCKCartesianGraphView` will take care of the right scaling.
-                /// This can be helpful if you do not know the range of your values but it makes it more difficult to animate the graphs.
-                self.chart?.graphView.xMinimum = 1
-                self.chart?.graphView.xMaximum = 24
-                
-                /// You can also set an array of strings to set custom labels on the x-axis.
-                /// I am not sure if that works on the y-axis as well.
-                self.chart?.graphView.horizontalAxisMarkers = ["steps"]
-                
-                /// With theses properties you can set a title and a subtitle for your graph.
-                self.chart?.headerView.titleLabel.text = "Your daily activity"
-                self.chart?.headerView.detailLabel.text = ""
+                self.chart?.graphView.dataSeries = dataSeries
+
+                self.chart?.headerView.titleLabel.text = "Your daily activity: \(numberOfSteps) steps"
             }
         }
     }
@@ -216,3 +226,4 @@ final class HomeView: OCKDailyPageViewController {
 //            }.disposed(by: self.disposeBag)
 //    }
 //}
+

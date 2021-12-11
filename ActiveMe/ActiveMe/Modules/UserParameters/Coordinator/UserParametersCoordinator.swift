@@ -41,7 +41,7 @@ class UserParametersCoordinator: BaseCoordinator<Void> {
 
 extension UserParametersCoordinator {
     private func showHeightView(in navigationController: UINavigationController) {
-        let parametersViewController = SliderParametersView(question: "Tell us your height", sliderRange: Range<Int>(100...250))
+        let parametersViewController = SliderParametersView(question: "Tell us your height", type: .height, sliderRange: Range<Int>(100...250))
         parametersViewController.viewModel = SliderParametersViewModel()
         
         parametersViewController.viewModel?.showNextPage.subscribe(onNext: { [weak self] _ in
@@ -54,7 +54,7 @@ extension UserParametersCoordinator {
     }
     
     private func showWeightView(in navigationController: UINavigationController) {
-        let parametersViewController = SliderParametersView(question: "Tell us your weight", sliderRange: Range<Int>(30...200))
+        let parametersViewController = SliderParametersView(question: "Tell us your weight", type: .weight, sliderRange: Range<Int>(30...200))
         parametersViewController.viewModel = SliderParametersViewModel()
         
         parametersViewController.viewModel?.showNextPage.subscribe(onNext: { [weak self] _ in
@@ -67,7 +67,7 @@ extension UserParametersCoordinator {
     }
     
     private func showAgeView(in navigationController: UINavigationController) {
-        let parametersViewController = SliderParametersView(question: "Tell us your age", sliderRange: Range<Int>(10...120))
+        let parametersViewController = SliderParametersView(question: "Tell us your age", type: .age, sliderRange: Range<Int>(10...120))
         parametersViewController.viewModel = SliderParametersViewModel()
         
         parametersViewController.viewModel?.showNextPage.subscribe(onNext: { [weak self] _ in
@@ -80,6 +80,7 @@ extension UserParametersCoordinator {
     }
     
     private func coordinateToMainView() {
+        UserDefaultsManager.saveObject(for: .isRegistered, value: true)
         coordinate(to: MainTabBarCoordinator(window: self.window))
     }
 }

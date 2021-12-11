@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func scheduleAppRefresh() {
         let request = BGAppRefreshTaskRequest(identifier: "com.dzmitry-semianovich.ActiveMe.activity")
-        request.earliestBeginDate = Date(timeIntervalSinceNow: 15) // Fetch no earlier than 15 minutes from now
+        request.earliestBeginDate = Date(timeIntervalSinceNow: 60) // Fetch no earlier than 15 sec from now
         
         do {
             try BGTaskScheduler.shared.submit(request)
@@ -64,6 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let lastOperation = operations.last!
         
         task.expirationHandler = {
+            self.scheduleAppRefresh()
             // After all operations are cancelled, the completion block below is called to set the task to complete.
             queue.cancelAllOperations()
         }

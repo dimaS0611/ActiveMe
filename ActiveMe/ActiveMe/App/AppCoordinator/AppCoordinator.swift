@@ -18,7 +18,13 @@ class AppCoordinator: BaseCoordinator<Void> {
     }
 
     override func start() -> Observable<Void> {
-        let repositoryListCoordinator = UserParametersCoordinator(window: window)
-        return coordinate(to: repositoryListCoordinator)
+        if UserDefaultsManager.getRegisterData() {
+            let mainCoordinator = MainTabBarCoordinator(window: window)
+            return coordinate(to: mainCoordinator)
+        } else {
+            let registerCoordinator = UserParametersCoordinator(window: window)
+            return coordinate(to: registerCoordinator)
+        }
+        
     }
 }

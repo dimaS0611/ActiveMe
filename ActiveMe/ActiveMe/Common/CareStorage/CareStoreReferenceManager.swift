@@ -11,16 +11,16 @@ import CareKit
 final class CareStoreReferenceManager {
     
     enum TaskIdentifiers: String, CaseIterable {
-      case feelling
-        case steps
+      case dailyTracker
+        case mood
     }
     
     static let shared = CareStoreReferenceManager()
     
     lazy var synchronizedStoreManager: OCKSynchronizedStoreManager = {
-        let store = OCKStore(name: "Steps tracker")
+        let store = OCKStore(name: "Daily tracker")
         store.populateDailyTask()
-        store.populateStepsTask()
+       // store.populateMoodTask()
         let manager = OCKSynchronizedStoreManager(wrapping: store)
         return manager
     }()

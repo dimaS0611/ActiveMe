@@ -22,8 +22,6 @@ class BackgroundOperation {
 class BackgroudPedometer: Operation {
     
     private let pedometer = PedometerManager.shared
-    private let disposeBag = DisposeBag()
-    private let storage = StorageService()
     
     override func main() {
         pedometer.startPedometerUpdater()
@@ -33,8 +31,6 @@ class BackgroudPedometer: Operation {
 class BackgroundActivityClassifier: Operation {
     
     private let activityClassifier = ActivityClassifier.shared
-    private let disposeBag = DisposeBag()
-    private let storage = StorageService()
     
     override func cancel() {
         super.cancel()

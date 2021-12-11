@@ -18,44 +18,66 @@ extension OCKStore {
             return assertionFailure("Could not create time 8AM this morning")
         }
         
-        let feellingSchedule = OCKSchedule(composing: [OCKScheduleElement(start: beforeBrekfast,
+        let dailySchedule = OCKSchedule(composing: [OCKScheduleElement(start:
+                                                                            beforeBrekfast,
                                                                          end: nil,
                                                                          interval: DateComponents(day: 1),
-                                                                         text: "How are your feeling today?",
+                                                                         text: "Glass of water",
+                                                                         targetValues: [],
+                                                                         duration: .allDay),
+                                                      OCKScheduleElement(start: beforeBrekfast,
+                                                                         end: nil,
+                                                                         interval: DateComponents(day: 1),
+                                                                         text: "Morning workout ", targetValues: [], duration: .allDay),
+                                                      OCKScheduleElement(start: beforeBrekfast,
+                                                                         end: nil,
+                                                                         interval: DateComponents(day: 1),
+                                                                         text: "Great mood",
                                                                          targetValues: [],
                                                                          duration: .allDay)])
         
-        var feellingTask = OCKTask(id: CareStoreReferenceManager.TaskIdentifiers.feelling.rawValue,
-                                   title: "Track feeling",
+        var dailyTask = OCKTask(id: CareStoreReferenceManager.TaskIdentifiers.dailyTracker.rawValue,
+                                   title: "Daily tracker",
                                    carePlanID: nil,
-                                   schedule: feellingSchedule)
+                                   schedule: dailySchedule)
         
-        feellingTask.instructions = "How are your feeling today?"
-        feellingTask.impactsAdherence = true
-        addTask(feellingTask)
+        dailyTask.impactsAdherence = true
+        
+        addTask(dailyTask)
     }
     
-    func populateStepsTask() {
+    func populateMoodTask() {
         let thisMorning = Calendar.current.startOfDay(for: Date())
         guard let beforeBrekfast = Calendar.current.date(byAdding: .hour, value: 8, to: thisMorning)
         else {
             return assertionFailure("Could not create time 8AM this morning")
         }
         
-        let stepsSchedule = OCKSchedule(composing: [OCKScheduleElement(start: beforeBrekfast,
+        let moodSchedule = OCKSchedule(composing: [OCKScheduleElement(start: beforeBrekfast,
                                                                          end: nil,
                                                                          interval: DateComponents(day: 1),
-                                                                         text: "",
-                                                                       targetValues: [OCKOutcomeValue(Int(), units: "")],
-                                                                         duration: .allDay)])
+                                                                         text: "🙂",
+                                                                       targetValues: [],
+                                                                       duration: .allDay),
+                                                    OCKScheduleElement(start: beforeBrekfast,
+                                                                       end: nil,
+                                                                       interval: DateComponents(day: 1),
+                                                                       text: "😕",
+                                                                       targetValues: [],
+                                                                       duration: .allDay),
+                                                    OCKScheduleElement(start: beforeBrekfast,
+                                                                       end: nil,
+                                                                       interval: DateComponents(day: 1),
+                                                                       text: "☹️",
+                                                                       targetValues: [],
+                                                                       duration: .allDay)])
         
-        var stepsTask = OCKTask(id: CareStoreReferenceManager.TaskIdentifiers.steps.rawValue,
-                                   title: "Today's steps",
+        var moodTask = OCKTask(id: CareStoreReferenceManager.TaskIdentifiers.mood.rawValue,
+                                   title: "Today's mood",
                                    carePlanID: nil,
-                                   schedule: stepsSchedule)
+                                   schedule: moodSchedule)
         
-        stepsTask.impactsAdherence = false
-
-        addTask(stepsTask)
+        moodTask.impactsAdherence = false
+        addTask(moodTask)
     }
 }

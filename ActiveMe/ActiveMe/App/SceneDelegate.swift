@@ -23,9 +23,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         NotificationCenter.default.post(name: Notification.Name("Hello"), object: nil)
         
         appCoordinator = AppCoordinator(window: window)
-        appCoordinator.start()
-            .subscribe()
-            .disposed(by: disposeBag)
+            appCoordinator.start()
+                .subscribe()
+                .disposed(by: disposeBag)
+    }
+    
+    func startMonitorActivity() {
+        let queue = OperationQueue()
+        queue.maxConcurrentOperationCount = 2
+        
+        let operations = BackgroundOperation.getOperationsToFetchLatestEntries()
+        queue.addOperations(operations, waitUntilFinished: false)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -36,6 +44,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
+      //  startMonitorActivity()
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
     }
@@ -55,6 +64,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
         // Save changes in the application's managed object context when the application transitions to the background.
+        UserDefaultsManager.saveObject(for: .endOfLastSession, value: Date())
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
         (UIApplication.shared.delegate as? AppDelegate)?.scheduleAppRefresh()
     }
