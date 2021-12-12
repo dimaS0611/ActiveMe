@@ -11,17 +11,23 @@ import RxSwift
 
 protocol PedometerDelegate: AnyObject {
     var pedometerCounter: PublishSubject<(Int,Date,Date)> { get }
+    var activityLabel: PublishSubject<String> { get }
+    var accelerationData: PublishSubject<(Double, Double, Double)> { get }
     
     func startActivityUpdater()
     func startPedometerUpdater()
+    func startAccelerationDataUpdater()
 }
 
 class PedometerManager {
     private let activityManager = CMMotionActivityManager()
     private let pedometer = CMPedometer()
     private let storage = StorageService()
+    private let motion = MotionManager.shared
     
     var pedometerCounter = PublishSubject<(Int, Date, Date)>()
+    var activityLabel = PublishSubject<String>()
+    var accelerationData = PublishSubject<(Double, Double, Double)>()
     
     let lock = NSRecursiveLock()
     
@@ -36,21 +42,20 @@ extension PedometerManager: PedometerDelegate {
         self.activityManager.startActivityUpdates(to: OperationQueue.main) { activity in
             guard let activity = activity else { return }
             var activityLabel = ""
-            DispatchQueue.main.async {
-                if activity.stationary {
-                    print("stationary")
-                    activityLabel = "standing"
-                } else if activity.walking {
-                    print("walking")
-                    activityLabel = "walking"
-                } else if activity.running {
-                    print("running")
-                    activityLabel = "running"
-                } else if activity.automotive {
-                    print("automative")
-                    activityLabel = "automative"
-                }
+            if activity.stationary {
+                print("stationary")
+                activityLabel = "standing"
+            } else if activity.walking {
+                print("walking")
+                activityLabel = "walking"
+            } else if activity.running {
+                print("running")
+                activityLabel = "running"
+            } else if activity.automotive {
+                print("automative")
+                activityLabel = "automative"
             }
+            self.activityLabel.onNext(activityLabel)
             
             self.lock.lock()
             DispatchQueue.global(qos: .utility).async {
@@ -70,7 +75,7 @@ extension PedometerManager: PedometerDelegate {
             DispatchQueue.global(qos: .utility).async {
                 self.pedometer.startUpdates(from: Date()) { data, error in
                     guard let pedometerData = data, error == nil else {
-                        print(error?.localizedDescription)
+                        print(error?.localizedDescription as Any)
                         return
                     }
                     
@@ -84,6 +89,16 @@ extension PedometerManager: PedometerDelegate {
                     self.lock.unlock()
                 }
             }
+        }
+    }
+    
+    func startAccelerationDataUpdater() {
+        motion.startDeviceMotion().startAccelerometerUpdates(to: .main) { data, error in
+            guard let data = data else { return }
+            
+            self.accelerationData.onNext((data.acceleration.x,
+                                          data.acceleration.y,
+                                          data.acceleration.z))
         }
     }
     

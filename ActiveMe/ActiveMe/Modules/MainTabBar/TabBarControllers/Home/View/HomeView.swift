@@ -28,7 +28,6 @@ final class HomeView: OCKDailyPageViewController {
     
     init(storeManager: OCKSynchronizedStoreManager = CareStoreReferenceManager.shared.synchronizedStoreManager) {
         super.init(storeManager: storeManager)
-        setupBinding()
     }
     
     override func viewDidLoad() {
@@ -59,14 +58,6 @@ final class HomeView: OCKDailyPageViewController {
                     feelingCard.taskView.headerView.detailLabel.text = ""
                     feelingCard.taskView.headerView.accessibilityLabel = ""
                     listViewController.appendViewController(feelingCard, animated: false)
-                    
-                case CareStoreReferenceManager.TaskIdentifiers.mood.rawValue:
-                    let moodTask = OCKGridTaskViewController(task: task,
-                                                             eventQuery: .init(for: date),
-                                                             storeManager: self.storeManager)
-                    
-                    moodTask.taskView.headerView.detailLabel.text = ""
-                   // listViewController.appendViewController(moodTask, animated: false)
                 default:
                     return
                 }
@@ -77,7 +68,6 @@ final class HomeView: OCKDailyPageViewController {
         
         var dataSeries = [OCKDataSeries]()
         for _ in 0..<24 {
-          //  let hour = formatter.string(from: time.start)
             var series = OCKDataSeries(values: [CGFloat()], title: "")
             series.size = 27
             series.gradientStartColor = UIColor(rgb: Int.random(in: Range<Int>(0...2147483637)))
@@ -149,81 +139,4 @@ final class HomeView: OCKDailyPageViewController {
         let dataSeries = OCKDataSeries(dataPoints: points, title: "Steps")
         chart?.graphView.dataSeries.append(dataSeries)
     }
-    
-    private func setupBinding() {
-
-    }
-    
 }
-
-//class HomeView: UIViewController {
-//
-//    private let disposeBag = DisposeBag()
-//
-//    let viewModel = HomeViewModel()
-//
-//    lazy var prediction: UILabel = {
-//       let label = UILabel()
-//        label.lineBreakMode = .byWordWrapping
-//        label.textColor = .label
-//        return label
-//    }()
-//
-//    lazy var accData: UILabel = {
-//       let label = UILabel()
-//        label.lineBreakMode = .byWordWrapping
-//        label.textColor = .label
-//        return label
-//    }()
-//
-//    override func viewDidLoad() {
-//        view.backgroundColor = .systemBlue
-//        setupUI()
-//    }
-//
-//    override func viewDidDisappear(_ animated: Bool) {
-//       // viewModel.viewDidDisappear()
-//    }
-//
-//    private func setupUI() {
-//        view.addSubview(prediction)
-//        view.addSubview(accData)
-//
-//        setupConstraints()
-//        setupBinding()
-//    }
-//
-//    private func setupConstraints() {
-//        prediction.snp.makeConstraints { make in
-//            make.center.equalToSuperview()
-//            make.width.height.equalTo(100.0)
-//        }
-//
-//        accData.snp.makeConstraints { make in
-//            make.centerX.equalToSuperview()
-//            make.bottom.equalToSuperview().inset(-50.0)
-//            make.height.equalTo(50.0)
-//            make.width.equalTo(150.0)
-//        }
-//    }
-//
-//    private func setupBinding() {
-//        viewModel.labelPrediction
-//            .subscribe(on: MainScheduler.instance)
-//            .subscribe { [weak self] prediction in
-//                DispatchQueue.main.async {
-//                    self?.prediction.text = prediction
-//                }
-//            }.disposed(by: self.disposeBag)
-//
-//        viewModel.accelerationData
-//            .subscribe(on: MainScheduler.instance)
-//            .subscribe { [weak self] data in
-//                guard let acc = data.element else { return }
-//                DispatchQueue.main.async {
-//                    self?.accData.text = "\(acc.0), \(acc.1), \(acc.2)"
-//                }
-//            }.disposed(by: self.disposeBag)
-//    }
-//}
-

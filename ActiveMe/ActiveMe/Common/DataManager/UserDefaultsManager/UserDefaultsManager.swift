@@ -33,9 +33,14 @@ extension UserDefaultsManager: UserDefaultsManagerProtocol {
     
     static func getRegisterData() -> Bool {
         do {
-            let isRegistered = defaults.object(forKey:UserDefaultsKeys.isRegistered.rawValue) as! Data
-            let decoded = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(isRegistered) as! Bool
-            return decoded
+            if let isRegistered = defaults.object(forKey:UserDefaultsKeys.isRegistered.rawValue) as? Data {
+                guard let decoded = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(isRegistered) as? Bool else {
+                    return false
+                }
+                return decoded
+            } else {
+                return false
+            }
         } catch let error{
             print(error.localizedDescription)
             return false

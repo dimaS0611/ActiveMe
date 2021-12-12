@@ -13,7 +13,7 @@ import RxSwift
 extension ActivityClassifier {
     struct ModelConstants {
         static let numOfFeatures = 3
-        static let sensorUpdateFrequency = 1.0 / 80
+        static let sensorUpdateFrequency = 1.0 / 50
         static let predictionWindowSize = 240
         static let hiddenInLenght = 20
         static let hiddenCellInLenghth = 200
