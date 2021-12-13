@@ -15,6 +15,8 @@
 		3A1043B4275DFE840017C25C /* ActivityClassifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1043B3275DFE840017C25C /* ActivityClassifierProtocol.swift */; };
 		3A1703632767C40F0023DF67 /* UITextFiewld+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1703622767C40F0023DF67 /* UITextFiewld+Extension.swift */; };
 		3A1703662767D43A0023DF67 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1703652767D43A0023DF67 /* ImagePicker.swift */; };
+		3A1703682767E7230023DF67 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1703672767E7230023DF67 /* SettingsViewModel.swift */; };
+		3A17036A2767E9F10023DF67 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1703692767E9F10023DF67 /* SettingsModel.swift */; };
 		3A29A1C22762927E00A0CE79 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A29A1C12762927E00A0CE79 /* HomeModel.swift */; };
 		3A6A2C6C276122D2006B840E /* PedometerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A2C6B276122D2006B840E /* PedometerManager.swift */; };
 		3A6A2C6E27612BA7006B840E /* CareKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3A6A2C6D27612BA7006B840E /* CareKit */; };
@@ -105,6 +107,8 @@
 		3A1043B3275DFE840017C25C /* ActivityClassifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityClassifierProtocol.swift; sourceTree = "<group>"; };
 		3A1703622767C40F0023DF67 /* UITextFiewld+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextFiewld+Extension.swift"; sourceTree = "<group>"; };
 		3A1703652767D43A0023DF67 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		3A1703672767E7230023DF67 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewModel.swift; path = ActiveMe/Common/Pickers/SettingsViewModel.swift; sourceTree = SOURCE_ROOT; };
+		3A1703692767E9F10023DF67 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsModel.swift; path = ActiveMe/Common/Pickers/SettingsModel.swift; sourceTree = SOURCE_ROOT; };
 		3A29A1C12762927E00A0CE79 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeModel.swift; path = ActiveMe/Modules/MainTabBar/TabBarControllers/Home/HomeModel.swift; sourceTree = SOURCE_ROOT; };
 		3A6A2C6B276122D2006B840E /* PedometerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedometerManager.swift; sourceTree = "<group>"; };
 		3A6A2C7427612C71006B840E /* CareStoreReferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareStoreReferenceManager.swift; sourceTree = "<group>"; };
@@ -731,6 +735,7 @@
 		D4DCA872275BE3BF0072F725 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3A1703672767E7230023DF67 /* SettingsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -738,6 +743,7 @@
 		D4DCA873275BE3C40072F725 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3A1703692767E9F10023DF67 /* SettingsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1026,9 +1032,11 @@
 				D442C17E275AB9CD00BD8EE6 /* SliderParametersViewModel.swift in Sources */,
 				D445F96C2751551C001AA71A /* StrokesSliderCell.swift in Sources */,
 				D445F93027515035001AA71A /* GenderView.swift in Sources */,
+				3A1703682767E7230023DF67 /* SettingsViewModel.swift in Sources */,
 				3A1043AD275DDD2C0017C25C /* ActivityClassifier.swift in Sources */,
 				3A1703632767C40F0023DF67 /* UITextFiewld+Extension.swift in Sources */,
 				D48E1E43275380500034DDBE /* GenderButton.swift in Sources */,
+				3A17036A2767E9F10023DF67 /* SettingsModel.swift in Sources */,
 				D4DCA876275BE3E00072F725 /* MainTabBarCoordinator.swift in Sources */,
 				3A6A2C7527612C71006B840E /* CareStoreReferenceManager.swift in Sources */,
 				D48E1E6E27541B6F0034DDBE /* AppCoordinator.swift in Sources */,

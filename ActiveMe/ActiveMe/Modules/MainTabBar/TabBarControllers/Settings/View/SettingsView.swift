@@ -15,6 +15,8 @@ class SettingsView: UIViewController {
     
     private let disposeBag = DisposeBag()
     
+    private let viewModel: SettingsViewModelProtocol = SettingsViewModel()
+    
     private lazy var avatarImage: UIImageView = {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 150.0, height: 150.0))
         imageView.contentMode = .scaleAspectFill
@@ -86,6 +88,7 @@ class SettingsView: UIViewController {
         button.clipsToBounds = true
         button.setTitle("Save", for: .normal)
         button.titleLabel?.font = UIFont.thin(with: 20.0)
+        button.isUserInteractionEnabled = true
         return button
     }()
     
@@ -99,6 +102,18 @@ class SettingsView: UIViewController {
         
         setupUI()
         setupEvents()
+        
+        let settingsModel = viewModel.loadSettingsData()
+        
+        nameTextField.text = settingsModel.name
+        ageTextField.text = String(settingsModel.age)
+        weightTextField.text = String(settingsModel.weight)
+        heightTextField.text = String(settingsModel.height)
+        
+        if let image = settingsModel.imageData {
+            avatarImage.image = UIImage(data: image)
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -141,7 +156,6 @@ class SettingsView: UIViewController {
         
         heightTextField.snp.makeConstraints { make in
             make.leading.equalTo(nameTextField.snp.leading)
-           // make.trailing.equalTo(weightTextField.snp.leading).inset(-15.0)
             make.width.equalTo(UIScreen.main.bounds.width / 2.1)
             make.height.equalTo(ageTextField.snp.height)
             make.top.equalTo(ageTextField.snp.bottom).inset(-15.0)
@@ -172,6 +186,31 @@ class SettingsView: UIViewController {
         tap.rx.event.subscribe { [weak self] _ in
             self?.showAlert()
         }.disposed(by: self.disposeBag)
+        
+        saveButton.rx.tap.subscribe { [weak self] in
+            self?.saveButtonTapped()
+        }
+    }
+    
+    private func saveButtonTapped() {
+        guard let name = nameTextField.text,
+              !name.isEmpty,
+              let ageStr = ageTextField.text,
+              !ageStr.isEmpty,
+              let age = Int(ageStr),
+              let weightStr = weightTextField.text,
+              !weightStr.isEmpty,
+              let weight = Int(weightStr),
+              let heightStr = heightTextField.text,
+              !heightStr.isEmpty,
+              let height = Int(heightStr)
+        else {
+            return
+        }
+        
+        let imageData = avatarImage.image?.jpegData(compressionQuality: 1.0)
+        
+        viewModel.saveButtonTapped(model: SettingsModel(name: name, age: age, height: height, weight: weight, imageData: imageData))
     }
     
     private func showAlert() {
@@ -203,6 +242,8 @@ class SettingsView: UIViewController {
 
     
 }
+
+// MARK: UITextFieldDelegate implementation
 
 extension SettingsView: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -253,7 +294,7 @@ extension SettingsView: UITextFieldDelegate {
     }
 }
 
-// MARK: ImagePickerDelegate
+// MARK: ImagePickerDelegate implementation
 
 extension SettingsView: ImagePickerDelegate {
 

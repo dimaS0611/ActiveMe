@@ -13,5 +13,7 @@ enum UserDefaultsKeys: String {
     case heightValue
     case weightValue
     case ageValue
+    case avatar
+    case name
     case isRegistered
 }

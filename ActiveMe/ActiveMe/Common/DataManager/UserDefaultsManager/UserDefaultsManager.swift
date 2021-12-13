@@ -10,6 +10,11 @@ import Foundation
 protocol UserDefaultsManagerProtocol: AnyObject {
     static func saveObject<T: Any>(for key: UserDefaultsKeys, value: T)
     static func getObject(for key: UserDefaultsKeys) -> Any?
+    static func getStringObject(for key: UserDefaultsKeys) -> String?
+    static func getIntObject(for key: UserDefaultsKeys) -> Int?
+    static func getDoubleObject(for key: UserDefaultsKeys) -> Double?
+    static func getBoolObject(for key: UserDefaultsKeys) -> Bool?
+    static func getDataObject(for key: UserDefaultsKeys) -> Data?
     static func getRegisterData() -> Bool
 }
 
@@ -29,6 +34,83 @@ extension UserDefaultsManager: UserDefaultsManagerProtocol {
     
     static func getObject(for key: UserDefaultsKeys) -> Any? {
         defaults.object(forKey:key.rawValue)
+    }
+    
+    static func getStringObject(for key: UserDefaultsKeys) -> String? {
+        do {
+            if let data = defaults.object(forKey:UserDefaultsKeys.isRegistered.rawValue) as? Data {
+                guard let decoded = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? String else {
+                    return nil
+                }
+                return decoded
+            } else {
+                return nil
+            }
+        } catch let error{
+            print(error.localizedDescription)
+            return nil
+        }
+    }
+    
+    static func getIntObject(for key: UserDefaultsKeys) -> Int? {
+        do {
+            if let data = defaults.object(forKey:UserDefaultsKeys.isRegistered.rawValue) as? Data {
+                guard let decoded = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? Int else {
+                    return nil
+                }
+                return decoded
+            } else {
+                return nil
+            }
+        } catch let error{
+            print(error.localizedDescription)
+            return nil
+        }
+    }
+    
+    static func getDoubleObject(for key: UserDefaultsKeys) -> Double? {
+        do {
+            if let data = defaults.object(forKey:UserDefaultsKeys.isRegistered.rawValue) as? Data {
+                guard let decoded = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? Double else {
+                    return nil
+                }
+                return decoded
+            } else {
+                return nil
+            }
+        } catch let error{
+            print(error.localizedDescription)
+            return nil
+        }
+    }
+    
+    static func getBoolObject(for key: UserDefaultsKeys) -> Bool? {
+        do {
+            if let data = defaults.object(forKey:UserDefaultsKeys.isRegistered.rawValue) as? Data {
+                guard let decoded = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? Bool else {
+                    return false
+                }
+                return decoded
+            } else {
+                return nil
+            }
+        } catch let error{
+            print(error.localizedDescription)
+            return nil
+        }
+    }
+    
+    static func getDataObject(for key: UserDefaultsKeys) -> Data? {
+        do {
+            if let data = defaults.object(forKey:UserDefaultsKeys.isRegistered.rawValue) as? Data {
+                return data
+            } else {
+                return nil
+            }
+        } catch let error{
+            print(error.localizedDescription)
+            return nil
+        }
     }
     
     static func getRegisterData() -> Bool {
