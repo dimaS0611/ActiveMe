@@ -38,7 +38,7 @@ extension UserDefaultsManager: UserDefaultsManagerProtocol {
     
     static func getStringObject(for key: UserDefaultsKeys) -> String? {
         do {
-            if let data = defaults.object(forKey:UserDefaultsKeys.isRegistered.rawValue) as? Data {
+            if let data = defaults.data(forKey: key.rawValue) {
                 guard let decoded = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? String else {
                     return nil
                 }
@@ -54,7 +54,7 @@ extension UserDefaultsManager: UserDefaultsManagerProtocol {
     
     static func getIntObject(for key: UserDefaultsKeys) -> Int? {
         do {
-            if let data = defaults.object(forKey:UserDefaultsKeys.isRegistered.rawValue) as? Data {
+            if let data = defaults.data(forKey: key.rawValue) {
                 guard let decoded = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? Int else {
                     return nil
                 }
@@ -70,7 +70,7 @@ extension UserDefaultsManager: UserDefaultsManagerProtocol {
     
     static func getDoubleObject(for key: UserDefaultsKeys) -> Double? {
         do {
-            if let data = defaults.object(forKey:UserDefaultsKeys.isRegistered.rawValue) as? Data {
+            if let data = defaults.data(forKey: key.rawValue) {
                 guard let decoded = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? Double else {
                     return nil
                 }
@@ -86,7 +86,7 @@ extension UserDefaultsManager: UserDefaultsManagerProtocol {
     
     static func getBoolObject(for key: UserDefaultsKeys) -> Bool? {
         do {
-            if let data = defaults.object(forKey:UserDefaultsKeys.isRegistered.rawValue) as? Data {
+            if let data = defaults.data(forKey: key.rawValue) {
                 guard let decoded = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? Bool else {
                     return false
                 }
@@ -101,21 +101,16 @@ extension UserDefaultsManager: UserDefaultsManagerProtocol {
     }
     
     static func getDataObject(for key: UserDefaultsKeys) -> Data? {
-        do {
-            if let data = defaults.object(forKey:UserDefaultsKeys.isRegistered.rawValue) as? Data {
-                return data
-            } else {
-                return nil
-            }
-        } catch let error{
-            print(error.localizedDescription)
+        if let data = defaults.data(forKey: key.rawValue) {
+            return data
+        } else {
             return nil
         }
     }
     
     static func getRegisterData() -> Bool {
         do {
-            if let isRegistered = defaults.object(forKey:UserDefaultsKeys.isRegistered.rawValue) as? Data {
+            if let isRegistered = defaults.object(forKey: UserDefaultsKeys.isRegistered.rawValue) as? Data {
                 guard let decoded = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(isRegistered) as? Bool else {
                     return false
                 }

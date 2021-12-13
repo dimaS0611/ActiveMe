@@ -111,7 +111,8 @@ class SettingsView: UIViewController {
         heightTextField.text = String(settingsModel.height)
         
         if let image = settingsModel.imageData {
-            avatarImage.image = UIImage(data: image)
+            let img = UIImage(data: image)
+            avatarImage.image = img
         }
         
     }
@@ -187,9 +188,9 @@ class SettingsView: UIViewController {
             self?.showAlert()
         }.disposed(by: self.disposeBag)
         
-        saveButton.rx.tap.subscribe { [weak self] in
+        saveButton.rx.tap.subscribe { [weak self] _ in
             self?.saveButtonTapped()
-        }
+        }.disposed(by: self.disposeBag)
     }
     
     private func saveButtonTapped() {
@@ -208,7 +209,7 @@ class SettingsView: UIViewController {
             return
         }
         
-        let imageData = avatarImage.image?.jpegData(compressionQuality: 1.0)
+        let imageData = avatarImage.image?.pngData()
         
         viewModel.saveButtonTapped(model: SettingsModel(name: name, age: age, height: height, weight: weight, imageData: imageData))
     }
