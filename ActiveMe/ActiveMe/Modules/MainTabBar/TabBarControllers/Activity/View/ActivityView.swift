@@ -172,13 +172,13 @@ class ActivityView: UIViewController {
                 
                 if self.pointsX.count == 50 {
                     var dataSeriesX = OCKDataSeries(dataPoints: self.pointsX, title: "")
-                    dataSeriesX.gradientStartColor = UIColor(rgb: Int.random(in: Range<Int>(0...2147483637)))
-                    dataSeriesX.gradientEndColor = UIColor(rgb: Int.random(in: Range<Int>(0...2147483637)))
+                    dataSeriesX.gradientStartColor = self.chartsStartGradient
+                    dataSeriesX.gradientEndColor = self.chartsEndGradient
                     dataSeriesX.size = 2
                     
                     var dataSeriesY = OCKDataSeries(dataPoints: self.pointsY, title: "")
-                    dataSeriesY.gradientStartColor = UIColor(rgb: Int.random(in: Range<Int>(0...2147483637)))
-                    dataSeriesY.gradientEndColor = UIColor(rgb: Int.random(in: Range<Int>(0...2147483637)))
+                    dataSeriesY.gradientStartColor = self.chartsStartGradient
+                    dataSeriesY.gradientEndColor = self.chartsEndGradient
                     dataSeriesY.size = 2
                     
                     var dataSeriesZ = OCKDataSeries(dataPoints: self.pointsZ, title: "")

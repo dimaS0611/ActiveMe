@@ -21,17 +21,21 @@ class MainTabBarView: UITabBarController {
         
         let activityItem = UITabBarItem(title: "Activity", image: UIImage(systemName: "chart.bar.xaxis")!, selectedImage: UIImage(systemName: "chart.bar.xaxis")!.withTintColor(UIColor(rgb: 0x178FB3)))
         let activityVC = ActivityView()
-        let activityNavC = UINavigationController(rootViewController: activityVC)
         
-        activityNavC.tabBarItem = activityItem
+        activityVC.tabBarItem = activityItem
         
         let settingsItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gearshape.fill"), selectedImage: UIImage(systemName: "gearshape.fill")?.withTintColor(UIColor(rgb: 0x178FB3)))
         let settingsVC = SettingsView()
-        let settingsNavC = UINavigationController(rootViewController: settingsVC)
         
-        settingsNavC.tabBarItem = settingsItem
+        settingsVC.tabBarItem = settingsItem
         
-        self.setViewControllers([homeNavC, activityNavC, settingsNavC], animated: false)
+        self.setViewControllers([homeNavC, activityVC, settingsVC], animated: false)
+        
+        let titleImage = UIImageView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width / 2.5, height: 35.0))
+        titleImage.image = UIImage(named: "ActiveMeName")
+        titleImage.contentMode = .scaleAspectFit
+        
+        self.navigationItem.titleView = titleImage
     }
     
 }

@@ -13,6 +13,8 @@
 		3A1043B0275DE11B0017C25C /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1043AF275DE11B0017C25C /* MotionManager.swift */; };
 		3A1043B2275DFC410017C25C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1043B1275DFC410017C25C /* HomeViewModel.swift */; };
 		3A1043B4275DFE840017C25C /* ActivityClassifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1043B3275DFE840017C25C /* ActivityClassifierProtocol.swift */; };
+		3A1703632767C40F0023DF67 /* UITextFiewld+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1703622767C40F0023DF67 /* UITextFiewld+Extension.swift */; };
+		3A1703662767D43A0023DF67 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1703652767D43A0023DF67 /* ImagePicker.swift */; };
 		3A29A1C22762927E00A0CE79 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A29A1C12762927E00A0CE79 /* HomeModel.swift */; };
 		3A6A2C6C276122D2006B840E /* PedometerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A2C6B276122D2006B840E /* PedometerManager.swift */; };
 		3A6A2C6E27612BA7006B840E /* CareKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3A6A2C6D27612BA7006B840E /* CareKit */; };
@@ -101,6 +103,8 @@
 		3A1043AF275DE11B0017C25C /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 		3A1043B1275DFC410017C25C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = ActiveMe/Common/Motion/HomeViewModel.swift; sourceTree = SOURCE_ROOT; };
 		3A1043B3275DFE840017C25C /* ActivityClassifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityClassifierProtocol.swift; sourceTree = "<group>"; };
+		3A1703622767C40F0023DF67 /* UITextFiewld+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextFiewld+Extension.swift"; sourceTree = "<group>"; };
+		3A1703652767D43A0023DF67 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		3A29A1C12762927E00A0CE79 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeModel.swift; path = ActiveMe/Modules/MainTabBar/TabBarControllers/Home/HomeModel.swift; sourceTree = SOURCE_ROOT; };
 		3A6A2C6B276122D2006B840E /* PedometerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedometerManager.swift; sourceTree = "<group>"; };
 		3A6A2C7427612C71006B840E /* CareStoreReferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareStoreReferenceManager.swift; sourceTree = "<group>"; };
@@ -241,6 +245,14 @@
 				3A6A2C6B276122D2006B840E /* PedometerManager.swift */,
 			);
 			path = Motion;
+			sourceTree = "<group>";
+		};
+		3A1703642767D42E0023DF67 /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				3A1703652767D43A0023DF67 /* ImagePicker.swift */,
+			);
+			path = Pickers;
 			sourceTree = "<group>";
 		};
 		3A6A2C7327612C52006B840E /* CareStorage */ = {
@@ -443,6 +455,7 @@
 		D445F96027515227001AA71A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3A1703642767D42E0023DF67 /* Pickers */,
 				3A6A2C7E27615F49006B840E /* DataManager */,
 				3A6A2C7327612C52006B840E /* CareStorage */,
 				3A1043AE275DE10A0017C25C /* Motion */,
@@ -499,6 +512,7 @@
 				D48E1E462753887A0034DDBE /* UIFont+Extension.swift */,
 				D48E1E612753E33F0034DDBE /* UIViewController+Extension.swift */,
 				3A6A2C7627612F8C006B840E /* OCKStore+Extension.swift */,
+				3A1703622767C40F0023DF67 /* UITextFiewld+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1013,6 +1027,7 @@
 				D445F96C2751551C001AA71A /* StrokesSliderCell.swift in Sources */,
 				D445F93027515035001AA71A /* GenderView.swift in Sources */,
 				3A1043AD275DDD2C0017C25C /* ActivityClassifier.swift in Sources */,
+				3A1703632767C40F0023DF67 /* UITextFiewld+Extension.swift in Sources */,
 				D48E1E43275380500034DDBE /* GenderButton.swift in Sources */,
 				D4DCA876275BE3E00072F725 /* MainTabBarCoordinator.swift in Sources */,
 				3A6A2C7527612C71006B840E /* CareStoreReferenceManager.swift in Sources */,
@@ -1030,6 +1045,7 @@
 				3ADAFBCD275A15DB0026A1CC /* WaterBalanceListView.swift in Sources */,
 				3A29A1C22762927E00A0CE79 /* HomeModel.swift in Sources */,
 				3A1043B0275DE11B0017C25C /* MotionManager.swift in Sources */,
+				3A1703662767D43A0023DF67 /* ImagePicker.swift in Sources */,
 				3A1043B2275DFC410017C25C /* HomeViewModel.swift in Sources */,
 				3A6A2C8027615F69006B840E /* StorageManager.swift in Sources */,
 				3A6A2C8527616BA0006B840E /* StepsStorable.swift in Sources */,
@@ -1226,7 +1242,9 @@
 				DEVELOPMENT_TEAM = J9ZD55BC9Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ActiveMe/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We are using camera in order to show your incredible photos";
 				INFOPLIST_KEY_NSMotionUsageDescription = "We are using motion usage in  order  to classify your motion activity and to track your steps count";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We are using photo library in order to show your incredible photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortrait UIInterfaceOrientationPortrait UIInterfaceOrientationPortrait";
@@ -1255,7 +1273,9 @@
 				DEVELOPMENT_TEAM = J9ZD55BC9Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ActiveMe/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We are using camera in order to show your incredible photos";
 				INFOPLIST_KEY_NSMotionUsageDescription = "We are using motion usage in  order  to classify your motion activity and to track your steps count";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We are using photo library in order to show your incredible photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortrait UIInterfaceOrientationPortrait UIInterfaceOrientationPortrait";

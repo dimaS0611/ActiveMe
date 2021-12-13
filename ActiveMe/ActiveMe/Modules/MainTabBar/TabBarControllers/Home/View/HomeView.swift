@@ -79,8 +79,8 @@ final class HomeView: OCKDailyPageViewController {
         
         /// If you do not specify the minimum and maximum of your graph, `OCKCartesianGraphView` will take care of the right scaling.
         /// This can be helpful if you do not know the range of your values but it makes it more difficult to animate the graphs.
-        self.chart?.graphView.xMinimum = 1
-        self.chart?.graphView.xMaximum = 24
+        self.chart?.graphView.xMinimum = -1
+        self.chart?.graphView.xMaximum = 25
         
         /// You can also set an array of strings to set custom labels on the x-axis.
         /// I am not sure if that works on the y-axis as well.
