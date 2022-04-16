@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		306578B7C25D1198987ABD8D /* Pods_ActiveMe_ActiveMeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B415E3530A6613DC6F95B0F /* Pods_ActiveMe_ActiveMeUITests.framework */; };
 		3A1043A9275DDCD00017C25C /* HARClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A1043A8275DDCD00017C25C /* HARClassifier.mlmodel */; };
 		3A1043AD275DDD2C0017C25C /* ActivityClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1043AC275DDD2C0017C25C /* ActivityClassifier.swift */; };
 		3A1043B0275DE11B0017C25C /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1043AF275DE11B0017C25C /* MotionManager.swift */; };
@@ -37,8 +36,16 @@
 		3ADAFBD7275A274E0026A1CC /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ADAFBD6275A274E0026A1CC /* Roboto-Regular.ttf */; };
 		3ADAFBD9275A27560026A1CC /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ADAFBD8275A27560026A1CC /* Roboto-Medium.ttf */; };
 		3ADAFBDB275A275D0026A1CC /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ADAFBDA275A275D0026A1CC /* Roboto-Light.ttf */; };
-		73B12AD6928F319E88059F4F /* Pods_ActiveMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC86FF7029CD919886F8AE8 /* Pods_ActiveMe.framework */; };
-		8CE3BE2BC57228A6EF893722 /* Pods_ActiveMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A43C10F58614F261F73A06CE /* Pods_ActiveMeTests.framework */; };
+		D41E73D527F05804003C05DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D41E73D427F05804003C05DF /* Assets.xcassets */; };
+		D41E73DB27F05804003C05DF /* ActiveMe Watch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D41E73DA27F05804003C05DF /* ActiveMe Watch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D41E73E027F05804003C05DF /* ActiveMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41E73DF27F05804003C05DF /* ActiveMeApp.swift */; };
+		D41E73E227F05804003C05DF /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41E73E127F05804003C05DF /* StartView.swift */; };
+		D41E73E427F05804003C05DF /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41E73E327F05804003C05DF /* NotificationController.swift */; };
+		D41E73E627F05804003C05DF /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41E73E527F05804003C05DF /* NotificationView.swift */; };
+		D41E73E827F05804003C05DF /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41E73E727F05804003C05DF /* ComplicationController.swift */; };
+		D41E73EA27F05805003C05DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D41E73E927F05805003C05DF /* Assets.xcassets */; };
+		D41E73ED27F05805003C05DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D41E73EC27F05805003C05DF /* Preview Assets.xcassets */; };
+		D41E73F227F05805003C05DF /* ActiveMe Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D41E73D227F05801003C05DF /* ActiveMe Watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D41F5478275E711E00093D1D /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F5477275E711E00093D1D /* GraphView.swift */; };
 		D424DCB22764917800E49132 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D424DCB12764917800E49132 /* UserDefaultsManager.swift */; };
 		D424DCB4276491E600E49132 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D424DCB3276491E600E49132 /* UserDefaultsKeys.swift */; };
@@ -64,6 +71,11 @@
 		D445F97427516608001AA71A /* StrokeSliderCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F97327516608001AA71A /* StrokeSliderCellProtocol.swift */; };
 		D445F97827516951001AA71A /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F97727516951001AA71A /* UICollectionViewCell+Extension.swift */; };
 		D4480FAD27516CA100EDCD22 /* StrokesSliderFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4480FAC27516CA100EDCD22 /* StrokesSliderFlowLayout.swift */; };
+		D466ADEB2803099A00862E5E /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D466ADEA2803099A00862E5E /* SummaryView.swift */; };
+		D466ADED28030B5400862E5E /* ActivityRingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D466ADEC28030B5400862E5E /* ActivityRingsView.swift */; };
+		D48D70E927F07FC4002F5002 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48D70E827F07FC4002F5002 /* SessionDelegate.swift */; };
+		D48D70EB27F0824C002F5002 /* DataTransferManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48D70EA27F0824C002F5002 /* DataTransferManager.swift */; };
+		D48D70ED27F08368002F5002 /* CommandStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48D70EC27F08368002F5002 /* CommandStatus.swift */; };
 		D48E1E43275380500034DDBE /* GenderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E42275380500034DDBE /* GenderButton.swift */; };
 		D48E1E45275386FF0034DDBE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E44275386FF0034DDBE /* UIColor+Extension.swift */; };
 		D48E1E472753887A0034DDBE /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E462753887A0034DDBE /* UIFont+Extension.swift */; };
@@ -73,6 +85,15 @@
 		D48E1E622753E33F0034DDBE /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E612753E33F0034DDBE /* UIViewController+Extension.swift */; };
 		D48E1E6B275419EE0034DDBE /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E6A275419EE0034DDBE /* BaseCoordinator.swift */; };
 		D48E1E6E27541B6F0034DDBE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E6D27541B6F0034DDBE /* AppCoordinator.swift */; };
+		D4A9579E2802E50100E98FF4 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A9579D2802E50100E98FF4 /* WorkoutManager.swift */; };
+		D4A957A02802E80900E98FF4 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A9579F2802E80900E98FF4 /* HealthKit.framework */; };
+		D4A957A22802E81D00E98FF4 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A957A12802E81D00E98FF4 /* WatchConnectivity.framework */; };
+		D4A957A52802E85900E98FF4 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A957A42802E85900E98FF4 /* HealthKit.framework */; };
+		D4A957AB2802F0D800E98FF4 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A957AA2802F0D800E98FF4 /* SessionView.swift */; };
+		D4A957AD2802F13800E98FF4 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A957AC2802F13800E98FF4 /* ControlsView.swift */; };
+		D4A957AF2802F1DD00E98FF4 /* MetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A957AE2802F1DD00E98FF4 /* MetricsView.swift */; };
+		D4A957B12802F29F00E98FF4 /* ElapsedTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A957B02802F29F00E98FF4 /* ElapsedTimeView.swift */; };
+		D4A957B32802F4E500E98FF4 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4A957B22802F4E500E98FF4 /* Colors.xcassets */; };
 		D4AA4F3C275BB11C002DBE23 /* MainTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AA4F3B275BB11C002DBE23 /* MainTabBarView.swift */; };
 		D4CA4EA1275EA1A800A8FE62 /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CA4EA0275EA1A800A8FE62 /* ActivityViewModel.swift */; };
 		D4DCA876275BE3E00072F725 /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DCA875275BE3E00072F725 /* MainTabBarCoordinator.swift */; };
@@ -82,6 +103,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D41E73DC27F05804003C05DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D445F92027515035001AA71A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D41E73D927F05804003C05DF;
+			remoteInfo = "ActiveMe Watch WatchKit Extension";
+		};
+		D41E73F027F05805003C05DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D445F92027515035001AA71A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D41E73D127F05801003C05DF;
+			remoteInfo = "ActiveMe Watch";
+		};
 		D445F94227515037001AA71A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D445F92027515035001AA71A /* Project object */;
@@ -98,8 +133,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D41E73F327F05805003C05DF /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				D41E73F227F05805003C05DF /* ActiveMe Watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D41E73F627F05805003C05DF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D41E73DB27F05804003C05DF /* ActiveMe Watch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		24EF2925AD47C758CECA4D9A /* Pods-ActiveMeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiveMeTests.release.xcconfig"; path = "Target Support Files/Pods-ActiveMeTests/Pods-ActiveMeTests.release.xcconfig"; sourceTree = "<group>"; };
 		3A1043A8275DDCD00017C25C /* HARClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = HARClassifier.mlmodel; path = ../../../ML/HARClassifier.mlmodel; sourceTree = "<group>"; };
 		3A1043AC275DDD2C0017C25C /* ActivityClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityClassifier.swift; sourceTree = "<group>"; };
 		3A1043AF275DE11B0017C25C /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
@@ -126,14 +185,18 @@
 		3ADAFBD6275A274E0026A1CC /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		3ADAFBD8275A27560026A1CC /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		3ADAFBDA275A275D0026A1CC /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
-		4ADB9D4C1712E76A05851EF0 /* Pods-ActiveMe-ActiveMeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiveMe-ActiveMeUITests.debug.xcconfig"; path = "Target Support Files/Pods-ActiveMe-ActiveMeUITests/Pods-ActiveMe-ActiveMeUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		6B415E3530A6613DC6F95B0F /* Pods_ActiveMe_ActiveMeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ActiveMe_ActiveMeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FC86FF7029CD919886F8AE8 /* Pods_ActiveMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ActiveMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A43C10F58614F261F73A06CE /* Pods_ActiveMeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ActiveMeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACFFE28DFDD648C9B106D7B6 /* Pods-ActiveMe-ActiveMeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiveMe-ActiveMeUITests.release.xcconfig"; path = "Target Support Files/Pods-ActiveMe-ActiveMeUITests/Pods-ActiveMe-ActiveMeUITests.release.xcconfig"; sourceTree = "<group>"; };
-		B17205CC9BC9A32973CC0A98 /* Pods-ActiveMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiveMe.debug.xcconfig"; path = "Target Support Files/Pods-ActiveMe/Pods-ActiveMe.debug.xcconfig"; sourceTree = "<group>"; };
-		C2228BD15E8A455C0FF41079 /* Pods-ActiveMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiveMe.release.xcconfig"; path = "Target Support Files/Pods-ActiveMe/Pods-ActiveMe.release.xcconfig"; sourceTree = "<group>"; };
-		C9EAAFAA08498AA2F64CD99D /* Pods-ActiveMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiveMeTests.debug.xcconfig"; path = "Target Support Files/Pods-ActiveMeTests/Pods-ActiveMeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D41E73D227F05801003C05DF /* ActiveMe Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ActiveMe Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D41E73D427F05804003C05DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D41E73DA27F05804003C05DF /* ActiveMe Watch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ActiveMe Watch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D41E73DF27F05804003C05DF /* ActiveMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveMeApp.swift; sourceTree = "<group>"; };
+		D41E73E127F05804003C05DF /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		D41E73E327F05804003C05DF /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		D41E73E527F05804003C05DF /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		D41E73E727F05804003C05DF /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		D41E73E927F05805003C05DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D41E73EC27F05805003C05DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D41E73EE27F05805003C05DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D41E73EF27F05805003C05DF /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		D41F5477275E711E00093D1D /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		D424DCB12764917800E49132 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		D424DCB3276491E600E49132 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
@@ -161,6 +224,11 @@
 		D445F97327516608001AA71A /* StrokeSliderCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeSliderCellProtocol.swift; sourceTree = "<group>"; };
 		D445F97727516951001AA71A /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
 		D4480FAC27516CA100EDCD22 /* StrokesSliderFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokesSliderFlowLayout.swift; sourceTree = "<group>"; };
+		D466ADEA2803099A00862E5E /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		D466ADEC28030B5400862E5E /* ActivityRingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRingsView.swift; sourceTree = "<group>"; };
+		D48D70E827F07FC4002F5002 /* SessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
+		D48D70EA27F0824C002F5002 /* DataTransferManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferManager.swift; sourceTree = "<group>"; };
+		D48D70EC27F08368002F5002 /* CommandStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandStatus.swift; sourceTree = "<group>"; };
 		D48E1E42275380500034DDBE /* GenderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderButton.swift; sourceTree = "<group>"; };
 		D48E1E44275386FF0034DDBE /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		D48E1E462753887A0034DDBE /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
@@ -169,6 +237,16 @@
 		D48E1E6A275419EE0034DDBE /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		D48E1E6D27541B6F0034DDBE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		D49ABA24275E96AD00573BCD /* CorePlot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CorePlot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4A9579D2802E50100E98FF4 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		D4A9579F2802E80900E98FF4 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		D4A957A12802E81D00E98FF4 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		D4A957A32802E85900E98FF4 /* ActiveMe Watch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ActiveMe Watch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		D4A957A42802E85900E98FF4 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.5.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		D4A957AA2802F0D800E98FF4 /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
+		D4A957AC2802F13800E98FF4 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
+		D4A957AE2802F1DD00E98FF4 /* MetricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsView.swift; sourceTree = "<group>"; };
+		D4A957B02802F29F00E98FF4 /* ElapsedTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedTimeView.swift; sourceTree = "<group>"; };
+		D4A957B22802F4E500E98FF4 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		D4AA4F3B275BB11C002DBE23 /* MainTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarView.swift; sourceTree = "<group>"; };
 		D4CA4EA0275EA1A800A8FE62 /* ActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewModel.swift; sourceTree = "<group>"; };
 		D4DCA875275BE3E00072F725 /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
@@ -178,6 +256,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D41E73D727F05804003C05DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4A957A52802E85900E98FF4 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D445F92527515035001AA71A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -187,9 +273,10 @@
 				3A6A2C7227612BA7006B840E /* CareKitUI in Frameworks */,
 				D48E1E56275399B00034DDBE /* RxCocoa in Frameworks */,
 				D445F96F27515CBA001AA71A /* SnapKit in Frameworks */,
+				D4A957A22802E81D00E98FF4 /* WatchConnectivity.framework in Frameworks */,
+				D4A957A02802E80900E98FF4 /* HealthKit.framework in Frameworks */,
 				D48E1E58275399B00034DDBE /* RxSwift in Frameworks */,
 				D445F9722751654C001AA71A /* GRDB in Frameworks */,
-				73B12AD6928F319E88059F4F /* Pods_ActiveMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +284,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CE3BE2BC57228A6EF893722 /* Pods_ActiveMeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,26 +291,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				306578B7C25D1198987ABD8D /* Pods_ActiveMe_ActiveMeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		24ACBD500153D57E2A8C6E8B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B17205CC9BC9A32973CC0A98 /* Pods-ActiveMe.debug.xcconfig */,
-				C2228BD15E8A455C0FF41079 /* Pods-ActiveMe.release.xcconfig */,
-				4ADB9D4C1712E76A05851EF0 /* Pods-ActiveMe-ActiveMeUITests.debug.xcconfig */,
-				ACFFE28DFDD648C9B106D7B6 /* Pods-ActiveMe-ActiveMeUITests.release.xcconfig */,
-				C9EAAFAA08498AA2F64CD99D /* Pods-ActiveMeTests.debug.xcconfig */,
-				24EF2925AD47C758CECA4D9A /* Pods-ActiveMeTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		3A1043A7275DDCAD0017C25C /* ML models */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +383,36 @@
 			path = WaterBalanceList;
 			sourceTree = "<group>";
 		};
+		D41E73D327F05801003C05DF /* ActiveMe Watch */ = {
+			isa = PBXGroup;
+			children = (
+				D41E73D427F05804003C05DF /* Assets.xcassets */,
+			);
+			path = "ActiveMe Watch";
+			sourceTree = "<group>";
+		};
+		D41E73DE27F05804003C05DF /* ActiveMe Watch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D4A957A32802E85900E98FF4 /* ActiveMe Watch WatchKit Extension.entitlements */,
+				D41E73EE27F05805003C05DF /* Info.plist */,
+				D4A957A92802F0AF00E98FF4 /* Resources */,
+				D4A957A82802F0A000E98FF4 /* App */,
+				D4A957A62802F08300E98FF4 /* Views */,
+				D4A9579C2802E4F000E98FF4 /* WorkoutManager */,
+				D41E73EB27F05805003C05DF /* Preview Content */,
+			);
+			path = "ActiveMe Watch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		D41E73EB27F05805003C05DF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D41E73EC27F05805003C05DF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		D41F5476275E710F00093D1D /* Graph */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,12 +486,14 @@
 		D445F91F27515035001AA71A = {
 			isa = PBXGroup;
 			children = (
+				D48D70E727F07FB5002F5002 /* Shared */,
 				D445F92A27515035001AA71A /* ActiveMe */,
 				D445F94427515037001AA71A /* ActiveMeTests */,
 				D445F94E27515038001AA71A /* ActiveMeUITests */,
+				D41E73D327F05801003C05DF /* ActiveMe Watch */,
+				D41E73DE27F05804003C05DF /* ActiveMe Watch WatchKit Extension */,
 				D445F92927515035001AA71A /* Products */,
 				D49ABA23275E96AD00573BCD /* Frameworks */,
-				24ACBD500153D57E2A8C6E8B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -399,6 +503,8 @@
 				D445F92827515035001AA71A /* ActiveMe.app */,
 				D445F94127515037001AA71A /* ActiveMeTests.xctest */,
 				D445F94B27515038001AA71A /* ActiveMeUITests.xctest */,
+				D41E73D227F05801003C05DF /* ActiveMe Watch.app */,
+				D41E73DA27F05804003C05DF /* ActiveMe Watch WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -533,6 +639,16 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		D48D70E727F07FB5002F5002 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D48D70E827F07FC4002F5002 /* SessionDelegate.swift */,
+				D48D70EA27F0824C002F5002 /* DataTransferManager.swift */,
+				D48D70EC27F08368002F5002 /* CommandStatus.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		D48E1E412753803C0034DDBE /* GenderButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -604,10 +720,10 @@
 		D49ABA23275E96AD00573BCD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D4A957A42802E85900E98FF4 /* HealthKit.framework */,
+				D4A957A12802E81D00E98FF4 /* WatchConnectivity.framework */,
+				D4A9579F2802E80900E98FF4 /* HealthKit.framework */,
 				D49ABA24275E96AD00573BCD /* CorePlot.framework */,
-				8FC86FF7029CD919886F8AE8 /* Pods_ActiveMe.framework */,
-				6B415E3530A6613DC6F95B0F /* Pods_ActiveMe_ActiveMeUITests.framework */,
-				A43C10F58614F261F73A06CE /* Pods_ActiveMeTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -618,6 +734,57 @@
 				D442C171275AA17800BD8EE6 /* UserParametersCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D4A9579C2802E4F000E98FF4 /* WorkoutManager */ = {
+			isa = PBXGroup;
+			children = (
+				D4A9579D2802E50100E98FF4 /* WorkoutManager.swift */,
+			);
+			path = WorkoutManager;
+			sourceTree = "<group>";
+		};
+		D4A957A62802F08300E98FF4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D4A957A72802F09000E98FF4 /* Notification */,
+				D41E73E127F05804003C05DF /* StartView.swift */,
+				D4A957AA2802F0D800E98FF4 /* SessionView.swift */,
+				D4A957AC2802F13800E98FF4 /* ControlsView.swift */,
+				D4A957AE2802F1DD00E98FF4 /* MetricsView.swift */,
+				D4A957B02802F29F00E98FF4 /* ElapsedTimeView.swift */,
+				D466ADEA2803099A00862E5E /* SummaryView.swift */,
+				D466ADEC28030B5400862E5E /* ActivityRingsView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D4A957A72802F09000E98FF4 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				D41E73E527F05804003C05DF /* NotificationView.swift */,
+			);
+			name = Notification;
+			sourceTree = "<group>";
+		};
+		D4A957A82802F0A000E98FF4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D41E73E727F05804003C05DF /* ComplicationController.swift */,
+				D41E73E327F05804003C05DF /* NotificationController.swift */,
+				D41E73DF27F05804003C05DF /* ActiveMeApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D4A957A92802F0AF00E98FF4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D41E73E927F05805003C05DF /* Assets.xcassets */,
+				D41E73EF27F05805003C05DF /* PushNotificationPayload.apns */,
+				D4A957B22802F4E500E98FF4 /* Colors.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		D4AA4F38275BB0E6002DBE23 /* MainTabBar */ = {
@@ -769,19 +936,53 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D445F92727515035001AA71A /* ActiveMe */ = {
+		D41E73D127F05801003C05DF /* ActiveMe Watch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D445F95527515038001AA71A /* Build configuration list for PBXNativeTarget "ActiveMe" */;
+			buildConfigurationList = D41E73FA27F05805003C05DF /* Build configuration list for PBXNativeTarget "ActiveMe Watch" */;
 			buildPhases = (
-				0F4BC92EBFA1B9EBA4EB8C60 /* [CP] Check Pods Manifest.lock */,
-				D445F92427515035001AA71A /* Sources */,
-				D445F92527515035001AA71A /* Frameworks */,
-				D445F92627515035001AA71A /* Resources */,
-				ECA5066BF63AA6359595BAAA /* [CP] Embed Pods Frameworks */,
+				D41E73D027F05801003C05DF /* Resources */,
+				D41E73F627F05805003C05DF /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D41E73DD27F05804003C05DF /* PBXTargetDependency */,
+			);
+			name = "ActiveMe Watch";
+			productName = "ActiveMe Watch";
+			productReference = D41E73D227F05801003C05DF /* ActiveMe Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		D41E73D927F05804003C05DF /* ActiveMe Watch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D41E73F927F05805003C05DF /* Build configuration list for PBXNativeTarget "ActiveMe Watch WatchKit Extension" */;
+			buildPhases = (
+				D41E73D627F05804003C05DF /* Sources */,
+				D41E73D727F05804003C05DF /* Frameworks */,
+				D41E73D827F05804003C05DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ActiveMe Watch WatchKit Extension";
+			productName = "ActiveMe Watch WatchKit Extension";
+			productReference = D41E73DA27F05804003C05DF /* ActiveMe Watch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		D445F92727515035001AA71A /* ActiveMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D445F95527515038001AA71A /* Build configuration list for PBXNativeTarget "ActiveMe" */;
+			buildPhases = (
+				D445F92427515035001AA71A /* Sources */,
+				D445F92527515035001AA71A /* Frameworks */,
+				D445F92627515035001AA71A /* Resources */,
+				D41E73F327F05805003C05DF /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D41E73F127F05805003C05DF /* PBXTargetDependency */,
 			);
 			name = ActiveMe;
 			packageProductDependencies = (
@@ -801,7 +1002,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D445F95827515038001AA71A /* Build configuration list for PBXNativeTarget "ActiveMeTests" */;
 			buildPhases = (
-				C97749F1A41203935A7B4D41 /* [CP] Check Pods Manifest.lock */,
 				D445F93D27515037001AA71A /* Sources */,
 				D445F93E27515037001AA71A /* Frameworks */,
 				D445F93F27515037001AA71A /* Resources */,
@@ -820,11 +1020,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D445F95B27515038001AA71A /* Build configuration list for PBXNativeTarget "ActiveMeUITests" */;
 			buildPhases = (
-				40D90EB3A9A6E490A67CF110 /* [CP] Check Pods Manifest.lock */,
 				D445F94727515038001AA71A /* Sources */,
 				D445F94827515038001AA71A /* Frameworks */,
 				D445F94927515038001AA71A /* Resources */,
-				0594056213DCC73CACDA471F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -843,9 +1041,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1310;
+				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
+					D41E73D127F05801003C05DF = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					D41E73D927F05804003C05DF = {
+						CreatedOnToolsVersion = 13.3;
+					};
 					D445F92727515035001AA71A = {
 						CreatedOnToolsVersion = 13.1;
 					};
@@ -881,11 +1085,31 @@
 				D445F92727515035001AA71A /* ActiveMe */,
 				D445F94027515037001AA71A /* ActiveMeTests */,
 				D445F94A27515038001AA71A /* ActiveMeUITests */,
+				D41E73D127F05801003C05DF /* ActiveMe Watch */,
+				D41E73D927F05804003C05DF /* ActiveMe Watch WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D41E73D027F05801003C05DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D41E73D527F05804003C05DF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D41E73D827F05804003C05DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4A957B32802F4E500E98FF4 /* Colors.xcassets in Resources */,
+				D41E73ED27F05805003C05DF /* Preview Assets.xcassets in Resources */,
+				D41E73EA27F05805003C05DF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D445F92627515035001AA71A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -916,110 +1140,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		0594056213DCC73CACDA471F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ActiveMe-ActiveMeUITests/Pods-ActiveMe-ActiveMeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ActiveMe-ActiveMeUITests/Pods-ActiveMe-ActiveMeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ActiveMe-ActiveMeUITests/Pods-ActiveMe-ActiveMeUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0F4BC92EBFA1B9EBA4EB8C60 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ActiveMe-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		40D90EB3A9A6E490A67CF110 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ActiveMe-ActiveMeUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C97749F1A41203935A7B4D41 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ActiveMeTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ECA5066BF63AA6359595BAAA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ActiveMe/Pods-ActiveMe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ActiveMe/Pods-ActiveMe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ActiveMe/Pods-ActiveMe-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
+		D41E73D627F05804003C05DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4A957AB2802F0D800E98FF4 /* SessionView.swift in Sources */,
+				D41E73E427F05804003C05DF /* NotificationController.swift in Sources */,
+				D4A957B12802F29F00E98FF4 /* ElapsedTimeView.swift in Sources */,
+				D41E73E227F05804003C05DF /* StartView.swift in Sources */,
+				D41E73E827F05804003C05DF /* ComplicationController.swift in Sources */,
+				D4A957AF2802F1DD00E98FF4 /* MetricsView.swift in Sources */,
+				D4A957AD2802F13800E98FF4 /* ControlsView.swift in Sources */,
+				D41E73E027F05804003C05DF /* ActiveMeApp.swift in Sources */,
+				D41E73E627F05804003C05DF /* NotificationView.swift in Sources */,
+				D466ADED28030B5400862E5E /* ActivityRingsView.swift in Sources */,
+				D4A9579E2802E50100E98FF4 /* WorkoutManager.swift in Sources */,
+				D466ADEB2803099A00862E5E /* SummaryView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D445F92427515035001AA71A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1033,6 +1173,7 @@
 				D445F96C2751551C001AA71A /* StrokesSliderCell.swift in Sources */,
 				D445F93027515035001AA71A /* GenderView.swift in Sources */,
 				3A1703682767E7230023DF67 /* SettingsViewModel.swift in Sources */,
+				D48D70ED27F08368002F5002 /* CommandStatus.swift in Sources */,
 				3A1043AD275DDD2C0017C25C /* ActivityClassifier.swift in Sources */,
 				3A1703632767C40F0023DF67 /* UITextFiewld+Extension.swift in Sources */,
 				D48E1E43275380500034DDBE /* GenderButton.swift in Sources */,
@@ -1068,8 +1209,10 @@
 				3A1043B4275DFE840017C25C /* ActivityClassifierProtocol.swift in Sources */,
 				D4DCA87B275BE6C10072F725 /* ActivityView.swift in Sources */,
 				D48E1E6B275419EE0034DDBE /* BaseCoordinator.swift in Sources */,
+				D48D70EB27F0824C002F5002 /* DataTransferManager.swift in Sources */,
 				D442C17C275AB9C300BD8EE6 /* SliderParametersView.swift in Sources */,
 				D48E1E45275386FF0034DDBE /* UIColor+Extension.swift in Sources */,
+				D48D70E927F07FC4002F5002 /* SessionDelegate.swift in Sources */,
 				D445F97827516951001AA71A /* UICollectionViewCell+Extension.swift in Sources */,
 				3A6A2C7727612F8C006B840E /* OCKStore+Extension.swift in Sources */,
 				D48E1E5C2753C8220034DDBE /* GenderViewModel.swift in Sources */,
@@ -1099,6 +1242,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D41E73DD27F05804003C05DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D41E73D927F05804003C05DF /* ActiveMe Watch WatchKit Extension */;
+			targetProxy = D41E73DC27F05804003C05DF /* PBXContainerItemProxy */;
+		};
+		D41E73F127F05805003C05DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D41E73D127F05801003C05DF /* ActiveMe Watch */;
+			targetProxy = D41E73F027F05805003C05DF /* PBXContainerItemProxy */;
+		};
 		D445F94327515037001AA71A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D445F92727515035001AA71A /* ActiveMe */;
@@ -1123,6 +1276,128 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D41E73F427F05805003C05DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J9ZD55BC9Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = ActiveMe_Watch_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "ActiveMe Watch";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.dzmitry-semianovich.ActiveMe";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dzmitry-semianovich.ActiveMe.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		D41E73F527F05805003C05DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J9ZD55BC9Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = ActiveMe_Watch_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "ActiveMe Watch";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.dzmitry-semianovich.ActiveMe";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dzmitry-semianovich.ActiveMe.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		D41E73F727F05805003C05DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "ActiveMe Watch WatchKit Extension/ActiveMe Watch WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ActiveMe Watch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = J9ZD55BC9Y;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ActiveMe Watch WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ActiveMe Watch WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = ActiveMe_Watch_WatchKit_Extension.ComplicationController;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dzmitry-semianovich.ActiveMe.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		D41E73F827F05805003C05DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "ActiveMe Watch WatchKit Extension/ActiveMe Watch WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ActiveMe Watch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = J9ZD55BC9Y;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ActiveMe Watch WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ActiveMe Watch WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = ActiveMe_Watch_WatchKit_Extension.ComplicationController;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dzmitry-semianovich.ActiveMe.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
 		D445F95327515038001AA71A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1156,6 +1431,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1217,6 +1493,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1241,10 +1518,10 @@
 		};
 		D445F95627515038001AA71A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B17205CC9BC9A32973CC0A98 /* Pods-ActiveMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J9ZD55BC9Y;
@@ -1272,10 +1549,10 @@
 		};
 		D445F95727515038001AA71A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2228BD15E8A455C0FF41079 /* Pods-ActiveMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J9ZD55BC9Y;
@@ -1303,7 +1580,6 @@
 		};
 		D445F95927515038001AA71A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9EAAFAA08498AA2F64CD99D /* Pods-ActiveMeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1330,7 +1606,6 @@
 		};
 		D445F95A27515038001AA71A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24EF2925AD47C758CECA4D9A /* Pods-ActiveMeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1357,7 +1632,6 @@
 		};
 		D445F95C27515038001AA71A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4ADB9D4C1712E76A05851EF0 /* Pods-ActiveMe-ActiveMeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
@@ -1382,7 +1656,6 @@
 		};
 		D445F95D27515038001AA71A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACFFE28DFDD648C9B106D7B6 /* Pods-ActiveMe-ActiveMeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
@@ -1408,6 +1681,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D41E73F927F05805003C05DF /* Build configuration list for PBXNativeTarget "ActiveMe Watch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D41E73F727F05805003C05DF /* Debug */,
+				D41E73F827F05805003C05DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D41E73FA27F05805003C05DF /* Build configuration list for PBXNativeTarget "ActiveMe Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D41E73F427F05805003C05DF /* Debug */,
+				D41E73F527F05805003C05DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D445F92327515035001AA71A /* Build configuration list for PBXProject "ActiveMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import CorePlot
 import RxSwift
 import CareKitUI
 
@@ -205,6 +204,4 @@ class ActivityView: UIViewController {
                 self?.activityPrediction.text = prediction
             }.disposed(by: self.disposeBag)
     }
-    
-    
 }
