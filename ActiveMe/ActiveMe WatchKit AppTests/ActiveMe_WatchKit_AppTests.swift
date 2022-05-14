@@ -1,14 +1,14 @@
 //
-//  ActiveMeTests.swift
-//  ActiveMeTests
+//  ActiveMe_WatchKit_AppTests.swift
+//  ActiveMe WatchKit AppTests
 //
 //  Created by Dima Semenovich on 8.05.22.
 //
 
 import XCTest
-@testable import ActiveMe
+@testable import ActiveMe_WatchKit_Extension
 
-class ActiveMeTests: XCTestCase {
+class ActiveMe_WatchKit_AppTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

@@ -1,13 +1,13 @@
 //
-//  ActiveMeUITestsLaunchTests.swift
-//  ActiveMeUITests
+//  ActiveMe_WatchKit_AppUITestsLaunchTests.swift
+//  ActiveMe WatchKit AppUITests
 //
 //  Created by Dima Semenovich on 8.05.22.
 //
 
 import XCTest
 
-class ActiveMeUITestsLaunchTests: XCTestCase {
+class ActiveMe_WatchKit_AppUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

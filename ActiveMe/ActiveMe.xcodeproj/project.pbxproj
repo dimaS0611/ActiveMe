@@ -7,146 +7,260 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A1043A9275DDCD00017C25C /* HARClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A1043A8275DDCD00017C25C /* HARClassifier.mlmodel */; };
-		3A1043AD275DDD2C0017C25C /* ActivityClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1043AC275DDD2C0017C25C /* ActivityClassifier.swift */; };
-		3A1043B0275DE11B0017C25C /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1043AF275DE11B0017C25C /* MotionManager.swift */; };
-		3A1043B2275DFC410017C25C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1043B1275DFC410017C25C /* HomeViewModel.swift */; };
-		3A1043B4275DFE840017C25C /* ActivityClassifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1043B3275DFE840017C25C /* ActivityClassifierProtocol.swift */; };
-		3ADAFBCD275A15DB0026A1CC /* WaterBalanceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADAFBCC275A15DB0026A1CC /* WaterBalanceListView.swift */; };
-		3ADAFBCF275A16080026A1CC /* WaterBalanceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADAFBCE275A16080026A1CC /* WaterBalanceListViewModel.swift */; };
-		3ADAFBD1275A1C690026A1CC /* WaterBalanceListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADAFBD0275A1C690026A1CC /* WaterBalanceListModel.swift */; };
-		3ADAFBD3275A273A0026A1CC /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ADAFBD2275A273A0026A1CC /* Roboto-Thin.ttf */; };
-		3ADAFBD5275A27440026A1CC /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ADAFBD4275A27440026A1CC /* Roboto-Bold.ttf */; };
-		3ADAFBD7275A274E0026A1CC /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ADAFBD6275A274E0026A1CC /* Roboto-Regular.ttf */; };
-		3ADAFBD9275A27560026A1CC /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ADAFBD8275A27560026A1CC /* Roboto-Medium.ttf */; };
-		3ADAFBDB275A275D0026A1CC /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ADAFBDA275A275D0026A1CC /* Roboto-Light.ttf */; };
-		D442C172275AA17800BD8EE6 /* UserParametersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D442C171275AA17800BD8EE6 /* UserParametersCoordinator.swift */; };
-		D442C175275AAABF00BD8EE6 /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D442C174275AAABF00BD8EE6 /* NextButton.swift */; };
-		D442C17C275AB9C300BD8EE6 /* SliderParametersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D442C17B275AB9C300BD8EE6 /* SliderParametersView.swift */; };
-		D442C17E275AB9CD00BD8EE6 /* SliderParametersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D442C17D275AB9CD00BD8EE6 /* SliderParametersViewModel.swift */; };
-		D445F92C27515035001AA71A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F92B27515035001AA71A /* AppDelegate.swift */; };
-		D445F92E27515035001AA71A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F92D27515035001AA71A /* SceneDelegate.swift */; };
-		D445F93027515035001AA71A /* GenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F92F27515035001AA71A /* GenderView.swift */; };
-		D445F93627515036001AA71A /* ActiveMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D445F93427515036001AA71A /* ActiveMe.xcdatamodeld */; };
-		D445F93827515037001AA71A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D445F93727515037001AA71A /* Assets.xcassets */; };
-		D445F93B27515037001AA71A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D445F93927515037001AA71A /* LaunchScreen.storyboard */; };
-		D445F94627515038001AA71A /* ActiveMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F94527515038001AA71A /* ActiveMeTests.swift */; };
-		D445F95027515038001AA71A /* ActiveMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F94F27515038001AA71A /* ActiveMeUITests.swift */; };
-		D445F95227515038001AA71A /* ActiveMeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F95127515038001AA71A /* ActiveMeUITestsLaunchTests.swift */; };
-		D445F964275152EE001AA71A /* StrokesSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F963275152EE001AA71A /* StrokesSlider.swift */; };
-		D445F96727515395001AA71A /* MainSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F96627515395001AA71A /* MainSection.swift */; };
-		D445F969275153D7001AA71A /* StrokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F968275153D7001AA71A /* StrokeCell.swift */; };
-		D445F96C2751551C001AA71A /* StrokesSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F96B2751551C001AA71A /* StrokesSliderCell.swift */; };
-		D445F96F27515CBA001AA71A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D445F96E27515CBA001AA71A /* SnapKit */; };
-		D445F9722751654C001AA71A /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D445F9712751654C001AA71A /* GRDB */; };
-		D445F97427516608001AA71A /* StrokeSliderCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F97327516608001AA71A /* StrokeSliderCellProtocol.swift */; };
-		D445F97827516951001AA71A /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445F97727516951001AA71A /* UICollectionViewCell+Extension.swift */; };
-		D4480FAD27516CA100EDCD22 /* StrokesSliderFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4480FAC27516CA100EDCD22 /* StrokesSliderFlowLayout.swift */; };
-		D48E1E43275380500034DDBE /* GenderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E42275380500034DDBE /* GenderButton.swift */; };
-		D48E1E45275386FF0034DDBE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E44275386FF0034DDBE /* UIColor+Extension.swift */; };
-		D48E1E472753887A0034DDBE /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E462753887A0034DDBE /* UIFont+Extension.swift */; };
-		D48E1E56275399B00034DDBE /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D48E1E55275399B00034DDBE /* RxCocoa */; };
-		D48E1E58275399B00034DDBE /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D48E1E57275399B00034DDBE /* RxSwift */; };
-		D48E1E5C2753C8220034DDBE /* GenderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E5B2753C8220034DDBE /* GenderViewModel.swift */; };
-		D48E1E622753E33F0034DDBE /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E612753E33F0034DDBE /* UIViewController+Extension.swift */; };
-		D48E1E6B275419EE0034DDBE /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E6A275419EE0034DDBE /* BaseCoordinator.swift */; };
-		D48E1E6E27541B6F0034DDBE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E1E6D27541B6F0034DDBE /* AppCoordinator.swift */; };
-		D4AA4F3C275BB11C002DBE23 /* MainTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AA4F3B275BB11C002DBE23 /* MainTabBarView.swift */; };
-		D4DCA876275BE3E00072F725 /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DCA875275BE3E00072F725 /* MainTabBarCoordinator.swift */; };
-		D4DCA879275BE6890072F725 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DCA878275BE6890072F725 /* HomeView.swift */; };
-		D4DCA87B275BE6C10072F725 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DCA87A275BE6C10072F725 /* ActivityView.swift */; };
-		D4DCA87D275BE6D40072F725 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DCA87C275BE6D40072F725 /* SettingsView.swift */; };
+		8A0FD18F28298F19003ADAD0 /* ActiveMeWatchCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8A0FD18D28298F19003ADAD0 /* ActiveMeWatchCoreData.xcdatamodeld */; };
+		8A0FD19628299168003ADAD0 /* WatchPersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0FD19528299168003ADAD0 /* WatchPersistenceController.swift */; };
+		8A24316B2829AEF300055FEB /* SleepData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2431672829AED600055FEB /* SleepData+CoreDataClass.swift */; };
+		8A24316C2829AEF300055FEB /* SleepData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2431682829AED600055FEB /* SleepData+CoreDataProperties.swift */; };
+		8A24316F2829B0F300055FEB /* ActiveMeCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8A24316D2829B0F300055FEB /* ActiveMeCoreData.xcdatamodeld */; };
+		8A2431732829B16D00055FEB /* SleepData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2431712829B16D00055FEB /* SleepData+CoreDataClass.swift */; };
+		8A2431742829B16D00055FEB /* SleepData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2431722829B16D00055FEB /* SleepData+CoreDataProperties.swift */; };
+		8A2431772829B1D100055FEB /* PersistanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2431762829B1D100055FEB /* PersistanceController.swift */; };
+		8A66EBCC2828246E009FECBB /* SleepClassifierNN.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8A66EBCB2828246D009FECBB /* SleepClassifierNN.mlmodel */; };
+		8A66EBCF282824BC009FECBB /* SleepClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A66EBCE282824BC009FECBB /* SleepClassifier.swift */; };
+		8A66EBD228285DD8009FECBB /* SleepDataProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A66EBD128285DD8009FECBB /* SleepDataProcessor.swift */; };
+		8A66EBD528285E07009FECBB /* SleepStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A66EBD428285E07009FECBB /* SleepStage.swift */; };
+		8A6E84BE282EEF3E00C2BB76 /* RingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E84BD282EEF3E00C2BB76 /* RingModel.swift */; };
+		8A6E84C0282EEFBB00C2BB76 /* StepModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E84BF282EEFBB00C2BB76 /* StepModel.swift */; };
+		8A6E84C4282EF01800C2BB76 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E84C3282EF01800C2BB76 /* HomeView.swift */; };
+		8A9B83102827C5DF00E90D61 /* ActiveMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B830F2827C5DF00E90D61 /* ActiveMeApp.swift */; };
+		8A9B83122827C5DF00E90D61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B83112827C5DF00E90D61 /* ContentView.swift */; };
+		8A9B83142827C5E000E90D61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A9B83132827C5E000E90D61 /* Assets.xcassets */; };
+		8A9B83172827C5E000E90D61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A9B83162827C5E000E90D61 /* Preview Assets.xcassets */; };
+		8A9B83212827C5E000E90D61 /* ActiveMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B83202827C5E000E90D61 /* ActiveMeTests.swift */; };
+		8A9B832B2827C5E000E90D61 /* ActiveMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B832A2827C5E000E90D61 /* ActiveMeUITests.swift */; };
+		8A9B832D2827C5E000E90D61 /* ActiveMeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B832C2827C5E000E90D61 /* ActiveMeUITestsLaunchTests.swift */; };
+		8A9B83312827C5E000E90D61 /* ActiveMe WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8A9B83302827C5E000E90D61 /* ActiveMe WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8A9B83362827C5E000E90D61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A9B83352827C5E000E90D61 /* Assets.xcassets */; };
+		8A9B833C2827C5E000E90D61 /* ActiveMe WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8A9B833B2827C5E000E90D61 /* ActiveMe WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8A9B83412827C5E000E90D61 /* ActiveMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B83402827C5E000E90D61 /* ActiveMeApp.swift */; };
+		8A9B83432827C5E000E90D61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B83422827C5E000E90D61 /* ContentView.swift */; };
+		8A9B83452827C5E000E90D61 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B83442827C5E000E90D61 /* NotificationController.swift */; };
+		8A9B83472827C5E000E90D61 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B83462827C5E000E90D61 /* NotificationView.swift */; };
+		8A9B83492827C5E000E90D61 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B83482827C5E000E90D61 /* ComplicationController.swift */; };
+		8A9B834B2827C5E100E90D61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A9B834A2827C5E100E90D61 /* Assets.xcassets */; };
+		8A9B834E2827C5E100E90D61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A9B834D2827C5E100E90D61 /* Preview Assets.xcassets */; };
+		8A9B835A2827C5E100E90D61 /* ActiveMe_WatchKit_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B83592827C5E100E90D61 /* ActiveMe_WatchKit_AppTests.swift */; };
+		8A9B83642827C5E100E90D61 /* ActiveMe_WatchKit_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B83632827C5E100E90D61 /* ActiveMe_WatchKit_AppUITests.swift */; };
+		8A9B83662827C5E100E90D61 /* ActiveMe_WatchKit_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B83652827C5E100E90D61 /* ActiveMe_WatchKit_AppUITestsLaunchTests.swift */; };
+		8A9B83852827C69300E90D61 /* SleepClassificationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B83842827C69300E90D61 /* SleepClassificationData.swift */; };
+		8A9B83872827C6B800E90D61 /* SleepTelemetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B83862827C6B800E90D61 /* SleepTelemetry.swift */; };
+		8A9B838B2827CACC00E90D61 /* PhoneConnectionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B838A2827CACC00E90D61 /* PhoneConnectionProvider.swift */; };
+		8A9B838E2827CB0400E90D61 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9B838D2827CB0400E90D61 /* WatchConnectivity.framework */; };
+		8A9B83912827D14400E90D61 /* SleepClassificationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B83842827C69300E90D61 /* SleepClassificationData.swift */; };
+		8A9B83922827D14E00E90D61 /* SleepTelemetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B83862827C6B800E90D61 /* SleepTelemetry.swift */; };
+		8A9B83942827D40800E90D61 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B83932827D40800E90D61 /* AppViewModel.swift */; };
+		8A9B839D2827D89200E90D61 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B839C2827D89200E90D61 /* WorkoutManager.swift */; };
+		8A9B83A22827DB9400E90D61 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9B83A12827DB9400E90D61 /* HealthKit.framework */; };
+		8A9B83A62827DC6C00E90D61 /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B83A52827DC6C00E90D61 /* HealthStore.swift */; };
+		8A9B83A92827DD6400E90D61 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9B83A82827DD6400E90D61 /* HealthKit.framework */; };
+		8A9B83AD2828063700E90D61 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B83AC2828063700E90D61 /* StartView.swift */; };
+		8A9B83B02828066600E90D61 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B83AF2828066600E90D61 /* SessionView.swift */; };
+		8A9B83B32828069800E90D61 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B83B22828069800E90D61 /* ControlsView.swift */; };
+		8A9B83B6282806BD00E90D61 /* MetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B83B5282806BD00E90D61 /* MetricsView.swift */; };
+		8A9B83BA282806E400E90D61 /* ElapsedTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B83B9282806E400E90D61 /* ElapsedTimeView.swift */; };
+		8A9B83BD2828073000E90D61 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B83BC2828073000E90D61 /* SummaryView.swift */; };
+		8A9B83C12828083700E90D61 /* ActivityRingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B83C02828083700E90D61 /* ActivityRingsView.swift */; };
+		8A9B83C428280BCC00E90D61 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B83C328280BCC00E90D61 /* MotionManager.swift */; };
+		8A9B83C728280C3200E90D61 /* PedometerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B83C628280C3200E90D61 /* PedometerManager.swift */; };
+		8AECAD6C282C2F8200B06A4E /* WatchConnectionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AECAD6B282C2F8200B06A4E /* WatchConnectionProvider.swift */; };
+		8AECAD6F282C388E00B06A4E /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AECAD6E282C388E00B06A4E /* AppViewModel.swift */; };
+		8AF14FF1282FB60400783B02 /* FloatingTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF14FF0282FB60400783B02 /* FloatingTabBar.swift */; };
+		8AF7A1A7282EFE4D00465DE2 /* FitnessRingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF7A1A6282EFE4D00465DE2 /* FitnessRingCardView.swift */; };
+		8AF7A1AB282F02D800465DE2 /* FitnessGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF7A1AA282F02D800465DE2 /* FitnessGraphView.swift */; };
+		8AF7A1AD282F043000465DE2 /* BarGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF7A1AC282F043000465DE2 /* BarGraph.swift */; };
+		8AF7A1B0282F155200465DE2 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF7A1AF282F155200465DE2 /* View+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D445F94227515037001AA71A /* PBXContainerItemProxy */ = {
+		8A2431782829B69C00055FEB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D445F92027515035001AA71A /* Project object */;
+			containerPortal = 8A9B83042827C5DF00E90D61 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D445F92727515035001AA71A;
+			remoteGlobalIDString = 8A9B832F2827C5E000E90D61;
+			remoteInfo = "ActiveMe WatchKit App";
+		};
+		8A9B831D2827C5E000E90D61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A9B83042827C5DF00E90D61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A9B830B2827C5DF00E90D61;
 			remoteInfo = ActiveMe;
 		};
-		D445F94C27515038001AA71A /* PBXContainerItemProxy */ = {
+		8A9B83272827C5E000E90D61 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D445F92027515035001AA71A /* Project object */;
+			containerPortal = 8A9B83042827C5DF00E90D61 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D445F92727515035001AA71A;
+			remoteGlobalIDString = 8A9B830B2827C5DF00E90D61;
 			remoteInfo = ActiveMe;
+		};
+		8A9B83322827C5E000E90D61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A9B83042827C5DF00E90D61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A9B832F2827C5E000E90D61;
+			remoteInfo = "ActiveMe WatchKit App";
+		};
+		8A9B833D2827C5E000E90D61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A9B83042827C5DF00E90D61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A9B833A2827C5E000E90D61;
+			remoteInfo = "ActiveMe WatchKit Extension";
+		};
+		8A9B83562827C5E100E90D61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A9B83042827C5DF00E90D61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A9B833A2827C5E000E90D61;
+			remoteInfo = "ActiveMe WatchKit Extension";
+		};
+		8A9B83602827C5E100E90D61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A9B83042827C5DF00E90D61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A9B832F2827C5E000E90D61;
+			remoteInfo = "ActiveMe WatchKit App";
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8A9B836C2827C5E100E90D61 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8A9B833C2827C5E000E90D61 /* ActiveMe WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A9B83702827C5E100E90D61 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				8A9B83312827C5E000E90D61 /* ActiveMe WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		3A1043A8275DDCD00017C25C /* HARClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = HARClassifier.mlmodel; path = ../../../ML/HARClassifier.mlmodel; sourceTree = "<group>"; };
-		3A1043AC275DDD2C0017C25C /* ActivityClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityClassifier.swift; sourceTree = "<group>"; };
-		3A1043AF275DE11B0017C25C /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
-		3A1043B1275DFC410017C25C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = ActiveMe/Common/Motion/HomeViewModel.swift; sourceTree = SOURCE_ROOT; };
-		3A1043B3275DFE840017C25C /* ActivityClassifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityClassifierProtocol.swift; sourceTree = "<group>"; };
-		3ADAFBCC275A15DB0026A1CC /* WaterBalanceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterBalanceListView.swift; sourceTree = "<group>"; };
-		3ADAFBCE275A16080026A1CC /* WaterBalanceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterBalanceListViewModel.swift; sourceTree = "<group>"; };
-		3ADAFBD0275A1C690026A1CC /* WaterBalanceListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterBalanceListModel.swift; sourceTree = "<group>"; };
-		3ADAFBD2275A273A0026A1CC /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
-		3ADAFBD4275A27440026A1CC /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
-		3ADAFBD6275A274E0026A1CC /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
-		3ADAFBD8275A27560026A1CC /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
-		3ADAFBDA275A275D0026A1CC /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
-		D442C171275AA17800BD8EE6 /* UserParametersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserParametersCoordinator.swift; sourceTree = "<group>"; };
-		D442C174275AAABF00BD8EE6 /* NextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
-		D442C17B275AB9C300BD8EE6 /* SliderParametersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderParametersView.swift; sourceTree = "<group>"; };
-		D442C17D275AB9CD00BD8EE6 /* SliderParametersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderParametersViewModel.swift; sourceTree = "<group>"; };
-		D445F92827515035001AA71A /* ActiveMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActiveMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D445F92B27515035001AA71A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D445F92D27515035001AA71A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D445F92F27515035001AA71A /* GenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderView.swift; sourceTree = "<group>"; };
-		D445F93527515036001AA71A /* ActiveMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ActiveMe.xcdatamodel; sourceTree = "<group>"; };
-		D445F93727515037001AA71A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D445F93A27515037001AA71A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D445F93C27515037001AA71A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D445F94127515037001AA71A /* ActiveMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActiveMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D445F94527515038001AA71A /* ActiveMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveMeTests.swift; sourceTree = "<group>"; };
-		D445F94B27515038001AA71A /* ActiveMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActiveMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D445F94F27515038001AA71A /* ActiveMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveMeUITests.swift; sourceTree = "<group>"; };
-		D445F95127515038001AA71A /* ActiveMeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveMeUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		D445F963275152EE001AA71A /* StrokesSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokesSlider.swift; sourceTree = "<group>"; };
-		D445F96627515395001AA71A /* MainSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSection.swift; sourceTree = "<group>"; };
-		D445F968275153D7001AA71A /* StrokeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeCell.swift; sourceTree = "<group>"; };
-		D445F96B2751551C001AA71A /* StrokesSliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokesSliderCell.swift; sourceTree = "<group>"; };
-		D445F97327516608001AA71A /* StrokeSliderCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeSliderCellProtocol.swift; sourceTree = "<group>"; };
-		D445F97727516951001AA71A /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
-		D4480FAC27516CA100EDCD22 /* StrokesSliderFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokesSliderFlowLayout.swift; sourceTree = "<group>"; };
-		D48E1E42275380500034DDBE /* GenderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderButton.swift; sourceTree = "<group>"; };
-		D48E1E44275386FF0034DDBE /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		D48E1E462753887A0034DDBE /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
-		D48E1E5B2753C8220034DDBE /* GenderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewModel.swift; sourceTree = "<group>"; };
-		D48E1E612753E33F0034DDBE /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		D48E1E6A275419EE0034DDBE /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
-		D48E1E6D27541B6F0034DDBE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		D4AA4F3B275BB11C002DBE23 /* MainTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarView.swift; sourceTree = "<group>"; };
-		D4DCA875275BE3E00072F725 /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
-		D4DCA878275BE6890072F725 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		D4DCA87A275BE6C10072F725 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
-		D4DCA87C275BE6D40072F725 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		8A0FD18E28298F19003ADAD0 /* ActiveMeSleepCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ActiveMeSleepCoreData.xcdatamodel; sourceTree = "<group>"; };
+		8A0FD19528299168003ADAD0 /* WatchPersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPersistenceController.swift; sourceTree = "<group>"; };
+		8A2431672829AED600055FEB /* SleepData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SleepData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8A2431682829AED600055FEB /* SleepData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SleepData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8A24316E2829B0F300055FEB /* ActiveMeCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ActiveMeCoreData.xcdatamodel; sourceTree = "<group>"; };
+		8A2431712829B16D00055FEB /* SleepData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SleepData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8A2431722829B16D00055FEB /* SleepData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SleepData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8A2431762829B1D100055FEB /* PersistanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceController.swift; sourceTree = "<group>"; };
+		8A66EBCB2828246D009FECBB /* SleepClassifierNN.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepClassifierNN.mlmodel; sourceTree = "<group>"; };
+		8A66EBCE282824BC009FECBB /* SleepClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepClassifier.swift; sourceTree = "<group>"; };
+		8A66EBD128285DD8009FECBB /* SleepDataProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepDataProcessor.swift; sourceTree = "<group>"; };
+		8A66EBD428285E07009FECBB /* SleepStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepStage.swift; sourceTree = "<group>"; };
+		8A6E84BD282EEF3E00C2BB76 /* RingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingModel.swift; sourceTree = "<group>"; };
+		8A6E84BF282EEFBB00C2BB76 /* StepModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepModel.swift; sourceTree = "<group>"; };
+		8A6E84C3282EF01800C2BB76 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8A9B830C2827C5DF00E90D61 /* ActiveMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActiveMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A9B830F2827C5DF00E90D61 /* ActiveMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveMeApp.swift; sourceTree = "<group>"; };
+		8A9B83112827C5DF00E90D61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8A9B83132827C5E000E90D61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A9B83162827C5E000E90D61 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8A9B831C2827C5E000E90D61 /* ActiveMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActiveMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A9B83202827C5E000E90D61 /* ActiveMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveMeTests.swift; sourceTree = "<group>"; };
+		8A9B83262827C5E000E90D61 /* ActiveMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActiveMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A9B832A2827C5E000E90D61 /* ActiveMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveMeUITests.swift; sourceTree = "<group>"; };
+		8A9B832C2827C5E000E90D61 /* ActiveMeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveMeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8A9B83302827C5E000E90D61 /* ActiveMe WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ActiveMe WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A9B83352827C5E000E90D61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A9B833B2827C5E000E90D61 /* ActiveMe WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ActiveMe WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A9B83402827C5E000E90D61 /* ActiveMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveMeApp.swift; sourceTree = "<group>"; };
+		8A9B83422827C5E000E90D61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8A9B83442827C5E000E90D61 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		8A9B83462827C5E000E90D61 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		8A9B83482827C5E000E90D61 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		8A9B834A2827C5E100E90D61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A9B834D2827C5E100E90D61 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8A9B834F2827C5E100E90D61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A9B83502827C5E100E90D61 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		8A9B83552827C5E100E90D61 /* ActiveMe WatchKit AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ActiveMe WatchKit AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A9B83592827C5E100E90D61 /* ActiveMe_WatchKit_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveMe_WatchKit_AppTests.swift; sourceTree = "<group>"; };
+		8A9B835F2827C5E100E90D61 /* ActiveMe WatchKit AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ActiveMe WatchKit AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A9B83632827C5E100E90D61 /* ActiveMe_WatchKit_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveMe_WatchKit_AppUITests.swift; sourceTree = "<group>"; };
+		8A9B83652827C5E100E90D61 /* ActiveMe_WatchKit_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveMe_WatchKit_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8A9B83842827C69300E90D61 /* SleepClassificationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepClassificationData.swift; sourceTree = "<group>"; };
+		8A9B83862827C6B800E90D61 /* SleepTelemetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTelemetry.swift; sourceTree = "<group>"; };
+		8A9B838A2827CACC00E90D61 /* PhoneConnectionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConnectionProvider.swift; sourceTree = "<group>"; };
+		8A9B838D2827CB0400E90D61 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
+		8A9B83932827D40800E90D61 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		8A9B839C2827D89200E90D61 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		8A9B83A02827DB9400E90D61 /* ActiveMe WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ActiveMe WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		8A9B83A12827DB9400E90D61 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.5.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		8A9B83A32827DC0E00E90D61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8A9B83A52827DC6C00E90D61 /* HealthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStore.swift; sourceTree = "<group>"; };
+		8A9B83A72827DD6400E90D61 /* ActiveMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ActiveMe.entitlements; sourceTree = "<group>"; };
+		8A9B83A82827DD6400E90D61 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		8A9B83AC2828063700E90D61 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		8A9B83AF2828066600E90D61 /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
+		8A9B83B22828069800E90D61 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
+		8A9B83B5282806BD00E90D61 /* MetricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsView.swift; sourceTree = "<group>"; };
+		8A9B83B9282806E400E90D61 /* ElapsedTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedTimeView.swift; sourceTree = "<group>"; };
+		8A9B83BC2828073000E90D61 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		8A9B83C02828083700E90D61 /* ActivityRingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRingsView.swift; sourceTree = "<group>"; };
+		8A9B83C328280BCC00E90D61 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
+		8A9B83C628280C3200E90D61 /* PedometerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedometerManager.swift; sourceTree = "<group>"; };
+		8AECAD6B282C2F8200B06A4E /* WatchConnectionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectionProvider.swift; sourceTree = "<group>"; };
+		8AECAD6E282C388E00B06A4E /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		8AF14FF0282FB60400783B02 /* FloatingTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTabBar.swift; sourceTree = "<group>"; };
+		8AF7A1A6282EFE4D00465DE2 /* FitnessRingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessRingCardView.swift; sourceTree = "<group>"; };
+		8AF7A1AA282F02D800465DE2 /* FitnessGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessGraphView.swift; sourceTree = "<group>"; };
+		8AF7A1AC282F043000465DE2 /* BarGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGraph.swift; sourceTree = "<group>"; };
+		8AF7A1AF282F155200465DE2 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D445F92527515035001AA71A /* Frameworks */ = {
+		8A9B83092827C5DF00E90D61 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D48E1E56275399B00034DDBE /* RxCocoa in Frameworks */,
-				D445F96F27515CBA001AA71A /* SnapKit in Frameworks */,
-				D48E1E58275399B00034DDBE /* RxSwift in Frameworks */,
-				D445F9722751654C001AA71A /* GRDB in Frameworks */,
+				8A9B838E2827CB0400E90D61 /* WatchConnectivity.framework in Frameworks */,
+				8A9B83A92827DD6400E90D61 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D445F93E27515037001AA71A /* Frameworks */ = {
+		8A9B83192827C5E000E90D61 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D445F94827515038001AA71A /* Frameworks */ = {
+		8A9B83232827C5E000E90D61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A9B83382827C5E000E90D61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A9B83A22827DB9400E90D61 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A9B83522827C5E100E90D61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A9B835C2827C5E100E90D61 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -156,539 +270,737 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3A1043A7275DDCAD0017C25C /* ML models */ = {
+		8A0FD19028298FEA003ADAD0 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				3A1043A8275DDCD00017C25C /* HARClassifier.mlmodel */,
+				8A0FD1942829909B003ADAD0 /* PersistenceController */,
+				8A0FD19128298FF1003ADAD0 /* Models */,
 			);
-			path = "ML models";
+			path = CoreData;
 			sourceTree = "<group>";
 		};
-		3A1043AB275DDD190017C25C /* ML */ = {
+		8A0FD19128298FF1003ADAD0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3A1043AC275DDD2C0017C25C /* ActivityClassifier.swift */,
-				3A1043B3275DFE840017C25C /* ActivityClassifierProtocol.swift */,
+				8A2431672829AED600055FEB /* SleepData+CoreDataClass.swift */,
+				8A2431682829AED600055FEB /* SleepData+CoreDataProperties.swift */,
 			);
-			path = ML;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		3A1043AE275DE10A0017C25C /* Motion */ = {
+		8A0FD1942829909B003ADAD0 /* PersistenceController */ = {
 			isa = PBXGroup;
 			children = (
-				3A1043AF275DE11B0017C25C /* MotionManager.swift */,
+				8A0FD19528299168003ADAD0 /* WatchPersistenceController.swift */,
 			);
-			path = Motion;
+			path = PersistenceController;
 			sourceTree = "<group>";
 		};
-		3ADAFBCA275A15980026A1CC /* WaterBalance */ = {
+		8A2431702829B14F00055FEB /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				3ADAFBCB275A15A40026A1CC /* WaterBalanceList */,
+				8A2431752829B1B100055FEB /* PersistanceController */,
+				8A2431712829B16D00055FEB /* SleepData+CoreDataClass.swift */,
+				8A2431722829B16D00055FEB /* SleepData+CoreDataProperties.swift */,
 			);
-			path = WaterBalance;
+			path = CoreData;
 			sourceTree = "<group>";
 		};
-		3ADAFBCB275A15A40026A1CC /* WaterBalanceList */ = {
+		8A2431752829B1B100055FEB /* PersistanceController */ = {
 			isa = PBXGroup;
 			children = (
-				3ADAFBCC275A15DB0026A1CC /* WaterBalanceListView.swift */,
-				3ADAFBCE275A16080026A1CC /* WaterBalanceListViewModel.swift */,
-				3ADAFBD0275A1C690026A1CC /* WaterBalanceListModel.swift */,
+				8A2431762829B1D100055FEB /* PersistanceController.swift */,
 			);
-			path = WaterBalanceList;
+			path = PersistanceController;
 			sourceTree = "<group>";
 		};
-		D442C173275AAAB100BD8EE6 /* NextButton */ = {
+		8A66EBC328281F23009FECBB /* ActivityManagers */ = {
 			isa = PBXGroup;
 			children = (
-				D442C174275AAABF00BD8EE6 /* NextButton.swift */,
+				8A9B83C528280C1C00E90D61 /* PedometerManager */,
+				8A9B83C228280BBC00E90D61 /* MotionManager */,
+				8A9B83A42827DC5D00E90D61 /* HealthStore */,
+				8A9B839B2827D88400E90D61 /* WorkoutManager */,
 			);
-			path = NextButton;
+			path = ActivityManagers;
 			sourceTree = "<group>";
 		};
-		D442C176275AB99700BD8EE6 /* UserParameters */ = {
+		8A66EBC428281F33009FECBB /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				D4A20654275A63D600453330 /* Coordinator */,
-				D442C177275AB9A400BD8EE6 /* SliderParameters */,
-				D48E1E5A2753C7C90034DDBE /* Gender */,
-			);
-			path = UserParameters;
-			sourceTree = "<group>";
-		};
-		D442C177275AB9A400BD8EE6 /* SliderParameters */ = {
-			isa = PBXGroup;
-			children = (
-				D442C17A275AB9B600BD8EE6 /* ViewModel */,
-				D442C179275AB9B200BD8EE6 /* View */,
-			);
-			path = SliderParameters;
-			sourceTree = "<group>";
-		};
-		D442C179275AB9B200BD8EE6 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				D442C17B275AB9C300BD8EE6 /* SliderParametersView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		D442C17A275AB9B600BD8EE6 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				D442C17D275AB9CD00BD8EE6 /* SliderParametersViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		D445F91F27515035001AA71A = {
-			isa = PBXGroup;
-			children = (
-				D445F92A27515035001AA71A /* ActiveMe */,
-				D445F94427515037001AA71A /* ActiveMeTests */,
-				D445F94E27515038001AA71A /* ActiveMeUITests */,
-				D445F92927515035001AA71A /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		D445F92927515035001AA71A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D445F92827515035001AA71A /* ActiveMe.app */,
-				D445F94127515037001AA71A /* ActiveMeTests.xctest */,
-				D445F94B27515038001AA71A /* ActiveMeUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		D445F92A27515035001AA71A /* ActiveMe */ = {
-			isa = PBXGroup;
-			children = (
-				3A1043A7275DDCAD0017C25C /* ML models */,
-				D445F95E27515054001AA71A /* App */,
-				D445F9762751693B001AA71A /* Extensions */,
-				D445F96027515227001AA71A /* Common */,
-				D48E1E592753C7C00034DDBE /* Modules */,
-				D445F95F27515066001AA71A /* SupportingFiles */,
-				D445F93C27515037001AA71A /* Info.plist */,
-			);
-			path = ActiveMe;
-			sourceTree = "<group>";
-		};
-		D445F94427515037001AA71A /* ActiveMeTests */ = {
-			isa = PBXGroup;
-			children = (
-				D445F94527515038001AA71A /* ActiveMeTests.swift */,
-			);
-			path = ActiveMeTests;
-			sourceTree = "<group>";
-		};
-		D445F94E27515038001AA71A /* ActiveMeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D445F94F27515038001AA71A /* ActiveMeUITests.swift */,
-				D445F95127515038001AA71A /* ActiveMeUITestsLaunchTests.swift */,
-			);
-			path = ActiveMeUITests;
-			sourceTree = "<group>";
-		};
-		D445F95E27515054001AA71A /* App */ = {
-			isa = PBXGroup;
-			children = (
-				D48E1E602753E3170034DDBE /* AppCoordinator */,
-				D445F92B27515035001AA71A /* AppDelegate.swift */,
-				D445F92D27515035001AA71A /* SceneDelegate.swift */,
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
-		D445F95F27515066001AA71A /* SupportingFiles */ = {
-			isa = PBXGroup;
-			children = (
-				D4480FAE2751775600EDCD22 /* Fonts */,
-				D445F93727515037001AA71A /* Assets.xcassets */,
-				D445F93927515037001AA71A /* LaunchScreen.storyboard */,
-				D445F93427515036001AA71A /* ActiveMe.xcdatamodeld */,
-			);
-			path = SupportingFiles;
-			sourceTree = "<group>";
-		};
-		D445F96027515227001AA71A /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				3A1043AE275DE10A0017C25C /* Motion */,
-				3A1043AB275DDD190017C25C /* ML */,
-				D445F9612751522F001AA71A /* UI */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		D445F9612751522F001AA71A /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				D442C173275AAAB100BD8EE6 /* NextButton */,
-				D48E1E412753803C0034DDBE /* GenderButton */,
-				D445F96227515235001AA71A /* StrokesSlider */,
 			);
 			path = UI;
 			sourceTree = "<group>";
 		};
-		D445F96227515235001AA71A /* StrokesSlider */ = {
+		8A66EBC828282444009FECBB /* ML */ = {
 			isa = PBXGroup;
 			children = (
-				D445F96A27515508001AA71A /* Cell */,
-				D445F96527515380001AA71A /* DiffableDataSource */,
-				D445F963275152EE001AA71A /* StrokesSlider.swift */,
-				D4480FAC27516CA100EDCD22 /* StrokesSliderFlowLayout.swift */,
+				8A66EBD028285DA9009FECBB /* SleepDataProcessor */,
+				8A66EBC928282448009FECBB /* SleepClassifier */,
 			);
-			path = StrokesSlider;
+			path = ML;
 			sourceTree = "<group>";
 		};
-		D445F96527515380001AA71A /* DiffableDataSource */ = {
+		8A66EBC928282448009FECBB /* SleepClassifier */ = {
 			isa = PBXGroup;
 			children = (
-				D445F96627515395001AA71A /* MainSection.swift */,
-				D445F968275153D7001AA71A /* StrokeCell.swift */,
+				8A66EBCA28282452009FECBB /* Model */,
+				8A66EBCE282824BC009FECBB /* SleepClassifier.swift */,
 			);
-			path = DiffableDataSource;
+			path = SleepClassifier;
 			sourceTree = "<group>";
 		};
-		D445F96A27515508001AA71A /* Cell */ = {
+		8A66EBCA28282452009FECBB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D445F96B2751551C001AA71A /* StrokesSliderCell.swift */,
-				D445F97327516608001AA71A /* StrokeSliderCellProtocol.swift */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		D445F9762751693B001AA71A /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				D445F97727516951001AA71A /* UICollectionViewCell+Extension.swift */,
-				D48E1E44275386FF0034DDBE /* UIColor+Extension.swift */,
-				D48E1E462753887A0034DDBE /* UIFont+Extension.swift */,
-				D48E1E612753E33F0034DDBE /* UIViewController+Extension.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		D4480FAE2751775600EDCD22 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				3ADAFBD2275A273A0026A1CC /* Roboto-Thin.ttf */,
-				3ADAFBD4275A27440026A1CC /* Roboto-Bold.ttf */,
-				3ADAFBD6275A274E0026A1CC /* Roboto-Regular.ttf */,
-				3ADAFBDA275A275D0026A1CC /* Roboto-Light.ttf */,
-				3ADAFBD8275A27560026A1CC /* Roboto-Medium.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		D48E1E412753803C0034DDBE /* GenderButton */ = {
-			isa = PBXGroup;
-			children = (
-				D48E1E42275380500034DDBE /* GenderButton.swift */,
-			);
-			path = GenderButton;
-			sourceTree = "<group>";
-		};
-		D48E1E592753C7C00034DDBE /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				D4AA4F38275BB0E6002DBE23 /* MainTabBar */,
-				D442C176275AB99700BD8EE6 /* UserParameters */,
-				3ADAFBCA275A15980026A1CC /* WaterBalance */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		D48E1E5A2753C7C90034DDBE /* Gender */ = {
-			isa = PBXGroup;
-			children = (
-				D48E1E5F2753C9F80034DDBE /* Model */,
-				D48E1E5E2753C9F40034DDBE /* View */,
-				D48E1E5D2753C9EE0034DDBE /* ViewModel */,
-			);
-			path = Gender;
-			sourceTree = "<group>";
-		};
-		D48E1E5D2753C9EE0034DDBE /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				D48E1E5B2753C8220034DDBE /* GenderViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		D48E1E5E2753C9F40034DDBE /* View */ = {
-			isa = PBXGroup;
-			children = (
-				D445F92F27515035001AA71A /* GenderView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		D48E1E5F2753C9F80034DDBE /* Model */ = {
-			isa = PBXGroup;
-			children = (
+				8A66EBCB2828246D009FECBB /* SleepClassifierNN.mlmodel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		D48E1E602753E3170034DDBE /* AppCoordinator */ = {
+		8A66EBD028285DA9009FECBB /* SleepDataProcessor */ = {
 			isa = PBXGroup;
 			children = (
-				D48E1E6C27541B520034DDBE /* BaseCoordinator */,
-				D48E1E6D27541B6F0034DDBE /* AppCoordinator.swift */,
+				8A66EBD128285DD8009FECBB /* SleepDataProcessor.swift */,
 			);
-			path = AppCoordinator;
+			path = SleepDataProcessor;
 			sourceTree = "<group>";
 		};
-		D48E1E6C27541B520034DDBE /* BaseCoordinator */ = {
+		8A66EBD328285DF9009FECBB /* DomainModels */ = {
 			isa = PBXGroup;
 			children = (
-				D48E1E6A275419EE0034DDBE /* BaseCoordinator.swift */,
+				8A66EBD428285E07009FECBB /* SleepStage.swift */,
 			);
-			path = BaseCoordinator;
+			path = DomainModels;
 			sourceTree = "<group>";
 		};
-		D4A20654275A63D600453330 /* Coordinator */ = {
+		8A6E84B7282EEF0300C2BB76 /* ProgressModel */ = {
 			isa = PBXGroup;
 			children = (
-				D442C171275AA17800BD8EE6 /* UserParametersCoordinator.swift */,
+				8A6E84BD282EEF3E00C2BB76 /* RingModel.swift */,
+				8A6E84BF282EEFBB00C2BB76 /* StepModel.swift */,
 			);
-			path = Coordinator;
+			path = ProgressModel;
 			sourceTree = "<group>";
 		};
-		D4AA4F38275BB0E6002DBE23 /* MainTabBar */ = {
+		8A6E84B8282EEF1100C2BB76 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				D4DCA877275BE4870072F725 /* TabBarControllers */,
-				D4DCA874275BE3CC0072F725 /* Coordinator */,
-				D4AA4F3A275BB105002DBE23 /* ViewModel */,
-				D4AA4F39275BB100002DBE23 /* View */,
+				8AF14FEE282FB5ED00783B02 /* FloatingTabBar */,
+				8AF7A1A8282F02BD00465DE2 /* FitnessGraph */,
+				8A6E84BC282EEF2E00C2BB76 /* FitnessRingCard */,
 			);
-			path = MainTabBar;
+			path = UI;
 			sourceTree = "<group>";
 		};
-		D4AA4F39275BB100002DBE23 /* View */ = {
+		8A6E84BC282EEF2E00C2BB76 /* FitnessRingCard */ = {
 			isa = PBXGroup;
 			children = (
-				D4AA4F3B275BB11C002DBE23 /* MainTabBarView.swift */,
+				8AF7A1A6282EFE4D00465DE2 /* FitnessRingCardView.swift */,
 			);
-			path = View;
+			path = FitnessRingCard;
 			sourceTree = "<group>";
 		};
-		D4AA4F3A275BB105002DBE23 /* ViewModel */ = {
+		8A6E84C1282EEFFA00C2BB76 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		D4DCA868275BE36E0072F725 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				D4DCA86D275BE38D0072F725 /* Model */,
-				D4DCA86C275BE3870072F725 /* ViewModel */,
-				D4DCA86B275BE3810072F725 /* View */,
+				8A6E84C2282EF00D00C2BB76 /* Views */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		D4DCA869275BE3750072F725 /* Activity */ = {
+		8A6E84C2282EF00D00C2BB76 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D4DCA870275BE3A10072F725 /* Model */,
-				D4DCA86F275BE39C0072F725 /* ViewModel */,
-				D4DCA86E275BE3970072F725 /* View */,
+				8A6E84C3282EF01800C2BB76 /* HomeView.swift */,
 			);
-			path = Activity;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		D4DCA86A275BE37B0072F725 /* Settings */ = {
+		8A9B83032827C5DF00E90D61 = {
 			isa = PBXGroup;
 			children = (
-				D4DCA873275BE3C40072F725 /* Model */,
-				D4DCA872275BE3BF0072F725 /* ViewModel */,
-				D4DCA871275BE3BC0072F725 /* View */,
+				8A9B830E2827C5DF00E90D61 /* ActiveMe */,
+				8A9B831F2827C5E000E90D61 /* ActiveMeTests */,
+				8A9B83292827C5E000E90D61 /* ActiveMeUITests */,
+				8A9B83342827C5E000E90D61 /* ActiveMe WatchKit App */,
+				8A9B833F2827C5E000E90D61 /* ActiveMe WatchKit Extension */,
+				8A9B83582827C5E100E90D61 /* ActiveMe WatchKit AppTests */,
+				8A9B83622827C5E100E90D61 /* ActiveMe WatchKit AppUITests */,
+				8A9B830D2827C5DF00E90D61 /* Products */,
+				8A9B838C2827CB0400E90D61 /* Frameworks */,
 			);
-			path = Settings;
 			sourceTree = "<group>";
 		};
-		D4DCA86B275BE3810072F725 /* View */ = {
+		8A9B830D2827C5DF00E90D61 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D4DCA878275BE6890072F725 /* HomeView.swift */,
+				8A9B830C2827C5DF00E90D61 /* ActiveMe.app */,
+				8A9B831C2827C5E000E90D61 /* ActiveMeTests.xctest */,
+				8A9B83262827C5E000E90D61 /* ActiveMeUITests.xctest */,
+				8A9B83302827C5E000E90D61 /* ActiveMe WatchKit App.app */,
+				8A9B833B2827C5E000E90D61 /* ActiveMe WatchKit Extension.appex */,
+				8A9B83552827C5E100E90D61 /* ActiveMe WatchKit AppTests.xctest */,
+				8A9B835F2827C5E100E90D61 /* ActiveMe WatchKit AppUITests.xctest */,
 			);
-			path = View;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		D4DCA86C275BE3870072F725 /* ViewModel */ = {
+		8A9B830E2827C5DF00E90D61 /* ActiveMe */ = {
 			isa = PBXGroup;
 			children = (
-				3A1043B1275DFC410017C25C /* HomeViewModel.swift */,
+				8A9B83A72827DD6400E90D61 /* ActiveMe.entitlements */,
+				8A9B83A32827DC0E00E90D61 /* Info.plist */,
+				8A9B83802827C64900E90D61 /* App */,
+				8A9B83112827C5DF00E90D61 /* ContentView.swift */,
+				8A9B83812827C65400E90D61 /* ActiveMeKit */,
+				8A6E84C1282EEFFA00C2BB76 /* Home */,
+				8A9B83982827D83100E90D61 /* Resources */,
+				8A9B83152827C5E000E90D61 /* Preview Content */,
+			);
+			path = ActiveMe;
+			sourceTree = "<group>";
+		};
+		8A9B83152827C5E000E90D61 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B83162827C5E000E90D61 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8A9B831F2827C5E000E90D61 /* ActiveMeTests */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B83202827C5E000E90D61 /* ActiveMeTests.swift */,
+			);
+			path = ActiveMeTests;
+			sourceTree = "<group>";
+		};
+		8A9B83292827C5E000E90D61 /* ActiveMeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B832A2827C5E000E90D61 /* ActiveMeUITests.swift */,
+				8A9B832C2827C5E000E90D61 /* ActiveMeUITestsLaunchTests.swift */,
+			);
+			path = ActiveMeUITests;
+			sourceTree = "<group>";
+		};
+		8A9B83342827C5E000E90D61 /* ActiveMe WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B83352827C5E000E90D61 /* Assets.xcassets */,
+			);
+			path = "ActiveMe WatchKit App";
+			sourceTree = "<group>";
+		};
+		8A9B833F2827C5E000E90D61 /* ActiveMe WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B83A02827DB9400E90D61 /* ActiveMe WatchKit Extension.entitlements */,
+				8A9B839A2827D87A00E90D61 /* ActiveMeWatchKit */,
+				8A9B83962827D81000E90D61 /* WatchApp */,
+				8A9B83AA2828062400E90D61 /* Recorder */,
+				8A9B83972827D81F00E90D61 /* Notifications */,
+				8A9B83992827D84700E90D61 /* Resources */,
+				8A9B83422827C5E000E90D61 /* ContentView.swift */,
+				8A9B83482827C5E000E90D61 /* ComplicationController.swift */,
+				8A9B834F2827C5E100E90D61 /* Info.plist */,
+				8A9B834C2827C5E100E90D61 /* Preview Content */,
+			);
+			path = "ActiveMe WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		8A9B834C2827C5E100E90D61 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B834D2827C5E100E90D61 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8A9B83582827C5E100E90D61 /* ActiveMe WatchKit AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B83592827C5E100E90D61 /* ActiveMe_WatchKit_AppTests.swift */,
+			);
+			path = "ActiveMe WatchKit AppTests";
+			sourceTree = "<group>";
+		};
+		8A9B83622827C5E100E90D61 /* ActiveMe WatchKit AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B83632827C5E100E90D61 /* ActiveMe_WatchKit_AppUITests.swift */,
+				8A9B83652827C5E100E90D61 /* ActiveMe_WatchKit_AppUITestsLaunchTests.swift */,
+			);
+			path = "ActiveMe WatchKit AppUITests";
+			sourceTree = "<group>";
+		};
+		8A9B83802827C64900E90D61 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B838F2827CFBD00E90D61 /* ViewModel */,
+				8A9B830F2827C5DF00E90D61 /* ActiveMeApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8A9B83812827C65400E90D61 /* ActiveMeKit */ = {
+			isa = PBXGroup;
+			children = (
+				8AF7A1AE282F154200465DE2 /* Extensions */,
+				8A6E84B8282EEF1100C2BB76 /* UI */,
+				8A2431702829B14F00055FEB /* CoreData */,
+				8A9B83882827CAB100E90D61 /* Connection */,
+				8A9B83822827C66400E90D61 /* Models */,
+			);
+			path = ActiveMeKit;
+			sourceTree = "<group>";
+		};
+		8A9B83822827C66400E90D61 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8A6E84B7282EEF0300C2BB76 /* ProgressModel */,
+				8A9B83832827C67300E90D61 /* AppleWatchData */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8A9B83832827C67300E90D61 /* AppleWatchData */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B83842827C69300E90D61 /* SleepClassificationData.swift */,
+				8A9B83862827C6B800E90D61 /* SleepTelemetry.swift */,
+			);
+			path = AppleWatchData;
+			sourceTree = "<group>";
+		};
+		8A9B83882827CAB100E90D61 /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B83892827CAB800E90D61 /* ConnectionProvider */,
+			);
+			path = Connection;
+			sourceTree = "<group>";
+		};
+		8A9B83892827CAB800E90D61 /* ConnectionProvider */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B838A2827CACC00E90D61 /* PhoneConnectionProvider.swift */,
+			);
+			path = ConnectionProvider;
+			sourceTree = "<group>";
+		};
+		8A9B838C2827CB0400E90D61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B83A82827DD6400E90D61 /* HealthKit.framework */,
+				8A9B83A12827DB9400E90D61 /* HealthKit.framework */,
+				8A9B838D2827CB0400E90D61 /* WatchConnectivity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A9B838F2827CFBD00E90D61 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B83932827D40800E90D61 /* AppViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		D4DCA86D275BE38D0072F725 /* Model */ = {
+		8A9B83962827D81000E90D61 /* WatchApp */ = {
 			isa = PBXGroup;
 			children = (
+				8AECAD6D282C383E00B06A4E /* ViewModel */,
+				8A9B83402827C5E000E90D61 /* ActiveMeApp.swift */,
 			);
-			path = Model;
+			path = WatchApp;
 			sourceTree = "<group>";
 		};
-		D4DCA86E275BE3970072F725 /* View */ = {
+		8A9B83972827D81F00E90D61 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
-				D4DCA87A275BE6C10072F725 /* ActivityView.swift */,
+				8A9B83442827C5E000E90D61 /* NotificationController.swift */,
+				8A9B83462827C5E000E90D61 /* NotificationView.swift */,
 			);
-			path = View;
+			path = Notifications;
 			sourceTree = "<group>";
 		};
-		D4DCA86F275BE39C0072F725 /* ViewModel */ = {
+		8A9B83982827D83100E90D61 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8A9B83132827C5E000E90D61 /* Assets.xcassets */,
+				8A24316D2829B0F300055FEB /* ActiveMeCoreData.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8A9B83992827D84700E90D61 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B83502827C5E100E90D61 /* PushNotificationPayload.apns */,
+				8A9B834A2827C5E100E90D61 /* Assets.xcassets */,
+				8A0FD18D28298F19003ADAD0 /* ActiveMeWatchCoreData.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8A9B839A2827D87A00E90D61 /* ActiveMeWatchKit */ = {
+			isa = PBXGroup;
+			children = (
+				8AECAD6A282C2F6B00B06A4E /* ConnectionProvider */,
+				8A0FD19028298FEA003ADAD0 /* CoreData */,
+				8A66EBD328285DF9009FECBB /* DomainModels */,
+				8A66EBC828282444009FECBB /* ML */,
+				8A66EBC428281F33009FECBB /* UI */,
+				8A66EBC328281F23009FECBB /* ActivityManagers */,
+			);
+			path = ActiveMeWatchKit;
+			sourceTree = "<group>";
+		};
+		8A9B839B2827D88400E90D61 /* WorkoutManager */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B839C2827D89200E90D61 /* WorkoutManager.swift */,
+			);
+			path = WorkoutManager;
+			sourceTree = "<group>";
+		};
+		8A9B83A42827DC5D00E90D61 /* HealthStore */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B83A52827DC6C00E90D61 /* HealthStore.swift */,
+			);
+			path = HealthStore;
+			sourceTree = "<group>";
+		};
+		8A9B83AA2828062400E90D61 /* Recorder */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B83BB2828071500E90D61 /* SummaryView */,
+				8A9B83B4282806B100E90D61 /* MetricsView */,
+				8A9B83B12828068A00E90D61 /* ControlsView */,
+				8A9B83AE2828065700E90D61 /* SessionView */,
+				8A9B83AB2828062B00E90D61 /* StartView */,
+			);
+			path = Recorder;
+			sourceTree = "<group>";
+		};
+		8A9B83AB2828062B00E90D61 /* StartView */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B83AC2828063700E90D61 /* StartView.swift */,
+			);
+			path = StartView;
+			sourceTree = "<group>";
+		};
+		8A9B83AE2828065700E90D61 /* SessionView */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B83AF2828066600E90D61 /* SessionView.swift */,
+			);
+			path = SessionView;
+			sourceTree = "<group>";
+		};
+		8A9B83B12828068A00E90D61 /* ControlsView */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B83B22828069800E90D61 /* ControlsView.swift */,
+			);
+			path = ControlsView;
+			sourceTree = "<group>";
+		};
+		8A9B83B4282806B100E90D61 /* MetricsView */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B83B7282806CF00E90D61 /* Subviews */,
+				8A9B83B5282806BD00E90D61 /* MetricsView.swift */,
+			);
+			path = MetricsView;
+			sourceTree = "<group>";
+		};
+		8A9B83B7282806CF00E90D61 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B83B8282806DC00E90D61 /* ElapsedTimeView */,
+			);
+			name = Subviews;
+			sourceTree = "<group>";
+		};
+		8A9B83B8282806DC00E90D61 /* ElapsedTimeView */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B83B9282806E400E90D61 /* ElapsedTimeView.swift */,
+			);
+			name = ElapsedTimeView;
+			sourceTree = "<group>";
+		};
+		8A9B83BB2828071500E90D61 /* SummaryView */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B83BE2828081300E90D61 /* Subviews */,
+				8A9B83BC2828073000E90D61 /* SummaryView.swift */,
+			);
+			path = SummaryView;
+			sourceTree = "<group>";
+		};
+		8A9B83BE2828081300E90D61 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B83BF2828082000E90D61 /* ActivityRingsView */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		8A9B83BF2828082000E90D61 /* ActivityRingsView */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B83C02828083700E90D61 /* ActivityRingsView.swift */,
+			);
+			path = ActivityRingsView;
+			sourceTree = "<group>";
+		};
+		8A9B83C228280BBC00E90D61 /* MotionManager */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B83C328280BCC00E90D61 /* MotionManager.swift */,
+			);
+			path = MotionManager;
+			sourceTree = "<group>";
+		};
+		8A9B83C528280C1C00E90D61 /* PedometerManager */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B83C628280C3200E90D61 /* PedometerManager.swift */,
+			);
+			path = PedometerManager;
+			sourceTree = "<group>";
+		};
+		8AECAD6A282C2F6B00B06A4E /* ConnectionProvider */ = {
+			isa = PBXGroup;
+			children = (
+				8AECAD6B282C2F8200B06A4E /* WatchConnectionProvider.swift */,
+			);
+			path = ConnectionProvider;
+			sourceTree = "<group>";
+		};
+		8AECAD6D282C383E00B06A4E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8AECAD6E282C388E00B06A4E /* AppViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		D4DCA870275BE3A10072F725 /* Model */ = {
+		8AF14FEE282FB5ED00783B02 /* FloatingTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				8AF14FEF282FB5F700783B02 /* Views */,
 			);
-			path = Model;
+			path = FloatingTabBar;
 			sourceTree = "<group>";
 		};
-		D4DCA871275BE3BC0072F725 /* View */ = {
+		8AF14FEF282FB5F700783B02 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D4DCA87C275BE6D40072F725 /* SettingsView.swift */,
+				8AF14FF0282FB60400783B02 /* FloatingTabBar.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		D4DCA872275BE3BF0072F725 /* ViewModel */ = {
+		8AF7A1A8282F02BD00465DE2 /* FitnessGraph */ = {
 			isa = PBXGroup;
 			children = (
+				8AF7A1A9282F02CC00465DE2 /* Views */,
 			);
-			path = ViewModel;
+			path = FitnessGraph;
 			sourceTree = "<group>";
 		};
-		D4DCA873275BE3C40072F725 /* Model */ = {
+		8AF7A1A9282F02CC00465DE2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8AF7A1AA282F02D800465DE2 /* FitnessGraphView.swift */,
+				8AF7A1AC282F043000465DE2 /* BarGraph.swift */,
 			);
-			path = Model;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		D4DCA874275BE3CC0072F725 /* Coordinator */ = {
+		8AF7A1AE282F154200465DE2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D4DCA875275BE3E00072F725 /* MainTabBarCoordinator.swift */,
+				8AF7A1AF282F155200465DE2 /* View+Extension.swift */,
 			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		D4DCA877275BE4870072F725 /* TabBarControllers */ = {
-			isa = PBXGroup;
-			children = (
-				D4DCA86A275BE37B0072F725 /* Settings */,
-				D4DCA869275BE3750072F725 /* Activity */,
-				D4DCA868275BE36E0072F725 /* Home */,
-			);
-			path = TabBarControllers;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D445F92727515035001AA71A /* ActiveMe */ = {
+		8A9B830B2827C5DF00E90D61 /* ActiveMe */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D445F95527515038001AA71A /* Build configuration list for PBXNativeTarget "ActiveMe" */;
+			buildConfigurationList = 8A9B83712827C5E100E90D61 /* Build configuration list for PBXNativeTarget "ActiveMe" */;
 			buildPhases = (
-				D445F92427515035001AA71A /* Sources */,
-				D445F92527515035001AA71A /* Frameworks */,
-				D445F92627515035001AA71A /* Resources */,
+				8A9B83082827C5DF00E90D61 /* Sources */,
+				8A9B83092827C5DF00E90D61 /* Frameworks */,
+				8A9B830A2827C5DF00E90D61 /* Resources */,
+				8A9B83702827C5E100E90D61 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8A9B83332827C5E000E90D61 /* PBXTargetDependency */,
+				8A2431792829B69C00055FEB /* PBXTargetDependency */,
 			);
 			name = ActiveMe;
-			packageProductDependencies = (
-				D445F96E27515CBA001AA71A /* SnapKit */,
-				D445F9712751654C001AA71A /* GRDB */,
-				D48E1E55275399B00034DDBE /* RxCocoa */,
-				D48E1E57275399B00034DDBE /* RxSwift */,
-			);
 			productName = ActiveMe;
-			productReference = D445F92827515035001AA71A /* ActiveMe.app */;
+			productReference = 8A9B830C2827C5DF00E90D61 /* ActiveMe.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D445F94027515037001AA71A /* ActiveMeTests */ = {
+		8A9B831B2827C5E000E90D61 /* ActiveMeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D445F95827515038001AA71A /* Build configuration list for PBXNativeTarget "ActiveMeTests" */;
+			buildConfigurationList = 8A9B83742827C5E100E90D61 /* Build configuration list for PBXNativeTarget "ActiveMeTests" */;
 			buildPhases = (
-				D445F93D27515037001AA71A /* Sources */,
-				D445F93E27515037001AA71A /* Frameworks */,
-				D445F93F27515037001AA71A /* Resources */,
+				8A9B83182827C5E000E90D61 /* Sources */,
+				8A9B83192827C5E000E90D61 /* Frameworks */,
+				8A9B831A2827C5E000E90D61 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D445F94327515037001AA71A /* PBXTargetDependency */,
+				8A9B831E2827C5E000E90D61 /* PBXTargetDependency */,
 			);
 			name = ActiveMeTests;
 			productName = ActiveMeTests;
-			productReference = D445F94127515037001AA71A /* ActiveMeTests.xctest */;
+			productReference = 8A9B831C2827C5E000E90D61 /* ActiveMeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D445F94A27515038001AA71A /* ActiveMeUITests */ = {
+		8A9B83252827C5E000E90D61 /* ActiveMeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D445F95B27515038001AA71A /* Build configuration list for PBXNativeTarget "ActiveMeUITests" */;
+			buildConfigurationList = 8A9B83772827C5E100E90D61 /* Build configuration list for PBXNativeTarget "ActiveMeUITests" */;
 			buildPhases = (
-				D445F94727515038001AA71A /* Sources */,
-				D445F94827515038001AA71A /* Frameworks */,
-				D445F94927515038001AA71A /* Resources */,
+				8A9B83222827C5E000E90D61 /* Sources */,
+				8A9B83232827C5E000E90D61 /* Frameworks */,
+				8A9B83242827C5E000E90D61 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D445F94D27515038001AA71A /* PBXTargetDependency */,
+				8A9B83282827C5E000E90D61 /* PBXTargetDependency */,
 			);
 			name = ActiveMeUITests;
 			productName = ActiveMeUITests;
-			productReference = D445F94B27515038001AA71A /* ActiveMeUITests.xctest */;
+			productReference = 8A9B83262827C5E000E90D61 /* ActiveMeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		8A9B832F2827C5E000E90D61 /* ActiveMe WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A9B836D2827C5E100E90D61 /* Build configuration list for PBXNativeTarget "ActiveMe WatchKit App" */;
+			buildPhases = (
+				8A9B832E2827C5E000E90D61 /* Resources */,
+				8A9B836C2827C5E100E90D61 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A9B833E2827C5E000E90D61 /* PBXTargetDependency */,
+			);
+			name = "ActiveMe WatchKit App";
+			productName = "ActiveMe WatchKit App";
+			productReference = 8A9B83302827C5E000E90D61 /* ActiveMe WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		8A9B833A2827C5E000E90D61 /* ActiveMe WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A9B83692827C5E100E90D61 /* Build configuration list for PBXNativeTarget "ActiveMe WatchKit Extension" */;
+			buildPhases = (
+				8A9B83372827C5E000E90D61 /* Sources */,
+				8A9B83382827C5E000E90D61 /* Frameworks */,
+				8A9B83392827C5E000E90D61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ActiveMe WatchKit Extension";
+			productName = "ActiveMe WatchKit Extension";
+			productReference = 8A9B833B2827C5E000E90D61 /* ActiveMe WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		8A9B83542827C5E100E90D61 /* ActiveMe WatchKit AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A9B837A2827C5E100E90D61 /* Build configuration list for PBXNativeTarget "ActiveMe WatchKit AppTests" */;
+			buildPhases = (
+				8A9B83512827C5E100E90D61 /* Sources */,
+				8A9B83522827C5E100E90D61 /* Frameworks */,
+				8A9B83532827C5E100E90D61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A9B83572827C5E100E90D61 /* PBXTargetDependency */,
+			);
+			name = "ActiveMe WatchKit AppTests";
+			productName = "ActiveMe WatchKit AppTests";
+			productReference = 8A9B83552827C5E100E90D61 /* ActiveMe WatchKit AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8A9B835E2827C5E100E90D61 /* ActiveMe WatchKit AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A9B837D2827C5E100E90D61 /* Build configuration list for PBXNativeTarget "ActiveMe WatchKit AppUITests" */;
+			buildPhases = (
+				8A9B835B2827C5E100E90D61 /* Sources */,
+				8A9B835C2827C5E100E90D61 /* Frameworks */,
+				8A9B835D2827C5E100E90D61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A9B83612827C5E100E90D61 /* PBXTargetDependency */,
+			);
+			name = "ActiveMe WatchKit AppUITests";
+			productName = "ActiveMe WatchKit AppUITests";
+			productReference = 8A9B835F2827C5E100E90D61 /* ActiveMe WatchKit AppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D445F92027515035001AA71A /* Project object */ = {
+		8A9B83042827C5DF00E90D61 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1310;
-				LastUpgradeCheck = 1310;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
 				TargetAttributes = {
-					D445F92727515035001AA71A = {
-						CreatedOnToolsVersion = 13.1;
+					8A9B830B2827C5DF00E90D61 = {
+						CreatedOnToolsVersion = 13.3.1;
 					};
-					D445F94027515037001AA71A = {
-						CreatedOnToolsVersion = 13.1;
-						TestTargetID = D445F92727515035001AA71A;
+					8A9B831B2827C5E000E90D61 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 8A9B830B2827C5DF00E90D61;
 					};
-					D445F94A27515038001AA71A = {
-						CreatedOnToolsVersion = 13.1;
-						TestTargetID = D445F92727515035001AA71A;
+					8A9B83252827C5E000E90D61 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 8A9B830B2827C5DF00E90D61;
+					};
+					8A9B832F2827C5E000E90D61 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					8A9B833A2827C5E000E90D61 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					8A9B83542827C5E100E90D61 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 8A9B833A2827C5E000E90D61;
+					};
+					8A9B835E2827C5E100E90D61 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 8A9B832F2827C5E000E90D61;
 					};
 				};
 			};
-			buildConfigurationList = D445F92327515035001AA71A /* Build configuration list for PBXProject "ActiveMe" */;
+			buildConfigurationList = 8A9B83072827C5DF00E90D61 /* Build configuration list for PBXProject "ActiveMe" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -696,47 +1008,71 @@
 				en,
 				Base,
 			);
-			mainGroup = D445F91F27515035001AA71A;
-			packageReferences = (
-				D445F96D27515CBA001AA71A /* XCRemoteSwiftPackageReference "SnapKit" */,
-				D445F9702751654B001AA71A /* XCRemoteSwiftPackageReference "GRDB.swift" */,
-				D48E1E54275399B00034DDBE /* XCRemoteSwiftPackageReference "RxSwift" */,
-				D4AA4F37275BADD3002DBE23 /* XCRemoteSwiftPackageReference "CareKit" */,
-			);
-			productRefGroup = D445F92927515035001AA71A /* Products */;
+			mainGroup = 8A9B83032827C5DF00E90D61;
+			productRefGroup = 8A9B830D2827C5DF00E90D61 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D445F92727515035001AA71A /* ActiveMe */,
-				D445F94027515037001AA71A /* ActiveMeTests */,
-				D445F94A27515038001AA71A /* ActiveMeUITests */,
+				8A9B830B2827C5DF00E90D61 /* ActiveMe */,
+				8A9B831B2827C5E000E90D61 /* ActiveMeTests */,
+				8A9B83252827C5E000E90D61 /* ActiveMeUITests */,
+				8A9B832F2827C5E000E90D61 /* ActiveMe WatchKit App */,
+				8A9B833A2827C5E000E90D61 /* ActiveMe WatchKit Extension */,
+				8A9B83542827C5E100E90D61 /* ActiveMe WatchKit AppTests */,
+				8A9B835E2827C5E100E90D61 /* ActiveMe WatchKit AppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D445F92627515035001AA71A /* Resources */ = {
+		8A9B830A2827C5DF00E90D61 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3ADAFBD3275A273A0026A1CC /* Roboto-Thin.ttf in Resources */,
-				D445F93B27515037001AA71A /* LaunchScreen.storyboard in Resources */,
-				3ADAFBDB275A275D0026A1CC /* Roboto-Light.ttf in Resources */,
-				3ADAFBD7275A274E0026A1CC /* Roboto-Regular.ttf in Resources */,
-				D445F93827515037001AA71A /* Assets.xcassets in Resources */,
-				3ADAFBD5275A27440026A1CC /* Roboto-Bold.ttf in Resources */,
-				3ADAFBD9275A27560026A1CC /* Roboto-Medium.ttf in Resources */,
+				8A9B83172827C5E000E90D61 /* Preview Assets.xcassets in Resources */,
+				8A9B83142827C5E000E90D61 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D445F93F27515037001AA71A /* Resources */ = {
+		8A9B831A2827C5E000E90D61 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D445F94927515038001AA71A /* Resources */ = {
+		8A9B83242827C5E000E90D61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A9B832E2827C5E000E90D61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A9B83362827C5E000E90D61 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A9B83392827C5E000E90D61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A9B834E2827C5E100E90D61 /* Preview Assets.xcassets in Resources */,
+				8A9B834B2827C5E100E90D61 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A9B83532827C5E100E90D61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A9B835D2827C5E100E90D61 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -746,100 +1082,148 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D445F92427515035001AA71A /* Sources */ = {
+		8A9B83082827C5DF00E90D61 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D48E1E622753E33F0034DDBE /* UIViewController+Extension.swift in Sources */,
-				D48E1E472753887A0034DDBE /* UIFont+Extension.swift in Sources */,
-				D442C17E275AB9CD00BD8EE6 /* SliderParametersViewModel.swift in Sources */,
-				D445F96C2751551C001AA71A /* StrokesSliderCell.swift in Sources */,
-				D445F93027515035001AA71A /* GenderView.swift in Sources */,
-				3A1043AD275DDD2C0017C25C /* ActivityClassifier.swift in Sources */,
-				D48E1E43275380500034DDBE /* GenderButton.swift in Sources */,
-				D4DCA876275BE3E00072F725 /* MainTabBarCoordinator.swift in Sources */,
-				D48E1E6E27541B6F0034DDBE /* AppCoordinator.swift in Sources */,
-				D445F92C27515035001AA71A /* AppDelegate.swift in Sources */,
-				D4480FAD27516CA100EDCD22 /* StrokesSliderFlowLayout.swift in Sources */,
-				3ADAFBCF275A16080026A1CC /* WaterBalanceListViewModel.swift in Sources */,
-				D4AA4F3C275BB11C002DBE23 /* MainTabBarView.swift in Sources */,
-				D4DCA879275BE6890072F725 /* HomeView.swift in Sources */,
-				D445F97427516608001AA71A /* StrokeSliderCellProtocol.swift in Sources */,
-				3ADAFBCD275A15DB0026A1CC /* WaterBalanceListView.swift in Sources */,
-				3A1043B0275DE11B0017C25C /* MotionManager.swift in Sources */,
-				3A1043B2275DFC410017C25C /* HomeViewModel.swift in Sources */,
-				3A1043A9275DDCD00017C25C /* HARClassifier.mlmodel in Sources */,
-				D445F92E27515035001AA71A /* SceneDelegate.swift in Sources */,
-				D445F964275152EE001AA71A /* StrokesSlider.swift in Sources */,
-				D442C175275AAABF00BD8EE6 /* NextButton.swift in Sources */,
-				D445F96727515395001AA71A /* MainSection.swift in Sources */,
-				D445F969275153D7001AA71A /* StrokeCell.swift in Sources */,
-				3ADAFBD1275A1C690026A1CC /* WaterBalanceListModel.swift in Sources */,
-				D442C172275AA17800BD8EE6 /* UserParametersCoordinator.swift in Sources */,
-				3A1043B4275DFE840017C25C /* ActivityClassifierProtocol.swift in Sources */,
-				D4DCA87B275BE6C10072F725 /* ActivityView.swift in Sources */,
-				D48E1E6B275419EE0034DDBE /* BaseCoordinator.swift in Sources */,
-				D442C17C275AB9C300BD8EE6 /* SliderParametersView.swift in Sources */,
-				D48E1E45275386FF0034DDBE /* UIColor+Extension.swift in Sources */,
-				D445F97827516951001AA71A /* UICollectionViewCell+Extension.swift in Sources */,
-				D48E1E5C2753C8220034DDBE /* GenderViewModel.swift in Sources */,
-				D4DCA87D275BE6D40072F725 /* SettingsView.swift in Sources */,
-				D445F93627515036001AA71A /* ActiveMe.xcdatamodeld in Sources */,
+				8AF7A1AD282F043000465DE2 /* BarGraph.swift in Sources */,
+				8AF7A1AB282F02D800465DE2 /* FitnessGraphView.swift in Sources */,
+				8A9B838B2827CACC00E90D61 /* PhoneConnectionProvider.swift in Sources */,
+				8AF14FF1282FB60400783B02 /* FloatingTabBar.swift in Sources */,
+				8AF7A1B0282F155200465DE2 /* View+Extension.swift in Sources */,
+				8AF7A1A7282EFE4D00465DE2 /* FitnessRingCardView.swift in Sources */,
+				8A6E84BE282EEF3E00C2BB76 /* RingModel.swift in Sources */,
+				8A6E84C4282EF01800C2BB76 /* HomeView.swift in Sources */,
+				8A9B83122827C5DF00E90D61 /* ContentView.swift in Sources */,
+				8A9B83942827D40800E90D61 /* AppViewModel.swift in Sources */,
+				8A9B83102827C5DF00E90D61 /* ActiveMeApp.swift in Sources */,
+				8A24316F2829B0F300055FEB /* ActiveMeCoreData.xcdatamodeld in Sources */,
+				8A2431772829B1D100055FEB /* PersistanceController.swift in Sources */,
+				8A6E84C0282EEFBB00C2BB76 /* StepModel.swift in Sources */,
+				8A2431742829B16D00055FEB /* SleepData+CoreDataProperties.swift in Sources */,
+				8A9B83852827C69300E90D61 /* SleepClassificationData.swift in Sources */,
+				8A9B83872827C6B800E90D61 /* SleepTelemetry.swift in Sources */,
+				8A2431732829B16D00055FEB /* SleepData+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D445F93D27515037001AA71A /* Sources */ = {
+		8A9B83182827C5E000E90D61 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D445F94627515038001AA71A /* ActiveMeTests.swift in Sources */,
+				8A9B83212827C5E000E90D61 /* ActiveMeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D445F94727515038001AA71A /* Sources */ = {
+		8A9B83222827C5E000E90D61 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D445F95227515038001AA71A /* ActiveMeUITestsLaunchTests.swift in Sources */,
-				D445F95027515038001AA71A /* ActiveMeUITests.swift in Sources */,
+				8A9B832D2827C5E000E90D61 /* ActiveMeUITestsLaunchTests.swift in Sources */,
+				8A9B832B2827C5E000E90D61 /* ActiveMeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A9B83372827C5E000E90D61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A66EBD528285E07009FECBB /* SleepStage.swift in Sources */,
+				8A9B83B32828069800E90D61 /* ControlsView.swift in Sources */,
+				8AECAD6F282C388E00B06A4E /* AppViewModel.swift in Sources */,
+				8A9B83C728280C3200E90D61 /* PedometerManager.swift in Sources */,
+				8A66EBCF282824BC009FECBB /* SleepClassifier.swift in Sources */,
+				8A9B83B6282806BD00E90D61 /* MetricsView.swift in Sources */,
+				8A0FD18F28298F19003ADAD0 /* ActiveMeWatchCoreData.xcdatamodeld in Sources */,
+				8A24316B2829AEF300055FEB /* SleepData+CoreDataClass.swift in Sources */,
+				8A9B83C12828083700E90D61 /* ActivityRingsView.swift in Sources */,
+				8A24316C2829AEF300055FEB /* SleepData+CoreDataProperties.swift in Sources */,
+				8A9B83922827D14E00E90D61 /* SleepTelemetry.swift in Sources */,
+				8A9B83912827D14400E90D61 /* SleepClassificationData.swift in Sources */,
+				8A9B83AD2828063700E90D61 /* StartView.swift in Sources */,
+				8A0FD19628299168003ADAD0 /* WatchPersistenceController.swift in Sources */,
+				8A9B83452827C5E000E90D61 /* NotificationController.swift in Sources */,
+				8A9B83BA282806E400E90D61 /* ElapsedTimeView.swift in Sources */,
+				8A9B83B02828066600E90D61 /* SessionView.swift in Sources */,
+				8A9B83432827C5E000E90D61 /* ContentView.swift in Sources */,
+				8A9B83BD2828073000E90D61 /* SummaryView.swift in Sources */,
+				8A9B83492827C5E000E90D61 /* ComplicationController.swift in Sources */,
+				8A9B839D2827D89200E90D61 /* WorkoutManager.swift in Sources */,
+				8A9B83412827C5E000E90D61 /* ActiveMeApp.swift in Sources */,
+				8A66EBD228285DD8009FECBB /* SleepDataProcessor.swift in Sources */,
+				8AECAD6C282C2F8200B06A4E /* WatchConnectionProvider.swift in Sources */,
+				8A9B83C428280BCC00E90D61 /* MotionManager.swift in Sources */,
+				8A9B83472827C5E000E90D61 /* NotificationView.swift in Sources */,
+				8A66EBCC2828246E009FECBB /* SleepClassifierNN.mlmodel in Sources */,
+				8A9B83A62827DC6C00E90D61 /* HealthStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A9B83512827C5E100E90D61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A9B835A2827C5E100E90D61 /* ActiveMe_WatchKit_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A9B835B2827C5E100E90D61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A9B83642827C5E100E90D61 /* ActiveMe_WatchKit_AppUITests.swift in Sources */,
+				8A9B83662827C5E100E90D61 /* ActiveMe_WatchKit_AppUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D445F94327515037001AA71A /* PBXTargetDependency */ = {
+		8A2431792829B69C00055FEB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D445F92727515035001AA71A /* ActiveMe */;
-			targetProxy = D445F94227515037001AA71A /* PBXContainerItemProxy */;
+			target = 8A9B832F2827C5E000E90D61 /* ActiveMe WatchKit App */;
+			targetProxy = 8A2431782829B69C00055FEB /* PBXContainerItemProxy */;
 		};
-		D445F94D27515038001AA71A /* PBXTargetDependency */ = {
+		8A9B831E2827C5E000E90D61 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D445F92727515035001AA71A /* ActiveMe */;
-			targetProxy = D445F94C27515038001AA71A /* PBXContainerItemProxy */;
+			target = 8A9B830B2827C5DF00E90D61 /* ActiveMe */;
+			targetProxy = 8A9B831D2827C5E000E90D61 /* PBXContainerItemProxy */;
+		};
+		8A9B83282827C5E000E90D61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A9B830B2827C5DF00E90D61 /* ActiveMe */;
+			targetProxy = 8A9B83272827C5E000E90D61 /* PBXContainerItemProxy */;
+		};
+		8A9B83332827C5E000E90D61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A9B832F2827C5E000E90D61 /* ActiveMe WatchKit App */;
+			targetProxy = 8A9B83322827C5E000E90D61 /* PBXContainerItemProxy */;
+		};
+		8A9B833E2827C5E000E90D61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A9B833A2827C5E000E90D61 /* ActiveMe WatchKit Extension */;
+			targetProxy = 8A9B833D2827C5E000E90D61 /* PBXContainerItemProxy */;
+		};
+		8A9B83572827C5E100E90D61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A9B833A2827C5E000E90D61 /* ActiveMe WatchKit Extension */;
+			targetProxy = 8A9B83562827C5E100E90D61 /* PBXContainerItemProxy */;
+		};
+		8A9B83612827C5E100E90D61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A9B832F2827C5E000E90D61 /* ActiveMe WatchKit App */;
+			targetProxy = 8A9B83602827C5E100E90D61 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		D445F93927515037001AA71A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D445F93A27515037001AA71A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		D445F95327515038001AA71A /* Debug */ = {
+		8A9B83672827C5E100E90D61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -883,24 +1267,21 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		D445F95427515038001AA71A /* Release */ = {
+		8A9B83682827C5E100E90D61 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -938,71 +1319,207 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		8A9B836A2827C5E100E90D61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "ActiveMe WatchKit Extension/ActiveMe WatchKit Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ActiveMe WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = J9ZD55BC9Y;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ActiveMe WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = ActiveMe;
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = ActiveMe_WatchKit_Extension.ComplicationController;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Workouts tracked by ActiveMe on Apple Watch will be saved to HealthKit.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Workouts tracked by ActiveMe on Apple Watch will be saved to HealthKit.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMotionUsageDescription = "Motion data tracked by ActiveMe on Apple Watch to classify your daily activity.";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dzmitry-semianovich.ActiveMe.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		8A9B836B2827C5E100E90D61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "ActiveMe WatchKit Extension/ActiveMe WatchKit Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ActiveMe WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = J9ZD55BC9Y;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ActiveMe WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = ActiveMe;
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = ActiveMe_WatchKit_Extension.ComplicationController;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Workouts tracked by ActiveMe on Apple Watch will be saved to HealthKit.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Workouts tracked by ActiveMe on Apple Watch will be saved to HealthKit.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMotionUsageDescription = "Motion data tracked by ActiveMe on Apple Watch to classify your daily activity.";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dzmitry-semianovich.ActiveMe.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		8A9B836E2827C5E100E90D61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J9ZD55BC9Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = ActiveMe_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "ActiveMe WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.dzmitry-semianovich.ActiveMe";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dzmitry-semianovich.ActiveMe.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		8A9B836F2827C5E100E90D61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J9ZD55BC9Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = ActiveMe_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "ActiveMe WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.dzmitry-semianovich.ActiveMe";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dzmitry-semianovich.ActiveMe.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		8A9B83722827C5E100E90D61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ActiveMe/ActiveMe.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ActiveMe/Preview Content\"";
+				DEVELOPMENT_TEAM = J9ZD55BC9Y;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ActiveMe/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dzmitry-semianovich.ActiveMe";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A9B83732827C5E100E90D61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ActiveMe/ActiveMe.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ActiveMe/Preview Content\"";
+				DEVELOPMENT_TEAM = J9ZD55BC9Y;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ActiveMe/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dzmitry-semianovich.ActiveMe";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		D445F95627515038001AA71A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J9ZD55BC9Y;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ActiveMe/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dzmitry-semianovich.ActiveMe";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		D445F95727515038001AA71A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J9ZD55BC9Y;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ActiveMe/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dzmitry-semianovich.ActiveMe";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		D445F95927515038001AA71A /* Debug */ = {
+		8A9B83752827C5E100E90D61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -1011,15 +1528,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J9ZD55BC9Y;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dzmitry-semianovich.ActiveMeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1027,7 +1540,7 @@
 			};
 			name = Debug;
 		};
-		D445F95A27515038001AA71A /* Release */ = {
+		8A9B83762827C5E100E90D61 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -1036,23 +1549,20 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J9ZD55BC9Y;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dzmitry-semianovich.ActiveMeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ActiveMe.app/ActiveMe";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		D445F95C27515038001AA71A /* Debug */ = {
+		8A9B83782827C5E100E90D61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -1060,14 +1570,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J9ZD55BC9Y;
 				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dzmitry-semianovich.ActiveMeUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1075,7 +1582,7 @@
 			};
 			name = Debug;
 		};
-		D445F95D27515038001AA71A /* Release */ = {
+		8A9B83792827C5E100E90D61 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -1083,132 +1590,200 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J9ZD55BC9Y;
 				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dzmitry-semianovich.ActiveMeUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = ActiveMe;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8A9B837B2827C5E100E90D61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J9ZD55BC9Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dzmitry-semianovich.ActiveMe-WatchKit-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ActiveMe WatchKit Extension.appex/ActiveMe WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		8A9B837C2827C5E100E90D61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J9ZD55BC9Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dzmitry-semianovich.ActiveMe-WatchKit-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ActiveMe WatchKit Extension.appex/ActiveMe WatchKit Extension";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		8A9B837E2827C5E100E90D61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J9ZD55BC9Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dzmitry-semianovich.ActiveMe-WatchKit-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "ActiveMe WatchKit App";
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		8A9B837F2827C5E100E90D61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J9ZD55BC9Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dzmitry-semianovich.ActiveMe-WatchKit-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "ActiveMe WatchKit App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D445F92327515035001AA71A /* Build configuration list for PBXProject "ActiveMe" */ = {
+		8A9B83072827C5DF00E90D61 /* Build configuration list for PBXProject "ActiveMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D445F95327515038001AA71A /* Debug */,
-				D445F95427515038001AA71A /* Release */,
+				8A9B83672827C5E100E90D61 /* Debug */,
+				8A9B83682827C5E100E90D61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D445F95527515038001AA71A /* Build configuration list for PBXNativeTarget "ActiveMe" */ = {
+		8A9B83692827C5E100E90D61 /* Build configuration list for PBXNativeTarget "ActiveMe WatchKit Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D445F95627515038001AA71A /* Debug */,
-				D445F95727515038001AA71A /* Release */,
+				8A9B836A2827C5E100E90D61 /* Debug */,
+				8A9B836B2827C5E100E90D61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D445F95827515038001AA71A /* Build configuration list for PBXNativeTarget "ActiveMeTests" */ = {
+		8A9B836D2827C5E100E90D61 /* Build configuration list for PBXNativeTarget "ActiveMe WatchKit App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D445F95927515038001AA71A /* Debug */,
-				D445F95A27515038001AA71A /* Release */,
+				8A9B836E2827C5E100E90D61 /* Debug */,
+				8A9B836F2827C5E100E90D61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D445F95B27515038001AA71A /* Build configuration list for PBXNativeTarget "ActiveMeUITests" */ = {
+		8A9B83712827C5E100E90D61 /* Build configuration list for PBXNativeTarget "ActiveMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D445F95C27515038001AA71A /* Debug */,
-				D445F95D27515038001AA71A /* Release */,
+				8A9B83722827C5E100E90D61 /* Debug */,
+				8A9B83732827C5E100E90D61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A9B83742827C5E100E90D61 /* Build configuration list for PBXNativeTarget "ActiveMeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A9B83752827C5E100E90D61 /* Debug */,
+				8A9B83762827C5E100E90D61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A9B83772827C5E100E90D61 /* Build configuration list for PBXNativeTarget "ActiveMeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A9B83782827C5E100E90D61 /* Debug */,
+				8A9B83792827C5E100E90D61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A9B837A2827C5E100E90D61 /* Build configuration list for PBXNativeTarget "ActiveMe WatchKit AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A9B837B2827C5E100E90D61 /* Debug */,
+				8A9B837C2827C5E100E90D61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A9B837D2827C5E100E90D61 /* Build configuration list for PBXNativeTarget "ActiveMe WatchKit AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A9B837E2827C5E100E90D61 /* Debug */,
+				8A9B837F2827C5E100E90D61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		D445F96D27515CBA001AA71A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-		D445F9702751654B001AA71A /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/groue/GRDB.swift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-		D48E1E54275399B00034DDBE /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
-		D4AA4F37275BADD3002DBE23 /* XCRemoteSwiftPackageReference "CareKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/carekit-apple/CareKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		D445F96E27515CBA001AA71A /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D445F96D27515CBA001AA71A /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		D445F9712751654C001AA71A /* GRDB */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D445F9702751654B001AA71A /* XCRemoteSwiftPackageReference "GRDB.swift" */;
-			productName = GRDB;
-		};
-		D48E1E55275399B00034DDBE /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D48E1E54275399B00034DDBE /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		D48E1E57275399B00034DDBE /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D48E1E54275399B00034DDBE /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
-
 /* Begin XCVersionGroup section */
-		D445F93427515036001AA71A /* ActiveMe.xcdatamodeld */ = {
+		8A0FD18D28298F19003ADAD0 /* ActiveMeWatchCoreData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				D445F93527515036001AA71A /* ActiveMe.xcdatamodel */,
+				8A0FD18E28298F19003ADAD0 /* ActiveMeSleepCoreData.xcdatamodel */,
 			);
-			currentVersion = D445F93527515036001AA71A /* ActiveMe.xcdatamodel */;
-			path = ActiveMe.xcdatamodeld;
+			currentVersion = 8A0FD18E28298F19003ADAD0 /* ActiveMeSleepCoreData.xcdatamodel */;
+			path = ActiveMeWatchCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		8A24316D2829B0F300055FEB /* ActiveMeCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8A24316E2829B0F300055FEB /* ActiveMeCoreData.xcdatamodel */,
+			);
+			currentVersion = 8A24316E2829B0F300055FEB /* ActiveMeCoreData.xcdatamodel */;
+			path = ActiveMeCoreData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = D445F92027515035001AA71A /* Project object */;
+	rootObject = 8A9B83042827C5DF00E90D61 /* Project object */;
 }
