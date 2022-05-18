@@ -27,14 +27,6 @@ struct FloatingTabBar: View {
           .foregroundColor(self.selected == 1 ? Color("secondary") : .gray)
           .padding(.horizontal)
       }
-
-      Button(action: {
-        self.selected = 2
-      }) {
-        Image(systemName: "gear")
-          .foregroundColor(self.selected == 2 ? Color("secondary") : .gray)
-          .padding(.horizontal)
-      }
     }
     .padding(.vertical, 20)
     .padding(.horizontal, 10)

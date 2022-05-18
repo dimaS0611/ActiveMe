@@ -10,6 +10,7 @@ import Foundation
 class SleepDataProcessor {
   var connectionProvider: WatchConnectionProvider
   var sleepData = [SleepStage]()
+  let sessionId = UUID()
   
   init(connectionProvider: WatchConnectionProvider) {
     self.connectionProvider = connectionProvider
@@ -34,7 +35,9 @@ class SleepDataProcessor {
     if lastRecord.plainType == stage.plainType {
       let newRecord = SleepStage(stage: stage.stage,
                                  startTime: lastRecord.startTime,
-                                 endTime: stage.endTime)
+                                 endTime: stage.endTime,
+                                 sessionId: sessionId,
+                                 stringDate: extractDate(date: Date()))
       sleepData[lastIndex] = newRecord
       
       print("Merge last stage: \(lastRecord.stage) \(dateFormatter.string(from: lastRecord.startTime)) \(dateFormatter.string(from:lastRecord.endTime))")
@@ -46,7 +49,14 @@ class SleepDataProcessor {
   }
   
   func saveSession() {
-    WatchPersistenceController.shared.saveSleepData(sleepData)
+    let dataToSave = sleepData.map {
+      SleepStage(stage: $0.stage,
+                 startTime: $0.startTime,
+                 endTime: $0.endTime,
+                 sessionId: sessionId,
+                 stringDate: extractDate(date: Date()))
+    }
+    WatchPersistenceController.shared.saveSleepData(dataToSave)
   }
   
   func pushToPhone() {
@@ -55,7 +65,9 @@ class SleepDataProcessor {
       obj.initWithData(startTime: data.startTime,
                        endTime: data.endTime,
                        date: Date(),
-                       sleepStage: data.stage)
+                       sleepStage: data.stage,
+                       sessionId: data.sessionId ?? UUID(),
+                       stringDate: extractDate(date: Date()))
       return obj
     }
     if !msg.isEmpty {
@@ -68,5 +80,13 @@ class SleepDataProcessor {
       archiver.finishEncoding()
       connectionProvider.sendWatchMessage(archiver.encodedData, messageType: .sleepStage)
     }
+  }
+
+  func extractDate(date: Date) -> String {
+    let formatter = DateFormatter()
+    formatter.locale = Locale(identifier: "en_US_POSIX")
+    formatter.dateFormat = "MM/dd/yyyy"
+
+    return formatter.string(from: date)
   }
 }

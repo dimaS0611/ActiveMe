@@ -21,6 +21,8 @@ extension SleepData {
     @NSManaged public var endTime: Date?
     @NSManaged public var sleepStage: String?
     @NSManaged public var date: Date?
+    @NSManaged public var sessionId: UUID?
+    @NSManaged public var stringDate: String?
 
 }
 

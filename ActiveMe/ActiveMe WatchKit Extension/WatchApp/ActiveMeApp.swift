@@ -31,14 +31,6 @@ struct ActiveMeApp: App {
     WindowGroup {
       NavigationView {
         StartView()
-//          .navigationTitle {
-//            HStack {
-//              Image("ActiveMeName")
-//                .resizable()
-//                .scaledToFit()
-//              Spacer()
-//            }
-//          }
       }
       .environment(\.managedObjectContext, persistenceController.container.viewContext)
       .environmentObject(workoutManager)

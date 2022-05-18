@@ -106,7 +106,7 @@ class WorkoutManager: NSObject, ObservableObject {
         self.heartRate = statistics.mostRecentQuantity()?.doubleValue(for: heartRateUnit) ?? 0
         self.averageHeartRate = statistics.averageQuantity()?.doubleValue(for: heartRateUnit) ?? 0
       default:
-        print(statistics.quantityType.debugDescription)
+        break
       }
     }
   }

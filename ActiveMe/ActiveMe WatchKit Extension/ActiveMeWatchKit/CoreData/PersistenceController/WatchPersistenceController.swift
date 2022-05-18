@@ -45,6 +45,8 @@ struct WatchPersistenceController {
     sleepData.endTime = data.endTime
     sleepData.date = Date()
     sleepData.sleepStage = data.stage
+    sleepData.sessionId = data.sessionId
+    sleepData.stringDate = data.stringDate
     
     save()
   }

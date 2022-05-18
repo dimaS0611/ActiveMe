@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
+  @EnvironmentObject var appViewModel: AppViewModel
+
   @State var currentWeek: [Date] = []
   @State var currentDay = Date()
 
@@ -15,57 +17,62 @@ struct HomeView: View {
   @State var showViews: [Bool] = Array(repeating: false, count: 5)
 
   @State var showView: Bool = false
+
   var body: some View {
-    VStack {
+    VStack(spacing: 20) {
       navBar
         .padding(.top, 35)
       dateBar
     ScrollView(.vertical,
                showsIndicators: false) {
-      if showView {
         mainContent
-      }
+        .opacity(showView ? 1 : 0)
     }
     }
     .edgesIgnoringSafeArea(.bottom)
     .padding()
     .frame(maxWidth: .infinity)
     .background(
-      background
+      BackgroundView()
         .ignoresSafeArea()
     )
     .preferredColorScheme(.dark)
     .onAppear {
+      appViewModel.fetchHealthDataForDate(currentDay)
+      appViewModel.fetchStepsDataForDate(currentDay)
       animateViews()
       extractCurrentWeek()
 
-      DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+      DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
         showView = true
       }
+    }
+    .onChange(of: currentDay) { date in
+      appViewModel.fetchHealthDataForDate(date)
+      appViewModel.fetchStepsDataForDate(date)
     }
     .frame(height: UIScreen.main.bounds.height)
   }
 
   var mainContent: some View {
-    VStack(spacing: 5) {
+    VStack(spacing: 20) {
       analitycs
         .padding(.vertical, 15)
-        .opacity(showViews[2] ? 1 : 0)
-        .offset(y: showViews[2] ? 0 : 200)
+        .opacity(showViews[0] ? 1 : 0)
+        .offset(y: showViews[0] ? 0 : 200)
 
       FitnessRingCardView()
-        .opacity(showViews[3] ? 1 : 0)
-        .offset(y: showViews[3] ? 0 : 250)
+        .opacity(showViews[1] ? 1 : 0)
+        .offset(y: showViews[1] ? 0 : 250)
 
       FitnessGraphView()
-        .opacity(showViews[4] ? 1 : 0)
-        .offset(y: showViews[4] ? 0 : 200)
+        .opacity(showViews[2] ? 1 : 0)
+        .offset(y: showViews[2] ? 0 : 200)
 
       Spacer()
         .frame(height: 100)
     }
   }
-
 
   var navBar: some View {
     HStack {
@@ -74,6 +81,12 @@ struct HomeView: View {
         .bold()
 
       Spacer()
+
+      Image("ActiveMeName")
+        .resizable()
+        .aspectRatio(contentMode: .fit)
+        .foregroundColor(Color("primary"))
+        .frame(width: 110, height: 60)
     }
     .foregroundColor(.white)
   }
@@ -107,31 +120,10 @@ struct HomeView: View {
       Text("Steps")
         .fontWeight(.semibold)
 
-      Text("6,243")
+      Text(appViewModel.stepsCount)
         .font(.system(size: 45, weight: .bold))
     }
     .frame(maxWidth: .infinity, alignment: .leading)
-  }
-
-  var background: some View {
-    ZStack {
-      VStack {
-        Circle()
-          .fill(Color("bgColorPurple"))
-          .scaleEffect(0.7)
-          .offset(x: 20)
-          .blur(radius: 120)
-
-        Circle()
-          .fill(Color("bgColorPurple"))
-          .scaleEffect(0.7, anchor: .leading)
-          .offset(x: -20)
-          .blur(radius: 120)
-      }
-
-      Rectangle()
-        .fill(.ultraThinMaterial)
-    }
   }
 
   func animateViews() {
@@ -155,7 +147,6 @@ struct HomeView: View {
       showViews[4] = true
     }
   }
-
 
   func extractCurrentWeek() {
     let calendar = Calendar.current

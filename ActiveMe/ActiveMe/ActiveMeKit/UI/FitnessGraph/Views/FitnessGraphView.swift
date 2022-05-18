@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct FitnessGraphView: View {
+  @EnvironmentObject var appViewModel: AppViewModel
   var body: some View {
     VStack(spacing: 15) {
       Text("Steps by hours")
         .fontWeight(.semibold)
         .frame(maxWidth: .infinity, alignment: .leading)
 
-      BarGraph(data: steps)
+      BarGraph(data: $appViewModel.steps)
         .padding(.top, 15)
+        .environmentObject(appViewModel)
     }
     .padding(.vertical, 20)
     .padding(.horizontal, 25)

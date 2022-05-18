@@ -13,6 +13,8 @@ struct SleepStage: Identifiable, Equatable {
   var stage: String
   var startTime: Date
   var endTime: Date
+  var sessionId: UUID?
+  var stringDate: String?
   
   var plainType: PlainType {
     .init(rawValue: stage) ?? .awake

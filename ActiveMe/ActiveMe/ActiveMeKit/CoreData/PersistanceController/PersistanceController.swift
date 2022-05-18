@@ -45,6 +45,8 @@ struct PersistenceController {
     sleepData.endTime = data.endTime
     sleepData.date = Date()
     sleepData.sleepStage = data.sleepStage
+    sleepData.sessionId = data.sessionId
+    sleepData.stringDate = data.stringDate
     
     save()
   }
@@ -71,4 +73,35 @@ struct PersistenceController {
       debugPrint("Unresolved error: \(error) \(error.userInfo)")
     }
   }
+
+  func fetchRecordsForDate(dateString: String) -> [SleepData] {
+    let predicate = NSPredicate(format: "stringDate == %@", dateString)
+
+    // Create a fetch request for a specific Entity type
+    let fetchRequest: NSFetchRequest<SleepData>
+    fetchRequest = SleepData.fetchRequest()
+    fetchRequest.predicate = predicate
+
+    // Get a reference to a NSManagedObjectContext
+    let context = container.viewContext
+
+    // Fetch all objects of one Entity type
+    var objects = try? context.fetch(fetchRequest)
+
+    guard let sessionId = objects?.first?.sessionId else {
+      return []
+    }
+
+    let sessionIdPredicate = NSPredicate(format: "sessionId == %@", sessionId as CVarArg)
+
+    let sessionIdFetchRequest: NSFetchRequest<SleepData>
+    sessionIdFetchRequest = SleepData.fetchRequest()
+    sessionIdFetchRequest.predicate = sessionIdPredicate
+
+    // Fetch all objects of one Entity type
+    objects = try? context.fetch(fetchRequest)
+
+    return objects ?? []
+  }
+
 }

@@ -50,12 +50,8 @@ class WatchConnectionProvider: NSObject, ObservableObject {
     if session.isReachable {
       debugPrint("Sending Watch Message")
       let message = [messageType.rawValue : msgData]
-      session.sendMessage(message, replyHandler: { reply in
-        guard let loadedData = reply["response"]
-        else {
-          debugPrint("Invalid data received")
-          return
-        }
+      session.sendMessage(message,
+                          replyHandler: { _ in
         print("Message received")
       }) { error in
         debugPrint(error.localizedDescription)

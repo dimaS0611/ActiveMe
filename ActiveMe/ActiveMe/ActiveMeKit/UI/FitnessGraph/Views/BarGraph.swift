@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct BarGraph: View {
+  @EnvironmentObject var appViewModel: AppViewModel
+
   // TO-DO: protocol/ generic
-  var data: [Step]
+  @Binding var data: [Step]
 
   @GestureState var isDragging: Bool = false
   @State var offset: CGFloat = .zero
@@ -52,13 +54,13 @@ struct BarGraph: View {
       }
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
-    .offset(y: -15)
+    .offset(y: -10)
   }
 
   var graph: some View {
     HStack(alignment: .bottom) {
       ForEach(data.indices, id: \.self) { idx in
-        cardView(data[idx], index: idx)
+        cardView($data[idx], index: idx)
       }
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
@@ -72,7 +74,7 @@ struct BarGraph: View {
         .onChanged { value in
           offset = isDragging ? value.location.x : 0
 
-          let draggingSpace = graphWidth//UIScreen.main.bounds.width - 60
+          let draggingSpace = graphWidth
 
           let eachBlock = draggingSpace / CGFloat(data.count)
 
@@ -95,33 +97,36 @@ struct BarGraph: View {
     }
   }
 
-  func cardView(_ datumn: Step, index: Int) -> some View {
+  func cardView(_ datumn: Binding<Step>, index: Int) -> some View {
     VStack(spacing: 5) {
       AnimatedBarGraphView(step: datumn, index: index)
         .padding(.horizontal, 8)
-        .opacity(isDragging ? (currentDatumnId == datumn.id ? 1 : 0.35) : 1)
-        .frame(height: barHeight(point: datumn.value, size: viewSize), alignment: .bottom)//(datumn.value / getMax()) * size.height)
+        .opacity(isDragging ? (currentDatumnId == datumn.wrappedValue.id ? 1 : 0.35) : 1)
+        .frame(height: barHeight(point: datumn.wrappedValue.value, size: viewSize), alignment: .bottom)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
         .overlay(
-          Text("\(Int(datumn.value))")
-            .font(.callout)
-            .foregroundColor(datumn.color)
+          Text("\(Int(datumn.wrappedValue.value))")
+            .font(.caption)
+            .foregroundColor(datumn.wrappedValue.color)
             .opacity(isDragging && currentDatumnId == datumn.id ? 1 : 0)
             .offset(y: -20)
 
           , alignment: .top
         )
 
-      Text(datumn.key
+      Text(datumn.wrappedValue.key
         .replacingOccurrences(of: " AM", with: "")
         .replacingOccurrences(of: " PM", with: ""))
-      .font(.callout)
-      .foregroundColor(currentDatumnId == datumn.id ? datumn.color : .gray)
+      .font(.caption)
+      .foregroundColor(currentDatumnId == datumn.id ? datumn.wrappedValue.color : .gray)
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
   }
 
   func barHeight(point: CGFloat, size: CGSize) -> CGFloat {
+    guard point != 0 else {
+      return 0
+    }
     let max = getMax()
 
     let height = (point / max) * (size.height - 37)
@@ -154,7 +159,7 @@ struct BarGraph: View {
 }
 
 struct AnimatedBarGraphView: View {
-  var step: Step
+  @Binding var step: Step
   var index: Int
 
   @State var showBar: Bool = false
@@ -168,10 +173,18 @@ struct AnimatedBarGraphView: View {
         .frame(height: showBar ? nil : 0, alignment: .bottom)
     }
     .onAppear {
-      DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-        withAnimation(.interactiveSpring(response: 0.6, dampingFraction: 0.8, blendDuration: 0.8).delay(Double(index) * 0.1)) {
-          showBar = true
-        }
+      animate()
+    }
+    .onChange(of: step) { _ in
+      showBar = false
+      animate()
+    }
+  }
+
+  func animate() {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+      withAnimation(.interactiveSpring(response: 0.6, dampingFraction: 0.8, blendDuration: 0.8).delay(Double(index) * 0.1)) {
+        showBar = true
       }
     }
   }

@@ -16,22 +16,30 @@ class SleepClassificationData: NSObject, ObservableObject, NSSecureCoding, Codab
   var endTime: Date?
   var date: Date?
   var sleepStage: String?
+  var sessionId: UUID?
+  var stringDate: String?
   
   func initWithData(startTime: Date,
                     endTime: Date,
                     date: Date,
-                    sleepStage: String) {
+                    sleepStage: String,
+                    sessionId: UUID,
+                    stringDate: String) {
     self.startTime = startTime
     self.endTime = endTime
     self.date = date
     self.sleepStage = sleepStage
+    self.sessionId = sessionId
+    self.stringDate = stringDate
   }
   
   public required convenience init?(coder: NSCoder) {
     guard let startTime = coder.decodeObject(forKey: "start_time") as? Date,
           let endTime = coder.decodeObject(forKey: "end_time") as? Date,
           let date = coder.decodeObject(forKey: "date") as? Date,
-          let sleepStage = coder.decodeObject(forKey: "sleep_stage") as? String
+          let sleepStage = coder.decodeObject(forKey: "sleep_stage") as? String,
+          let sessionId = coder.decodeObject(forKey: "session_id") as? UUID,
+          let stringDate = coder.decodeObject(forKey: "string_date") as? String
     else {
       return nil
     }
@@ -40,7 +48,9 @@ class SleepClassificationData: NSObject, ObservableObject, NSSecureCoding, Codab
     self.initWithData(startTime: startTime,
                       endTime: endTime,
                       date: date,
-                      sleepStage: sleepStage)
+                      sleepStage: sleepStage,
+                      sessionId: sessionId,
+                      stringDate: stringDate)
   }
   
   public func encode(with coder: NSCoder) {
@@ -48,5 +58,7 @@ class SleepClassificationData: NSObject, ObservableObject, NSSecureCoding, Codab
     coder.encode(self.endTime, forKey: "end_time")
     coder.encode(self.date, forKey: "date")
     coder.encode(self.sleepStage, forKey: "sleep_stage")
+    coder.encode(self.sessionId, forKey: "session_id")
+    coder.encode(self.stringDate, forKey: "string_date")
   }
 }
